@@ -5,6 +5,7 @@
         <title>Log in</title>
     </head>
     <body>
+<!--     	Hier komt de log in -->
         <h1>Log in</h1>
         <?php
         
