@@ -14,11 +14,9 @@
 
 	/*AddBlog styling*/
 
-	#AddBlog
+	#JelleGay
 	{
-		display: grid;
-		grid-template-rows: 100px auto auto auto auto;
-		grid-template-columns: auto;
+		font-family: Arial;
 		min-height: 650px;
 		width: 450px;
 		margin: auto;
@@ -30,19 +28,61 @@
 
 
 	#mylittleformy
-	{
+	{	
+		display: grid;
+		grid-template-rows: auto auto auto auto 200px 100px;
 		padding: 35px;
 		padding-left: 25px;
 		width: 400px;
+		min-height: 600px;
 		font-weight: bold;
 	}
-
+	#Ndocent
+	{
+		grid-row: 1;
+	}
+	.l1
+	{
+		grid-row: 2;
+	}
 	#mylittleformy input
 	{
 		margin-bottom: 20px;
 		height: 25px;
 		border: none;
 		border-bottom: solid lightgrey 2px;
+		grid-row: 3;
+		font-size: 10pt;
+	}
+
+	.l2
+	{
+		grid-row: 4;
+	}
+	div.butt
+	{
+		grid-row: 10;
+		margin: auto;
+	}
+
+	button.blue
+	{
+		width: 150px;
+		height: 50px;
+		margin: 20px;
+		border-radius: 5px;
+		background-color:#008487;
+		color: white;
+		font-size: 15pt;
+	}
+
+	button.white
+	{
+		width: 150px;
+		height: 50px;
+		margin: 20px;
+		border-radius: 5px;
+		font-size: 15pt;
 	}
 
 	#mylittleformy select
@@ -64,8 +104,11 @@
 		overflow: auto;
 		border: none;
 		border-bottom: solid lightgrey 2px;
+		grid-row: 5;
+		font-size: 10pt;
 
 	}
+
 
 
 
