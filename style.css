@@ -58,28 +58,30 @@
 	{
 		grid-row: 4;
 	}
-	div.butt
+	.buttonsAB
 	{
 		grid-row: 10;
-		margin: auto;
+		width: 350px;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 20px;
+		display: block;
 	}
 
-	button.blue
+	.blueAB
 	{
 		width: 150px;
 		height: 50px;
-		margin: 20px;
 		border-radius: 5px;
 		background-color:#008487;
 		color: white;
 		font-size: 15pt;
 	}
 
-	button.white
+	.whiteAB
 	{
 		width: 150px;
 		height: 50px;
-		margin: 20px;
 		border-radius: 5px;
 		font-size: 15pt;
 	}
@@ -109,6 +111,53 @@
 	}
 
 
+	#BlogPost
+	{
+		display: grid;
+		grid-template-columns: 500px auto auto;
+	}
+
+	#DetailsAB
+	{
+		min-height: 100px;
+		width: 400px;
+		display: block;
+	}
+	#DetailsAB p 
+		{
+		background-color: lightgray;
+		padding: 4px;
+		margin: 0;
+		box-shadow: 1px 1px 20px;
+		}
+	#ArtikelContent
+	{
+		width: 900px;
+		min-height: 920px; 
+		background-color: white;
+		box-shadow: 2px 2px 20px;
+		background-color: lightgray;
+		align-items: auto;
+	
+	}
+	.h1AB
+	{
+		margin-left: 44px;
+	}
+	#txtAC
+	{
+		resize: none;
+		overflow: auto;
+		width: 800px;
+		min-height: 700px;
+		border-radius: 5px;
+		padding: 5px;
+		margin-left: auto;
+		margin-right: auto;
+		/*Margin met raad van: Tim(GrandDynamo)*/
+		display: block;
+		border: 1px black outset;
+	}
 
 
 
