@@ -1,20 +1,77 @@
-/*Algemene styling*/
+	/*Algemene styling*/
 
 
-/*Login styling*/
-
-
-
-/*Home styling*/
+	/*Login styling*/
 
 
 
-/*Blog styling*/
+	/*Home styling*/
 
 
 
-/*FAQ styling*/
+	/*Blog styling*/
+
+
+	/*AddBlog styling*/
+
+	#AddBlog
+	{
+		display: grid;
+		grid-template-rows: 100px auto auto auto auto;
+		grid-template-columns: auto;
+		min-height: 650px;
+		width: 450px;
+		margin: auto;
+		background-color: white;
+		overflow: none;
+		border-radius: 15px;
+		box-shadow: 5px 5px 20px;
+	}
+
+
+	#mylittleformy
+	{
+		padding: 35px;
+		padding-left: 25px;
+		width: 400px;
+		font-weight: bold;
+	}
+
+	#mylittleformy input
+	{
+		margin-bottom: 20px;
+		height: 25px;
+		border: none;
+		border-bottom: solid lightgrey 2px;
+	}
+
+	#mylittleformy select
+	{
+		margin-bottom: 20px;
+		width: 390px;
+		height: 30px;
+		border-radius: 5px;
+		text-align: center;
+	}
+
+	textarea.AddBlog
+	{
+		resize: none;
+		min-height: 150px;
+		width: 400px;
+		background-color: white;
+		display: block;
+		overflow: auto;
+		border: none;
+		border-bottom: solid lightgrey 2px;
+
+	}
 
 
 
-/*Contact styling*/
+
+	/*FAQ styling*/
+
+
+
+	/*Contact styling*/
