@@ -3,33 +3,46 @@
     <head>
     	<link rel="StyleSheet" href="style.css">
         <meta charset="UTF-8">
-        <title>Add new post</title>
+        <title>Add new post | page 1</title>
     </head>
     <body>
     	<main class="addblog">
 
-	        <form id="mylittleformy">
-	        	<select name="Category" required id="ABcategory">
+	        <form id="mylittleformy" action="AddBlogPost.php" method="post">
+	        	<select name="CategoryAB" required id="ABcategory">
 	        		<option value="" disabled selected>Select Category *</option>
-	        		<option value="Gerjan">1</option>
-	        		<option value="Winnie">2</option>
-	        		<option value="Rene">3</option>
-	        		<option value="Raymond">4</option>
-	        		<option value="Albert">5</option>
-	        		<option value="RobL">6</option>
-	        		<option value="Robs">7</option>
-	        		<option value="Jan">8</option>
+	        		<option value="News">News</option>
+	        		<option value="Corona">Corona</option>
+	        		<option value="Events">Evenementen</option>
 	        	</select><br>
 	        	<label class="l1" for="NameArticle">Title: *</label><br>
-	        	<input type="text" required id="NameArticle" placeholder="Input Title"><br>
+	        	<input type="text" required id="NameArticle" placeholder="Input Title" name="titleAB" autocomplete="off"><br>
 	        	<label class="l2" for= "AddBlog">Description *</label><br>
-	        	<textarea class="AddBlog" required id="AddBlog" placeholder="Input text..."></textarea>
+	        	<textarea class="AddBlog" required id="AddBlog" placeholder="Input text..." name="descriptionAB"></textarea>
 
-	        	<div class="butt">
-	        		<button class="white" type="reset">Reset</button>
-	        		<button class="blue" type="submit">Add</button>
+	        	<div class="buttonsAB">
+	        		<button class="whiteAB" type="reset">Reset</button>
+	        		<button class="blueAB" type="submit" name="submit">Next</button>
 	        	</div>
 	    	</form>
-    	</main>
+		</main>
+		<?php
+		if(isset($_REQUEST["submit"]))
+		{
+			$xml = new DOMDocument("1.0", "UTF-8");
+			$xml->load("article.xml");
+			$rootTag = $xml->GetElementsByTagName("document")->item(0);
+			$dataTag = $xml->createElement("data");
+			$categoryTag = $xml->createElement("Category",$_REQUEST["CategoryAB"]);
+			$titleTag = $xml->createElement("Title",$_REQUEST["titleAB"]);
+			$descriptionTag = $xml->createElement("Description", $_REQUEST["descriptionAB"]);
+
+			$dataTag->appendChild($categoryTag, $titleTag, $descriptionTag);
+			$rootTag->appendChild($dataTag);
+			$xml->save("article.xml");
+		}
+
+
+		?>
     </body>
 </html>
