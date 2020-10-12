@@ -14,7 +14,47 @@
 
 
 /*FAQ styling*/
+#faqMain {
+	display: grid;
+	grid-template-columns: 250px 900px 300px 250px;
+	grid-template-rows: 100px auto 300px;
+}
 
+#faqUserSearchBox {
+	display: flex;
+	justify-content: space-between;
+	grid-column-start: 2;
+	grid-column-end: 4;
+}
+
+#faqSelect {
+	width: 200px;
+	height: 25px;
+}
+
+#faqQuestions {
+	grid-column-start: 2;
+	grid-column-end: 3;
+	grid-row-start: 2;
+	min-height: 500px;
+}
+
+.faqQuestionsItem {
+	list-style-type: none;
+	padding-bottom: 50px;
+}
+
+#faqQuestions a, #faqQuestions li {
+	color: #008487;
+}
+
+#faqQuestions ul {
+	padding: 0;
+}
+
+#faqQuestions p {
+	text-align: justify;
+}
 
 
 /*Contact styling*/
