@@ -6,6 +6,31 @@
 
 
 /*Home styling*/
+#homekopje {
+    font-family: Verdana;
+    font-size: 16px;
+    color: blue;
+}
+
+.onderkopje {
+    font-family: Verdana;
+    font-size: 13px;
+}
+
+p {
+    font-family: Verdana;
+    font-size: 11px;
+}
+
+#Lgrid {
+    display: grid;
+    grid-template-columns: 100px;
+}
+
+div {
+    width: 200px;
+    background-color: red;
+}
 
 
 
