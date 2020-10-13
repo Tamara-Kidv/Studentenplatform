@@ -10,7 +10,7 @@
     #header{
         height: 60px;
         display: grid;
-        grid-column: repeat (6, 1fr);
+        grid-template-columns: auto auto auto auto auto 60px;
         font-family: arial;
     }
     #logo{
@@ -72,19 +72,20 @@
         background-color: darkgray;
     }
     #footer {
+        display: grid;
+        grid-template-columns: 45% 40% auto;
         height: 30px;
+        width: 100%;
         background-color: #005AA7 ;
     }
     #footerdate{
-        display: flex;
-        justify-content: center;
         margin: 0px;
+        grid-column: 2
     }
-    #footerprivacy{
-        display: flex;
-        justify-content: flex-end;
-        float: right;
+    #footerprivacy
+    {
         margin: 0px;
+        grid-column: 3;
     }
     
 /*Login styling*/
