@@ -22,27 +22,9 @@
 
 	        	<div class="buttonsAB">
 	        		<button class="whiteAB" type="reset">Reset</button>
-	        		<button class="blueAB" type="submit" name="submit">Next</button>
+	        		<button class="blueAB" type="submit" name="submit2">Next</button>
 	        	</div>
 	    	</form>
 		</main>
-		<?php
-		if(isset($_REQUEST["submit"]))
-		{
-			$xml = new DOMDocument("1.0", "UTF-8");
-			$xml->load("article.xml");
-			$rootTag = $xml->GetElementsByTagName("document")->item(0);
-			$dataTag = $xml->createElement("data");
-			$categoryTag = $xml->createElement("Category",$_REQUEST["CategoryAB"]);
-			$titleTag = $xml->createElement("Title",$_REQUEST["titleAB"]);
-			$descriptionTag = $xml->createElement("Description", $_REQUEST["descriptionAB"]);
-
-			$dataTag->appendChild($categoryTag, $titleTag, $descriptionTag);
-			$rootTag->appendChild($dataTag);
-			$xml->save("article.xml");
-		}
-
-
-		?>
     </body>
 </html>

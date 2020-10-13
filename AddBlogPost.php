@@ -7,6 +7,27 @@
     </head>
 
     <body>
+        <?php
+            if(isset($_REQUEST["submit"]))
+            {
+                $xml = new DOMDocument("1.0", "UTF-8");
+                $xml->load("article.xml");
+
+                $rootTag = $xml->getElementsByTagName("document")->item(0);
+
+                $dataTag = $xml->createElement("data");
+                $categoryTag = $xml->createElement("Category",$_REQUEST["CategoryAB"]);
+                $titleTag = $xml->createElement("Title",$_REQUEST["titleAB"]);
+                $descriptionTag = $xml->createElement("Description", $_REQUEST["descriptionAB"]);
+
+                $dataTag->appendChild($categoryTag);
+                $dataTag->appendChild($titleTag);
+                $dataTag->appendChild($descriptionTag);
+                $rootTag->appendChild($dataTag);
+
+                $xml->save("article.xml");
+            }
+        ?>
         <main id="BlogPost">
             <details id="DetailsAB">
                 <summary>Summary</summary>
@@ -16,36 +37,16 @@
             </details>       
             <content id="ArtikelContent">
                 <h1 class="h1AB">Content Article</h1>
-                <form action="AddBlogPost.php" method="post">
-                    <textarea required id="txtAC" placeholder="Please enter the content of your article here..." name="contentAB"></textarea>
+                <form action="AddBlog.php" method="post">
+                    <textarea name="ContentAB" required id="txtAC" placeholder="Please enter the content of your article here..."></textarea>
 
                     <div class="buttonsAB">
                         <button class="whiteAB" type="reset">Reset</button>
-                        <button class="blueAB" type="submit" name="submit2"><u>Submit</u></button>
+                        <button class="blueAB" type="submit" name="submit"><u>Submit</u></button>
                     </div>
                 </form>
             </content>
         </main>
-        <?php
-        if(isset($_REQUEST["submit2"]))
-        {
-            $xml = new DOMDocument("1.0", "UTF-8");
-            $xml->load("article.xml");
-
-            $rootTag = $xml->GetElementsByTagName("document")->item(0);
-
-            $DTag = $xml->createElement("DataDescription");
-            $categoryTag = $xml->createElement("Category",$_REQUEST["CategoryAB"]);
-			$titleTag = $xml->createElement("Title",$_REQUEST["titleAB"]);
-			$descriptionTag = $xml->createElement("Description", $_REQUEST["descriptionAB"]);
-            $contentTag = $xml->createElement("Content", $_REQUEST["contentAB"]);
-
-            $DTag->appendChild($contentTag);
-            $rootTag->appendChild($DTag);
-
-            $xml->save("Article.xml");
-        }
-        ?>
     </body>
 </html>
 
