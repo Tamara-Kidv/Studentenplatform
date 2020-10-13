@@ -10,7 +10,7 @@
     #header{
         height: 60px;
         display: grid;
-        grid-template-columns: auto auto auto auto auto 60px;
+        grid-template-columns: 100px auto auto auto auto 60px;
         font-family: arial;
     }
     #logo{
@@ -74,7 +74,7 @@
     #footer {
         display: grid;
         grid-template-columns: 45% 40% auto;
-        height: 30px;
+        height: 20px;
         width: 100%;
         background-color: #005AA7 ;
     }
