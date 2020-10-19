@@ -1,5 +1,7 @@
 /*Algemene styling*/
-
+body {
+	font-family: "Arial";
+}
 
 /*Login styling*/
 
@@ -10,19 +12,37 @@
 
 
 /*Blog styling*/
-#flexcontainer {
+.flexcontainer {
 	display: flex;
 	flex-wrap: wrap;
-	width: 1000px;
-	background-color: blue;³
-}
-#flexcontainer div{
-/*	width: 250px;
-	height: 150px;*/
+	width: 65vw;
 	margin: auto;
-	flex-basis: 25%;
-	background-color: lightblue;
-	border: 2px outset;
+	border: 1px dotted;
+}
+
+.flexcontainer div{
+	width: 500px;
+	height: 600px;
+/*	flex-basis: 25%;*/
+	margin: auto;
+	border: 1px dotted;
+	display: flex;
+	flex-direction: column;
+}
+.flexcontainer div div{
+	width: 350px;
+	height: 500px;
+/*	flex-basis: 25%;*/
+	margin: auto;
+	background-color: white;
+	display: flex;
+	flex-direction: column;
+	border-radius: 10px;
+	box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+	border: 1px solid;
+}
+.leesmeer a {
+	align-self: flex-end;
 }
 
 
