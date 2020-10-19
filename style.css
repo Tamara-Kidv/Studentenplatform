@@ -10,6 +10,8 @@
     font-family: Verdana;
     font-size: 16px;
     color: blue;
+    width: 120px;
+    background-color: orange;
 }
 
 .onderkopje {
@@ -17,23 +19,39 @@
     font-size: 13px;
 }
 
+#Hgrid {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    grid-template-rows: auto; 
+    grid-template-areas: Homeleft homemid homeright;
+    grid-column-gap: 0px;
+    width: 700px;
+}
+
+.Homeline {
+    width: 1px;
+    background-color: black;    
+}
+
 p {
     font-family: Verdana;
     font-size: 11px;
 }
 
-#Lgrid {
-    display: grid;
-    grid-template-columns: 100px;
-}
-
-div {
+#Homeleft {
+    background-color: green;
     width: 200px;
-    background-color: red;
 }
 
+#homemid {
+    background-color: red;
+    width: 400px;
+}
 
-
+#homeright {
+    background-color: orange;
+    width: 50px;
+}
 /*Blog styling*/
 
 
