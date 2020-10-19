@@ -1,4 +1,8 @@
 /*Algemene styling*/
+	*{
+		margin: 0;
+		padding: 0;
+	}
     a {
         text-decoration: none;
         color: #0464b3;
@@ -8,14 +12,13 @@
         text-decoration: underline;
     }
     header{
-        height: 60px;
+        height: 8vh;
         display: grid;
         grid-template-columns: 100px auto auto auto auto 60px;
         font-family: arial;
     }
     #logo{
-        height: 50px;
-        width: 100px;
+        height: 100%;
         grid-column-start: 1;
         display:flex;
         justify-content: center;
@@ -57,7 +60,7 @@
     }
     #banner{
         display: grid;
-        height: 120px; 
+        height: 10vh;
         background-image: url("images/background.png");
         background-size: cover;
     }
@@ -67,14 +70,13 @@
         padding: 5px;
         display: table;
     }
-    #main{
-        height: 200px;
-        background-color: darkgray;
+    main {
+    	min-height: 79vh;
     }
     footer {
         display: grid;
         grid-template-columns: 45% 40% auto;
-        height: 20px;
+        height: 3vh;
         width: 100%;
         background-color: #0464b3 ;
     }
@@ -104,16 +106,16 @@
 
 /*FAQ styling*/
 #faqMain {
+	padding-top: 50px;
 	display: grid;
 	grid-template-columns: 250px 900px 300px 250px;
-	grid-template-rows: 100px auto 300px;
 }
 
 #faqUserSearchBox {
+	padding-bottom: 50px;
 	display: flex;
 	justify-content: space-between;
 	grid-column-start: 2;
-	grid-column-end: 4;
 }
 
 .searchBar {
@@ -131,10 +133,6 @@
 
 .iconSearch {
 	color: #005AA7;
-}
-
-#faqUserSearchBox button {
-
 }
 
 #faqQuestions {
