@@ -27,9 +27,25 @@
 	grid-column-end: 4;
 }
 
-#faqSelect {
-	width: 200px;
-	height: 25px;
+.searchBar {
+	border-radius: 10px;
+	border: 1px solid;
+	width: 250px;
+	height: 20px;
+}
+
+.searchBarButton {
+	border: none;
+	background-color: white;
+	font-size: 17px;
+}
+
+.iconSearch {
+	color: #005AA7;
+}
+
+#faqUserSearchBox button {
+
 }
 
 #faqQuestions {
@@ -39,21 +55,16 @@
 	min-height: 500px;
 }
 
-.faqQuestionsItem {
-	list-style-type: none;
-	padding-bottom: 50px;
+#faqQuestions p {
+	text-align: justify;
 }
 
-#faqQuestions a, #faqQuestions li {
+#faqQuestions summary {
 	color: #008487;
 }
 
-#faqQuestions ul {
-	padding: 0;
-}
-
-#faqQuestions p {
-	text-align: justify;
+#faqQuestions details {
+	padding-bottom: 50px;
 }
 
 
