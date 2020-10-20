@@ -1,8 +1,96 @@
-/*Algemene styling*/
-body {
-	font-family: "Arial";
-}
-
+	*{
+		margin: 0;
+		padding: 0;
+	}
+    a {
+        text-decoration: none;
+        color: #0464b3;
+    }
+    a:hover{
+        color: #012340;
+        text-decoration: underline;
+    }
+    header{
+        height: 8vh;
+        display: grid;
+        grid-template-columns: 100px auto auto auto auto 60px;
+        font-family: arial;
+    }
+    #logo{
+        height: 100%;
+        grid-column-start: 1;
+        display:flex;
+        justify-content: center;
+        align-items: center; 
+    }
+    #navhome{
+        grid-column-start: 2;
+        display:flex;
+        justify-content: center;
+        align-items: center;   
+    }
+    #navblog{
+        grid-column-start: 3;
+        display:flex;
+        justify-content: center;
+        align-items: center;   
+    }
+    #navfaq{
+        grid-column-start: 4;
+        display:flex;
+        justify-content: center;
+        align-items: center;   
+    }
+    #navcontact{
+        grid-column-start: 5;
+        display:flex;
+        justify-content: center;
+        align-items: center;   
+    }
+    .placelang{
+        display: flex;
+        justify-content: flex-end;
+        grid-column-start: 6;
+    }
+    #lang{
+        height: 20px;
+        width:  60px;
+        border: 0px;
+    }
+    #banner{
+        display: grid;
+        height: 10vh;
+        background-image: url("images/background.png");
+        background-size: cover;
+    }
+    #title{
+        background-color: white;
+        margin: auto;
+        padding: 5px;
+        display: table;
+    }
+    main {
+    	min-height: 79vh;
+    }
+    footer {
+        display: grid;
+        grid-template-columns: 45% 40% auto;
+        height: 3vh;
+        width: 100%;
+        background-color: #0464b3 ;
+    }
+    #footerdate{
+        color: #ffffff;
+        margin: 0px;
+        grid-column: 2;
+    }
+    #footerprivacy
+    {
+        color: #ffffff ;
+        margin: 0px;
+        grid-column: 3;
+    }
+    
 /*Login styling*/
 
 
@@ -47,7 +135,54 @@ body {
 
 
 /*FAQ styling*/
+#faqMain {
+	padding-top: 50px;
+	display: grid;
+	grid-template-columns: 250px 900px 300px 250px;
+}
 
+#faqUserSearchBox {
+	padding-bottom: 50px;
+	display: flex;
+	justify-content: space-between;
+	grid-column-start: 2;
+}
+
+.searchBar {
+	border-radius: 10px;
+	border: 1px solid;
+	width: 250px;
+	height: 20px;
+}
+
+.searchBarButton {
+	border: none;
+	background-color: white;
+	font-size: 17px;
+}
+
+.iconSearch {
+	color: #005AA7;
+}
+
+#faqQuestions {
+	grid-column-start: 2;
+	grid-column-end: 3;
+	grid-row-start: 2;
+	min-height: 500px;
+}
+
+#faqQuestions p {
+	text-align: justify;
+}
+
+#faqQuestions summary {
+	color: #008487;
+}
+
+#faqQuestions details {
+	padding-bottom: 50px;
+}
 
 
 /*Contact styling*/
