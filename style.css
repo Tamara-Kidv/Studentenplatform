@@ -184,5 +184,7 @@
 	padding-bottom: 50px;
 }
 
-
+summary:focus {
+	outline: none;
+}
 /*Contact styling*/
