@@ -100,27 +100,41 @@
 
 
 /*Blog styling*/
-.flexcontainer {
+.blogcontent {
+	display: grid;
+    grid-template-columns: auto 32.5vw 32.5vw auto;
+    grid-template-rows: 53px;
+    grid-template-areas: ". search selector .";
+}
+div .selectorcontainer{
+    grid-area: selector;
+    margin-left: auto;
+}
+div .searchcontainer{
+    grid-area: search;
+    margin-top: auto;
+    margin-right: auto;
+}
+
+.blogcontentflex {
 	display: flex;
 	flex-wrap: wrap;
 	width: 65vw;
 	margin: auto;
-	border: 1px dotted;
+/*	border: 1px dotted;*/
 }
 
-.flexcontainer div{
-	width: 500px;
-	height: 600px;
-/*	flex-basis: 25%;*/
+.blogcontentflex div{
+	width: 400px;
+	height: 550px;
 	margin: auto;
-	border: 1px dotted;
+/*	border: 1px dotted;*/
 	display: flex;
 	flex-direction: column;
 }
-.flexcontainer div div{
+.blogcontentflex div div{
 	width: 350px;
 	height: 500px;
-/*	flex-basis: 25%;*/
 	margin: auto;
 	background-color: white;
 	display: flex;
@@ -129,10 +143,40 @@
 	box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
 	border: 1px solid;
 }
-.leesmeer a {
-	align-self: flex-end;
+.blogcontentflex div div h3 {
+    text-align: center;
 }
-
+.blogcontentflex div div p, .blogcontentflex div div a , .blogcontentflex div div h3 {
+    padding-left: 25px;
+    padding-right: 25px;
+}
+.blogcategorie {
+    text-align: right;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+    margin-right: -25px;
+    padding-top: 25px;
+}
+.leesmeer {
+    margin-top: auto;
+    padding: 25px;
+	text-align: right;
+}
+    /*button styling*/
+select, input { 
+    font-size: 13px;
+    border: 1px solid #ccc;
+    height: 35px;
+    border-radius: 5px;
+    background-color: white;
+}
+select{
+    width: 150px;
+    
+}
+input {
+    width: 50px;
+}
 
 /*FAQ styling*/
 #faqMain {
