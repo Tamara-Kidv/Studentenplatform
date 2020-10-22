@@ -92,7 +92,8 @@
                 ?>
                 <div>
                 	<div>
-                        <p class="blogcategorie"><?= $entry->category?></p> <!-- This should have a background later, to improve readability and attract more readers, if/else structure with colors -->
+                        <br>
+                        <p class="blogcategorie"><?= $entry->category?></p>
 	                    <h3><?= $entry->title ?></h3>
 	                    <p><?= strftime('%A %e %B %Y %T', strtotime($entry->pubDate)) ?></p>
 	                    <p><?= $entry->description ?></p>
