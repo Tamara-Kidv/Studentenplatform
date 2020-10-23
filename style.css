@@ -186,3 +186,41 @@
 
 
 /*Contact styling*/
+.h1_contact{
+    font-family: arial;
+    font-size: 32px;
+    color:#005AA7;
+}
+
+.p_contact{
+    color:#008487;
+    font-size: 16px;
+    font-family: arial;
+    
+}
+.centercontact{
+    text-align: center;
+}
+
+textarea{
+    width: 500px;
+    height: 350px;
+    resize: none;
+}
+
+.button_css{
+    font-family: arial;
+    background-color: #005AA7;
+    color: white;
+    width: 150px;
+    height: 40px;
+}
+
+#footer{
+    font-family: arial;
+    color:white;
+    background-color:#005AA7;
+    height: 32px;
+    
+    
+}
