@@ -12,11 +12,11 @@
          */
         if (isset($_POST['submit2'])) {
             $xml = simplexml_load_file('Article.xml');
-            $post = $xml->addChild('BlogPost', '');
-            $post->addChild('Category', $_REQUEST["CategoryAB"]);
-            $post->addChild('Title', $_REQUEST["titleAB"]);
-            $post->addChild('Description', $_REQUEST["descriptionAB"]);
-            $post->addChild('Content', $_REQUEST["ContentAB"]);
+            $post = $xml->addChild('item', '');
+            $post->addChild('category', $_REQUEST["CategoryAB"]);
+            $post->addChild('title', $_REQUEST["titleAB"]);
+            $post->addChild('description', $_REQUEST["descriptionAB"]);
+            $post->addChild('content', $_REQUEST["ContentAB"]);
             print_r($xml);
             echo $xml->saveXML("Article.xml");     
             header("Location: AddBlog.php");
