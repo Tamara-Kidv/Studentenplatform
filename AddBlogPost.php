@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <link rel="StyleSheet" href="style.css">
+        <link rel="StyleSheet" href="styleAddBlog.css">
         <meta charset="UTF-8">
         <title>Add new post | page 2</title>
     </head>

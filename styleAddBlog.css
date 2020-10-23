@@ -4,7 +4,7 @@
 		font-family: Arial;
 		min-height: 650px;
 		width: 450px;
-		margin:auto;
+		margin: auto;
 		background-color: white;
 		overflow: none;
 		border-radius: 15px;
@@ -13,33 +13,21 @@
 	#mylittleformy
 	{	
 		display: grid;
-		grid-template-rows: auto auto auto auto auto 200px 100px;
+		grid-template-rows: auto auto 50px 1px auto auto 70px auto;
 		padding: 35px;
 		padding-left: 25px;
 		width: 400px;
 		min-height: 600px;
 		font-weight: bold;
 	}
-	#ABcategory
-	{
-		grid-row: 1;
-	}
-	.l1
-	{
-		grid-row: 2;
-	}
 	#mylittleformy input
 	{
 		margin-bottom: 20px;
+		min-width: 25px;
 		height: 25px;
 		border: none;
 		border-bottom: solid lightgrey 2px;
-		grid-row: 3;
 		font-size: 10pt;
-	}
-	.l2
-	{
-		grid-row: 4;
 	}
 	.buttonsAB
 	{
@@ -84,7 +72,6 @@
 		overflow: auto;
 		border: none;
 		border-bottom: solid lightgrey 2px;
-		grid-row: 5;
 		font-size: 10pt;
 	}
 	#BlogPost
