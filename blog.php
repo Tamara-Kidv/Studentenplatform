@@ -57,7 +57,7 @@
         <div class="blogcontent">
             <div class="selectorcontainer">
             	<p>Selecteer feed:</p>
-            	<form action="blog.php" method="post"> 
+            	<form action="template.php?Blog" method="post"> 
     	        	<select name="blogselector">
     	        		<option value="everything">Everything</option>
                        <!--  not yet implemented options
