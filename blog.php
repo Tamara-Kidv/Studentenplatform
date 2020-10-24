@@ -65,7 +65,7 @@
             <div class="selectorcontainer">
             	<p>Selecteer feed:</p>
             	<form action="template.php?Blog" method="post"> 
-    	        	<select name="blogselector">
+    	        	<select class="blogselect" name="blogselector">
     	        		<option value="everything">Everything</option>
                        <!--  not yet implemented options
     	        		<option value="news">News</option>
@@ -77,14 +77,16 @@
     	        		<option value="tweakers">Tweakers</option>
     	        		<option value="Article">Article</option>
             		</select>
-            		<input type="submit" name="submitblogfeed" value="Submit"/>
+            		<input class="bloginput" type="submit" name="submitblogfeed" value="Submit"/>
             	</form>
             </div>
             <!-- Searchbox code geleend van de FAQ code -->
             <div class="searchcontainer">
                 <div>
-		            <input type="text" id="search" placeholder="Search..." class="searchBarButton">
-		            <input type="button" name="search" value="Go" onclick="search(document.getElementById('search').value)">
+		            <input type="text" id="search" placeholder="Search..." class="blogsearchbarbutton">
+		            <input class="bloginput" type="button" name="search" value="Go" onclick="search(document.getElementById('search').value)">
+                   <!--  Moet nog vervangen worden door een echte reset -->
+                    <input class="bloginput" type="button" name="reset" value="Reset" onclick="document.location.href='template.php?Blog'">
         		</div>
             </div>        	
         </div>
