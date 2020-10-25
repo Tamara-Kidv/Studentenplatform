@@ -22,7 +22,9 @@
             $feeds = array(
             "https://www.nu.nl/rss/Tech",
             "blog.xml",
-            "http://feeds.feedburner.com/tweakers/nieuws"
+            "http://feeds.feedburner.com/tweakers/nieuws",
+            "Article.xml"
+
         );
         //rest of the feeds, replace with proper xml files later
         }
@@ -39,6 +41,11 @@
         else if ($selectedfeed == "blog") {
             $feeds = array(
             "blog.xml"
+        );
+        }
+        else if ($selectedfeed == "Article") {
+            $feeds = array(
+            "Article.xml"
         );
         }
         //Read each feed's items
@@ -58,7 +65,7 @@
             <div class="selectorcontainer">
             	<p>Selecteer feed:</p>
             	<form action="template.php?Blog" method="post"> 
-    	        	<select name="blogselector">
+    	        	<select class="blogselect" name="blogselector">
     	        		<option value="everything">Everything</option>
                        <!--  not yet implemented options
     	        		<option value="news">News</option>
@@ -68,41 +75,58 @@
     	        		<option value="nu">nu.nl</option>
     	        		<option value="blog">blog.xml</option>
     	        		<option value="tweakers">Tweakers</option>
+    	        		<option value="Article">Article</option>
             		</select>
-            		<input type="submit" name="submitblogfeed" value="Submit"/>
+            		<input class="bloginput" type="submit" name="submitblogfeed" value="Submit"/>
             	</form>
             </div>
             <!-- Searchbox code geleend van de FAQ code -->
             <div class="searchcontainer">
-                <section id="faqUserSearchBox">         
-                <form>
-                    <button type="submit" class="searchBarButton">
-                        <li class="fa fa-search iconSearch"></li>
-                    </button>
-                    <input type="text" name="search" class="searchBar" placeholder="Search...">
-                </form>
-                </section>
+                <div>
+		            <input type="text" id="search" placeholder="Search..." class="blogsearchbarbutton">
+		            <input class="bloginput" type="button" name="search" value="Go" onclick="search(document.getElementById('search').value)">
+                   <!--  Moet nog vervangen worden door een echte reset -->
+                    <input class="bloginput" type="button" name="reset" value="Reset" onclick="document.location.href='template.php?Blog'">
+        		</div>
             </div>        	
         </div>
         <!-- Flexbox met de RSS reader content -->
-        <div class="blogcontentflex">
+        <div id="searchResults"></div>   
+        <div class="blogcontentflex">	
             <?php
             //Print all the entries
             foreach($entries as $entry){
                 ?>
                 <div>
-                	<div>
+                	<div class="blogs">
                         <br>
                         <p class="blogcategorie"><?= $entry->category?></p>
 	                    <h3><?= $entry->title ?></h3>
 	                    <p><?= strftime('%A %e %B %Y %T', strtotime($entry->pubDate)) ?></p>
 	                    <p><?= $entry->description ?></p>
 	                    <a class="leesmeer" href="<?= $entry->link ?>">Lees Meer</a>
-                	</div>
+                	</div>	            
             	</div>
             <?php  }
         	?>
-      
-        </ul>
+        </div>
+	        <script type="text/javascript">
+		        function search(string){
+		            var content = document.getElementsByClassName("blogs");
+		            var searchValue = string;
+		              var canvas = document.getElementById("searchResults");
+
+		            for(var i = 0; i < content.length; i++){
+		              if(content[i].innerHTML.indexOf(searchValue) > -1){
+		              canvas.appendChild(content[i]);
+		              
+		              } else {
+
+		              }
+		              console.log(canvas);
+		            }
+		            document.getElementById("blogcontentflex").style.cssText = 'visibility: hidden'
+		        }
+	    	</script>
     </body>
 </html>

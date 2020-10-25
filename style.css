@@ -104,7 +104,7 @@
 	display: grid;
     grid-template-columns: auto 32.5vw 32.5vw auto;
     grid-template-rows: 53px;
-    grid-template-areas: ". search selector .";
+    grid-template-areas: "search . . selector";
 }
 div .selectorcontainer{
     grid-area: selector;
@@ -201,19 +201,21 @@ div .searchcontainer{
 	text-align: right;
 }
     /*button styling*/
-select, input { 
+.blogselect, .bloginput, .blogsearchbarbutton { 
     font-size: 13px;
     border: 1px solid #ccc;
     height: 35px;
     border-radius: 5px;
     background-color: white;
 }
-select{
-    width: 150px;
-    
+.blogselect{
+    width: 150px;    
 }
-input {
+.bloginput {
     width: 50px;
+}
+.blogsearch {
+    width: 150px;
 }
 
 /*FAQ styling*/
