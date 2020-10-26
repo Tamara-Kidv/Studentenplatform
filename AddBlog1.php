@@ -4,7 +4,7 @@
     <head>
         <link rel="StyleSheet" href="style1.css">
         <meta charset="UTF-8">
-		<title>Add new post | page 1</title>
+		<title>Add new post</title>
     </head>
     <body>
         <main id="addblogmain">
@@ -60,11 +60,12 @@ if (isset($_POST['submitpost']))
 {
     $xml = simplexml_load_file('Article.xml');
     $post = $xml->addChild('item', '');
-    $post->addChild('category', $_REQUEST["CategoryAB"]);
-    $post->addChild('title', $_REQUEST["titleAB"]);
-    $post->addChild('description', $_REQUEST["descriptionAB"]);
-    $post->addChild('content', $_REQUEST["ContentAB"]);
+    $post->addChild('category', $_POST["CategoryAB"]);
+    $post->addChild('title', $_POST["titleAB"]);
+    $post->addChild('description', $_POST["descriptionAB"]);
+    $post->addChild('content', $_POST["ContentAB"]);
     print_r($xml);
     echo $xml->saveXML("Article.xml");     
     header("blog.php");
 }
+?>
