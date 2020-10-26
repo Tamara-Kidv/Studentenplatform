@@ -1,11 +1,11 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="UTF-8">
         <title>Blog</title>
         <link rel="stylesheet" href="style.css">
     </head>
-    <body>
+    <body> -->
         <!-- Check what feed is selected, and if none is set, load "everything" -->
         <?php
             if(isset($_POST["submitblogfeed"])) {
@@ -83,6 +83,8 @@
             <div class="add-blog-button">
                 <a class="add-blog-button" href="template.php?AddBlog">   
                     <p><i class="fas fa-plus-circle"></i></p>                    
+                <a class="add-blog-button" href=AddBlog.php>   
+                    <i class="fas fa-plus-circle"></i>                    
                 </a>
             </div>
             <!-- Searchbox code geleend van de FAQ code -->
@@ -97,7 +99,7 @@
         </div>
         <!-- Flexbox met de RSS reader content -->
         <div id="searchResults"></div>   
-        <div class="blogcontentflex">	
+        <div id="blogcontentflex">	
             <?php
             //Print all the entries
             foreach($entries as $entry){
@@ -130,8 +132,8 @@
 		              }
 		              console.log(canvas);
 		            }
-		            document.getElementById("blogcontentflex").style.cssText = 'visibility: hidden'
+		            document.getElementById("blogcontentflex").style.cssText = 'visibility: hidden';
 		        }
 	    	</script>
-    </body>
-</html>
+<!--     </body>
+</html> -->

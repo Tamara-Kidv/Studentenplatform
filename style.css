@@ -110,7 +110,7 @@
 /*Blog styling*/
 .blogcontent {
 	display: grid;
-    grid-template-columns: auto auto auto auto auto;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 53px;
     grid-template-areas: "search . add-blog-button . selector";
 }
@@ -127,14 +127,14 @@ div .add-blog-button {
     grid-area: add-blog-button;
     margin: auto;
 }
-.blogcontentflex {
+#blogcontentflex, #searchResults {
 	display: flex;
 	flex-wrap: wrap;
 	width: 65vw;
 	margin: auto;
 /*	border: 1px dotted;*/
 }
-.blogcontentflex div{
+#blogcontentflex div, #searchResults div{
 	width: 400px;
 	height: 550px;
 	margin: auto;
@@ -142,7 +142,7 @@ div .add-blog-button {
 	display: flex;
 	flex-direction: column;
 }
-.blogcontentflex div div{
+#blogcontentflex div div, .blogs{
 	width: 350px;
 	height: 500px;
 	margin: auto;
@@ -153,10 +153,10 @@ div .add-blog-button {
 	box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
 	border: 1px solid;
 }
-.blogcontentflex div div h3 {
+#blogcontentflex div div h3, #searchResults div div h3 {
     text-align: center;
 }
-.blogcontentflex div div p, .blogcontentflex div div a , .blogcontentflex div div h3 {
+#blogcontentflex div div p, #blogcontentflex div div a , #blogcontentflex div div h3, #searchResults div div p, #searchResults div div a , #searchResults div div h3 {
     padding-left: 25px;
     padding-right: 25px;
 }
@@ -201,7 +201,7 @@ div .add-blog-button {
 	text-align: right;
 }
     /*button styling*/
-.blogselect, .blogsearchbarbutton { 
+.blogselect, .blogsearchbarbutton, .bloginput { 
     font-size: 13px;
     border: 1px solid #ccc;
     height: 35px;
