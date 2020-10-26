@@ -81,7 +81,7 @@
             	</form>
             </div>
             <div class="add-blog-button">
-                <a class="add-blog-button" href=AddBlog.php>   
+                <a class="add-blog-button" href="template.php?AddBlog">   
                     <p><i class="fas fa-plus-circle"></i></p>                    
                 </a>
             </div>

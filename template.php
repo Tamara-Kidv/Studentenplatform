@@ -33,8 +33,8 @@
                     $page = "FAQ";
                 } else if(isset($_GET['Contact'])) {
                     $page = "Contact";
-                } else if(isset($_GET['addBlog'])) {
-                    $page = "Add Blog";
+                } else if(isset($_GET['AddBlog'])) {
+                    $page = "AddBlog";
                 }
                 echo "<h1 id='title'> $page </h1>"
             ?>
