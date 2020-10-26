@@ -1,0 +1,295 @@
+	*{
+		margin: 0;
+		padding: 0;
+	}
+    a {
+        text-decoration: none;
+        color: #0464b3;
+    }
+    a:hover{
+        color: #012340;
+        text-decoration: underline;
+    }
+    header{
+        height: 8vh;
+        display: grid;
+        grid-template-columns: 100px auto auto auto auto 60px;
+        font-family: arial;
+    }
+    #logo{
+        height: 100%;
+        grid-column-start: 1;
+        display:flex;
+        justify-content: center;
+        align-items: center; 
+    }
+    #navhome{
+        grid-column-start: 2;
+        display:flex;
+        justify-content: center;
+        align-items: center;   
+    }
+    #navblog{
+        grid-column-start: 3;
+        display:flex;
+        justify-content: center;
+        align-items: center;   
+    }
+    #navfaq{
+        grid-column-start: 4;
+        display:flex;
+        justify-content: center;
+        align-items: center;   
+    }
+    #navcontact{
+        grid-column-start: 5;
+        display:flex;
+        justify-content: center;
+        align-items: center;   
+    }
+    .placelang{
+        display: flex;
+        justify-content: flex-end;
+        grid-column-start: 6;
+    }
+    #lang{
+        height: 20px;
+        width:  60px;
+        border: 0px;
+    }
+    #banner{
+        display: grid;
+        height: 10vh;
+        background-image: url("images/background.png");
+        background-size: cover;
+    }
+    #title{
+        background-color: white;
+        margin: auto;
+        padding: 5px;
+        display: table;
+    }
+    main {
+    	min-height: 79vh;
+    }
+    footer {
+        display: grid;
+        grid-template-columns: 45% 40% auto;
+        height: 3vh;
+        width: 100%;
+        background-color: #0464b3 ;
+    }
+    #footerdate{
+        color: #ffffff;
+        margin: 0px;
+        grid-column: 2;
+    }
+    #footerprivacy
+    {
+        color: #ffffff ;
+        margin: 0px;
+        grid-column: 3;
+    }
+    .searchButton {
+        font-size: 13px;
+        border: 1px solid #ccc;
+        height: 35px;
+        border-radius: 5px;
+        background-color: white;
+        width: 50px;
+    }
+    
+/*Login styling*/
+
+
+
+/*Home styling*/
+
+
+
+/*Blog styling*/
+.blogcontent {
+	display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    grid-template-rows: 53px;
+    grid-template-areas: "search . add-blog-button . selector";
+}
+div .selectorcontainer{
+    grid-area: selector;
+    margin-left: auto;
+}
+div .searchcontainer{
+    grid-area: search;
+    margin-top: auto;
+    margin-right: auto;
+}
+div .add-blog-button {
+    grid-area: add-blog-button;
+    margin: auto;
+}
+.blogcontentflex {
+	display: flex;
+	flex-wrap: wrap;
+	width: 65vw;
+	margin: auto;
+/*	border: 1px dotted;*/
+}
+.blogcontentflex div{
+	width: 400px;
+	height: 550px;
+	margin: auto;
+/*	border: 1px dotted;*/
+	display: flex;
+	flex-direction: column;
+}
+.blogcontentflex div div{
+	width: 350px;
+	height: 500px;
+	margin: auto;
+	background-color: white;
+	display: flex;
+	flex-direction: column;
+	border-radius: 10px;
+	box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+	border: 1px solid;
+}
+.blogcontentflex div div h3 {
+    text-align: center;
+}
+.blogcontentflex div div p, .blogcontentflex div div a , .blogcontentflex div div h3 {
+    padding-left: 25px;
+    padding-right: 25px;
+}
+.blogcategorie {
+    width: 200px;
+    height: 40px;
+    position: relative;
+    background: #005AA7;
+    text-align: center;
+    margin-right: -50px;
+    margin-left: 120px;
+    color: white;
+}
+.blogcategorie:before {
+    content: "";
+    position: absolute;
+    right: -20px;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border: 20px;
+    border-style: solid;
+    border-color: #005AA7;
+    background-color: #005AA7; 
+    }
+.blogcategorie:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-top: 20px solid white;
+    border-right: 40px solid #005AA7;
+    border-bottom: 20px solid white;
+    }
+.leesmeer {
+    margin-top: auto;
+    padding: 25px;
+	text-align: right;
+}
+    /*button styling*/
+.blogselect, .blogsearchbarbutton { 
+    font-size: 13px;
+    border: 1px solid #ccc;
+    height: 35px;
+    border-radius: 5px;
+    background-color: white;
+}
+.blogselect{
+    width: 150px;    
+}
+.bloginput {
+    width: 50px;
+}
+.blogsearch {
+    width: 150px;
+}
+.add-blog-button {
+    background-color:#005AA7;
+    border-radius:8px;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-size:20px;
+    font-weight:bold;
+    padding:8px 8px;
+    text-decoration:none;
+}
+.add-blog-button:hover {
+    background-color:#008587;
+}
+.add-blog-button:active {
+    position:relative;
+    top:1px;
+}
+
+
+
+/*FAQ styling*/
+#faqMain {
+	padding-top: 50px;
+	display: grid;
+	grid-template-columns: 250px 900px 300px 250px;
+}
+
+#faqUserSearchBox {
+	padding-bottom: 50px;
+	display: flex;
+	justify-content: space-between;
+	grid-column-start: 2;
+}
+
+.searchBar {
+	border-radius: 10px;
+	border: 1px solid;
+	width: 250px;
+	height: 20px;
+}
+
+.searchBarButton {
+	border: none;
+	background-color: white;
+	font-size: 17px;
+}
+
+.iconSearch {
+	color: #005AA7;
+}
+
+#faqQuestions {
+	grid-column-start: 2;
+	grid-column-end: 3;
+	grid-row-start: 2;
+	min-height: 500px;
+}
+
+#faqQuestions p {
+	text-align: justify;
+	padding-top: 15px;
+}
+
+#faqQuestions summary {
+	color: #008487;
+}
+
+#faqQuestions details {
+	padding-bottom: 50px;
+}
+
+summary:focus {
+	outline: none;
+}
+/*Contact styling*/
