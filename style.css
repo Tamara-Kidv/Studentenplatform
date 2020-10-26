@@ -90,6 +90,14 @@
         margin: 0px;
         grid-column: 3;
     }
+    .searchButton {
+        font-size: 13px;
+        border: 1px solid #ccc;
+        height: 35px;
+        border-radius: 5px;
+        background-color: white;
+        width: 50px;
+    }
     
 /*Login styling*/
 
@@ -160,6 +168,7 @@ div .add-blog-button {
     text-align: center;
     margin-right: -50px;
     margin-left: 120px;
+    color: white;
 }
 .blogcategorie:before {
     content: "";
@@ -192,7 +201,7 @@ div .add-blog-button {
 	text-align: right;
 }
     /*button styling*/
-.blogselect, .bloginput, .blogsearchbarbutton { 
+.blogselect, .blogsearchbarbutton { 
     font-size: 13px;
     border: 1px solid #ccc;
     height: 35px;
@@ -269,6 +278,7 @@ div .add-blog-button {
 
 #faqQuestions p {
 	text-align: justify;
+	padding-top: 15px;
 }
 
 #faqQuestions summary {
@@ -279,5 +289,7 @@ div .add-blog-button {
 	padding-bottom: 50px;
 }
 
-
+summary:focus {
+	outline: none;
+}
 /*Contact styling*/
