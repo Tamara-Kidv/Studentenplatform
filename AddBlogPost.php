@@ -32,9 +32,6 @@
             <content id="ArtikelContent">
                 <h1 class="h1AB">Content Article</h1>
                 <form method="post">
-                    <input type="text" name="titleAB" value="<?= $_POST["titleAB"]; ?>" hidden>
-                    <input type="text" name="CategoryAB" value="<?= $_POST["CategoryAB"]; ?>" hidden>
-                    <input type="text" name="descriptionAB" value="<?= $_POST["descriptionAB"]; ?>" hidden>
                     <textarea name="ContentAB" required id="txtAC" placeholder="Please enter the content of your article here..."></textarea>
                     <div class="buttonsAB">
                         <button class="whiteAB" type="reset">Reset</button>

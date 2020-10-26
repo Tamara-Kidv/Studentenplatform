@@ -80,6 +80,11 @@
             		<input class="bloginput" type="submit" name="submitblogfeed" value="Submit"/>
             	</form>
             </div>
+            <div class="add-blog-button">
+                <a class="add-blog-button" href=AddBlog.php>   
+                    <p><i class="fas fa-plus-circle"></i></p>                    
+                </a>
+            </div>
             <!-- Searchbox code geleend van de FAQ code -->
             <div class="searchcontainer">
                 <div>
