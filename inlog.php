@@ -20,7 +20,7 @@
 
                 <hr>
 
-                <p>Bij inloggen accepteer je onze <a href="#">Terms & Conditions</a>.</p>
+                <p>Bij inloggen accepteer je onze <a href="https://www.nhlstenden.com/privacyverklaring">Terms & Conditions</a>.</p>
                 <input type="submit" value="Login" name="submit" class="registerbtn">
                 
                         <div class="signin">
