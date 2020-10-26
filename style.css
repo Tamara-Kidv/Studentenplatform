@@ -90,6 +90,14 @@
         margin: 0px;
         grid-column: 3;
     }
+    .searchButton {
+        font-size: 13px;
+        border: 1px solid #ccc;
+        height: 35px;
+        border-radius: 5px;
+        background-color: white;
+        width: 50px;
+    }
     
 /*Login styling*/
 
@@ -201,7 +209,7 @@ div .searchcontainer{
 	text-align: right;
 }
     /*button styling*/
-.blogselect, .bloginput, .blogsearchbarbutton { 
+.blogselect, .blogsearchbarbutton { 
     font-size: 13px;
     border: 1px solid #ccc;
     height: 35px;
