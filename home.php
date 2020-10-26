@@ -12,92 +12,89 @@
                 <div id="Hgrid">
                     <div id="Homeleft">
                         <h2 class="Homekopje">Latest News:</h2> 
-                    <?php 
-                    $feeds = array(
-            "https://www.nu.nl/rss/Tech",
-            "blog.xml",
-            "http://feeds.feedburner.com/tweakers/nieuws"
-        );
-                    $entries = array();
-        foreach($feeds as $feed) {
-            $xml = simplexml_load_file($feed);
-            $entries = array_merge($entries, $xml->xpath("//item"));
-        }
-        usort($entries, function ($feed1, $feed2) {
-            return strtotime($feed2->pubDate) - strtotime($feed1->pubDate);
-        });
-                    ?>
-                    <div class="blogcontentflex">
-            <?php
-            //Print all the entries
-            $NUMITEMS   = 3;
+                        <?php 
+                            $feeds = array(
+                            "https://www.nu.nl/rss/Tech",
+                            "blog.xml",
+                            "http://feeds.feedburner.com/tweakers/nieuws"
+                            );
+                            $entries = array();
+                            foreach($feeds as $feed) {
+                                $xml = simplexml_load_file($feed);
+                                $entries = array_merge($entries, $xml->xpath("//item"));
+                            }
+                            usort($entries, function ($feed1, $feed2) {
+                                return strtotime($feed2->pubDate) - strtotime($feed1->pubDate);
+                            });
+                        ?>
+                        <div class="homenews">
+                            <?php
+                                //Print all the entries
+                                $NUMITEMS   = 3;
 
-            $count = 0;
-            foreach($entries as $entry){
-                ?>
-                <div>
-                    <div>
-                        <br>
-                        <p class="blogcategorie"><?= $entry->category?></p>
-                        <h3><?= $entry->title ?></h3>
-                        <p><?= strftime('%A %e %B %Y %T', strtotime($entry->pubDate)) ?></p>
-                        <p><?= $entry->description ?></p>
-                        <a class="leesmeer" href="<?= $entry->link ?>">Lees Meer</a>
-                        <hr>
-                    </div>
-                </div>
-            <?php
-        
-        if(++$count >= $NUMITEMS) break;
-        }
-        ?>
+                                $count = 0;
+                                foreach($entries as $entry){
+                            ?>
+                            <div>
+                                <div>
+                                    <br>
+                                    <h3><?= $entry->title ?></h3>
+                                    <p><?= strftime('%A %e %B %Y %T', strtotime($entry->pubDate)) ?></p>
+                                    <p><?= $entry->description ?></p>
+                                    <a class="leesmeer" href="<?= $entry->link ?>">Lees Meer</a>
+                                    <hr>
+                                </div>
+                            </div>
+                            <?php
+                            if(++$count >= $NUMITEMS) break;
+                            }
+                            ?>
+                        </div>
                     </div>
                     <div class="Homeline"></div>
                    
-                <div id="homemid">
-                    <h5 class="Homekopje">Soon in agenda:</h5>
-                <?php 
-                    $feeds = array(
-            "https://www.nu.nl/rss/Tech",
-            "blog.xml",
-            "http://feeds.feedburner.com/tweakers/nieuws"
-        );
-                    $entries = array();
-        foreach($feeds as $feed) {
-            $xml = simplexml_load_file($feed);
-            $entries = array_merge($entries, $xml->xpath("//item"));
-        }
-        usort($entries, function ($feed1, $feed2) {
-            return strtotime($feed2->pubDate) - strtotime($feed1->pubDate);
-        });
-                    ?>
-                    <div class="blogcontentflex">
-            <?php
-            //Print all the entries
-            $NUMITEMS   = 3;
+                    <div id="Homemid">
+                        <h5 class="Homekopje">Soon in agenda:</h5>
+                        <?php 
+                            $feeds = array(
+                            "https://www.nu.nl/rss/Tech",
+                            "blog.xml",
+                            "http://feeds.feedburner.com/tweakers/nieuws"
+                            );
+                            $entries = array();
+                        foreach($feeds as $feed) {
+                            $xml = simplexml_load_file($feed);
+                            $entries = array_merge($entries, $xml->xpath("//item"));
+                        }
+                        usort($entries, function ($feed1, $feed2) {
+                            return strtotime($feed2->pubDate) - strtotime($feed1->pubDate);
+                        });
+                        ?>
+                        <div class="homenews">
+                        <?php
+                        //Print all the entries
+                        $NUMITEMS   = 3;
 
-            $count = 0;
-            foreach($entries as $entry){
-                ?>
-                <div>
-                    <div>
-                        <br>
-                        <p class="blogcategorie"><?= $entry->category?></p>
-                        <h3><?= $entry->title ?></h3>
-                        <p><?= strftime('%A %e %B %Y %T', strtotime($entry->pubDate)) ?></p>
-                        <p><?= $entry->description ?></p>
-                        <a class="leesmeer" href="<?= $entry->link ?>">Lees Meer</a>
-                        <hr>
+                        $count = 0;
+                        foreach($entries as $entry){
+                        ?>
+                        <div>
+                            <div>
+                                <br>
+                                <h3><?= $entry->title ?></h3>
+                                <p><?= strftime('%A %e %B %Y %T', strtotime($entry->pubDate)) ?></p>
+                                <p><?= $entry->description ?></p>
+                                <a class="leesmeer" href="<?= $entry->link ?>">Lees Meer</a>
+                                <hr>
+                            </div>
+                        </div>
+                        <?php
+                        if(++$count >= $NUMITEMS) break;
+                        }
+                        ?>
+                        </div>
                     </div>
-                </div>
-            <?php
-        
-        if(++$count >= $NUMITEMS) break;
-        }
-        ?>
-                    </div>
-                </div>
-                    
+                    <div id="homecalendar">
         <?php
         
         class Calendar {  
@@ -316,15 +313,21 @@
 
     echo $calendar->show();
         ?>
-                </div>
-            </div>
+             
             
-            <div id="FaQhome">
-                <ul id="homelist">
-                    <li><a href="http://localhost/studentenplatform/template.php?FAQ">How is NHL Stenden handeling the situation around Covid-19 virus?</a></li>
-                    <li><a href="http://localhost/studentenplatform/template.php?FAQ">Where can i order my books?</a></li>
-                    <li><a href="http://localhost/studentenplatform/template.php?FAQ">How can i see my schedule?</a></li>
-                </ul>
+                    <div id="FaQhome">
+                        <h2 class="Homekopje">FAQ:</h2>
+                        <ul id="homelist">
+                            <li><a href="http://localhost/studentenplatform/template.php?FAQ">How is NHL Stenden handeling the situation around Covid-19 virus?</a></li>
+                            <li><br></li>
+                            <li><a href="http://localhost/studentenplatform/template.php?FAQ">Where can i order my books?</a></li>
+                            <li><br></li>
+                            <li><a href="http://localhost/studentenplatform/template.php?FAQ">How can i see my schedule?</a></li>
+                            <li><br></li>
+                            <li><a href="http://localhost/studentenplatform/template.php?FAQ">See more...</a></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </main>
     </body>
