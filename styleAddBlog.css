@@ -74,11 +74,7 @@
 		border-bottom: solid lightgrey 2px;
 		font-size: 10pt;
 	}
-	#BlogPost
-	{
-		display: grid;
-		grid-template-columns: 500px auto auto;
-	}
+	
 	#DetailsAB
 	{
 		min-height: 100px;
@@ -99,7 +95,9 @@
 		background-color: white;
 		box-shadow: 2px 2px 20px;
 		background-color: lightgray;
-		align-items: auto;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
 	
 	}
 	.h1AB
