@@ -82,7 +82,7 @@
             </div>
             <div class="add-blog-button">
                 <a class="add-blog-button" href=AddBlog.php>   
-                    <p><i class="fas fa-plus-circle"></i>Add Blog</p>                    
+                    <p><i class="fas fa-plus-circle"></i></p>                    
                 </a>
             </div>
             <!-- Searchbox code geleend van de FAQ code -->

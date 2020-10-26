@@ -160,6 +160,7 @@ div .add-blog-button {
     text-align: center;
     margin-right: -50px;
     margin-left: 120px;
+    color: white;
 }
 .blogcategorie:before {
     content: "";
