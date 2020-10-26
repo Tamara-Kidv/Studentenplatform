@@ -7,22 +7,97 @@
     </head>
     <body>
         <main>
-            <img id="homeimg" src="images/StendenHome.jpg" alt="foto van de school">
-            <h2 id="homekopje">Latest News</h2>
+            <img id="homeimg" src="images/Stendenhome.jpg" alt="foto van de school">
+
                 <div id="Hgrid">
-                <div id="Homeleft">
-                <h3 class="onderkopje">Sport Event Canceled</h3>
-                <p> work with me goddammit, DEUS VULT</p>
-                <hr>
-                <h4 class="onderkopje">Sport Event Canceled</h4>
-                <p> AAAAAAAAAA </p>
+                    <div id="Homeleft">
+                        <h2 class="Homekopje">Latest News:</h2> 
+                    <?php 
+                    $feeds = array(
+            "https://www.nu.nl/rss/Tech",
+            "blog.xml",
+            "http://feeds.feedburner.com/tweakers/nieuws"
+        );
+                    $entries = array();
+        foreach($feeds as $feed) {
+            $xml = simplexml_load_file($feed);
+            $entries = array_merge($entries, $xml->xpath("//item"));
+        }
+        usort($entries, function ($feed1, $feed2) {
+            return strtotime($feed2->pubDate) - strtotime($feed1->pubDate);
+        });
+                    ?>
+                    <div class="blogcontentflex">
+            <?php
+            //Print all the entries
+            $NUMITEMS   = 3;
+
+            $count = 0;
+            foreach($entries as $entry){
+                ?>
+                <div>
+                    <div>
+                        <br>
+                        <p class="blogcategorie"><?= $entry->category?></p>
+                        <h3><?= $entry->title ?></h3>
+                        <p><?= strftime('%A %e %B %Y %T', strtotime($entry->pubDate)) ?></p>
+                        <p><?= $entry->description ?></p>
+                        <a class="leesmeer" href="<?= $entry->link ?>">Lees Meer</a>
+                        <hr>
+                    </div>
                 </div>
+            <?php
+        
+        if(++$count >= $NUMITEMS) break;
+        }
+        ?>
+                    </div>
                     <div class="Homeline"></div>
+                   
                 <div id="homemid">
-                <h5 class="onderkopje">YEET</h4>
-                <p> yes</p>
+                    <h5 class="Homekopje">Soon in agenda:</h5>
+                <?php 
+                    $feeds = array(
+            "https://www.nu.nl/rss/Tech",
+            "blog.xml",
+            "http://feeds.feedburner.com/tweakers/nieuws"
+        );
+                    $entries = array();
+        foreach($feeds as $feed) {
+            $xml = simplexml_load_file($feed);
+            $entries = array_merge($entries, $xml->xpath("//item"));
+        }
+        usort($entries, function ($feed1, $feed2) {
+            return strtotime($feed2->pubDate) - strtotime($feed1->pubDate);
+        });
+                    ?>
+                    <div class="blogcontentflex">
+            <?php
+            //Print all the entries
+            $NUMITEMS   = 3;
+
+            $count = 0;
+            foreach($entries as $entry){
+                ?>
+                <div>
+                    <div>
+                        <br>
+                        <p class="blogcategorie"><?= $entry->category?></p>
+                        <h3><?= $entry->title ?></h3>
+                        <p><?= strftime('%A %e %B %Y %T', strtotime($entry->pubDate)) ?></p>
+                        <p><?= $entry->description ?></p>
+                        <a class="leesmeer" href="<?= $entry->link ?>">Lees Meer</a>
+                        <hr>
+                    </div>
                 </div>
-                        
+            <?php
+        
+        if(++$count >= $NUMITEMS) break;
+        }
+        ?>
+                    </div>
+                </div>
+                    
         <?php
         
         class Calendar {  
@@ -241,6 +316,7 @@
 
     echo $calendar->show();
         ?>
+                </div>
             </div>
             
             <div id="FaQhome">
