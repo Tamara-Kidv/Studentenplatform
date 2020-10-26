@@ -8,47 +8,24 @@
     <body> -->
         <!-- Check what feed is selected, and if none is set, load "everything" -->
         <?php
+       /*Check the value from the category selector, and put it in the variable $selectedcategory*/
             if(isset($_POST["submitblogfeed"])) {
-                $selectedfeed = $_POST['blogselector'];
+                $selectedcategory = $_POST['blogselector'];
             }
         ?>        
         <?php
         //default feed
-            if (empty($selectedfeed)) {
-            $selectedfeed = "everything";
-       }
+            if (empty($selectedcategory)) {
+            $selectedcategory = "everything";
+        }
+        $feeds = array(
+        /*XML files go here*/
+        "https://www.nu.nl/rss/Tech",
+        "blog.xml",
+        "http://feeds.feedburner.com/tweakers/nieuws",
+        "Article.xml"
+        );
 
-        if ( $selectedfeed == "everything" ) {
-            $feeds = array(
-            "https://www.nu.nl/rss/Tech",
-            "blog.xml",
-            "http://feeds.feedburner.com/tweakers/nieuws",
-            "Article.xml"
-
-        );
-        //rest of the feeds, replace with proper xml files later
-        }
-        else if ($selectedfeed == "tweakers") {
-            $feeds = array(
-            "http://feeds.feedburner.com/tweakers/nieuws"
-        );
-        }
-        else if ($selectedfeed == "nu") {
-            $feeds = array(
-            "https://www.nu.nl/rss/Tech"
-        );
-        }
-        else if ($selectedfeed == "blog") {
-            $feeds = array(
-            "blog.xml"
-        );
-        }
-        else if ($selectedfeed == "Article") {
-            $feeds = array(
-            "Article.xml"
-        );
-        }
-        //Read each feed's items
         $entries = array();
         foreach($feeds as $feed) {
             $xml = simplexml_load_file($feed);
@@ -63,47 +40,42 @@
         ?>
         <div class="blogcontent">
             <div class="selectorcontainer">
-            	<p>Selecteer feed:</p>
+                <!-- Category selector -->
+            	<p>Select category:</p>
             	<form action="template.php?Blog" method="post"> 
     	        	<select class="blogselect" name="blogselector">
     	        		<option value="everything">Everything</option>
-                       <!--  not yet implemented options
-    	        		<option value="news">News</option>
-    	        		<option value="important">Important</option>
-                        <option value="entertaining">Entertaining</option>
-                        Temp rss feed links -->
-    	        		<option value="nu">nu.nl</option>
-    	        		<option value="blog">blog.xml</option>
-    	        		<option value="tweakers">Tweakers</option>
-    	        		<option value="Article">Article</option>
+    	        		<option value="News">News</option>
+    	        		<option value="Corona">Corona</option>
+                        <option value="Evenementen">Events</option>
             		</select>
             		<input class="bloginput" type="submit" name="submitblogfeed" value="Submit"/>
             	</form>
             </div>
             <div class="add-blog-button">
                 <a class="add-blog-button" href="template.php?AddBlog">   
-                    <p><i class="fas fa-plus-circle"></i></p>                    
-                <a class="add-blog-button" href=AddBlog.php>   
-                    <i class="fas fa-plus-circle"></i>                    
+                    <p><i class="fas fa-plus-circle"></i>Add Post</p>                                     
                 </a>
             </div>
-            <!-- Searchbox code geleend van de FAQ code -->
+            <!-- JS based search box -->
             <div class="searchcontainer">
                 <div>
 		            <input type="text" id="search" placeholder="Search..." class="blogsearchbarbutton">
 		            <input class="searchButton" type="button" name="search" value="Go" onclick="search(document.getElementById('search').value)">
-                   <!--  Moet nog vervangen worden door een echte reset -->
+                   <!--  Reset button -->
                     <input class="searchButton" type="button" name="reset" value="Reset" onclick="document.location.href='template.php?Blog'">
         		</div>
             </div>        	
         </div>
-        <!-- Flexbox met de RSS reader content -->
+        <!-- Flexbox with the contents of the RSS reader -->
         <div id="searchResults"></div>   
         <div id="blogcontentflex">	
             <?php
             //Print all the entries
             foreach($entries as $entry){
-                ?>
+                /*Check if the category matches the selected value before printing it*/
+                if (stristr($entry->category, $selectedcategory) OR ($selectedcategory == "everything")) {
+                ?>            
                 <div>
                 	<div class="blogs">
                         <br>
@@ -111,24 +83,23 @@
 	                    <h3><?= $entry->title ?></h3>
 	                    <p><?= strftime('%A %e %B %Y %T', strtotime($entry->pubDate)) ?></p>
 	                    <p><?= $entry->description ?></p>
-	                    <a class="leesmeer" href="<?= $entry->link ?>">Lees Meer</a>
+	                    <!-- <a class="leesmeer" href="<?= $entry->link ?>">Lees Meer</a> -->
+                        <a class="leesmeer" href="readblog.php?title=<?= $entry->title ?>">Lees Meer</a>
                 	</div>	            
             	</div>
-            <?php  }
+            <?php  } }
         	?>
+            <!-- end of print -->
         </div>
 	        <script type="text/javascript">
 		        function search(string){
 		            var content = document.getElementsByClassName("blogs");
 		            var searchValue = string;
 		              var canvas = document.getElementById("searchResults");
-
 		            for(var i = 0; i < content.length; i++){
 		              if(content[i].innerHTML.indexOf(searchValue) > -1){
-		              canvas.appendChild(content[i]);
-		              
+		              canvas.appendChild(content[i]);		              
 		              } else {
-
 		              }
 		              console.log(canvas);
 		            }
