@@ -20,8 +20,6 @@
                         <option value="nl">NL</option>
                     </select>
                 </div>
-                <?php
-                ?>
         </header>
         <div id="banner">
             <?php
@@ -46,7 +44,7 @@
         </main>
         <footer>       
             <p id="footerdate">	&copy; 2020 - 2021</p>
-            <p id="footerprivacy">privacystatement - profile XX</p>
+            <p id="footerprivacy">privacystatement - <a href="profile.php">profile</a></p>
         </footer>
     </body>
 </html>
