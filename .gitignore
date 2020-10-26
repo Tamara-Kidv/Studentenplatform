@@ -1,7 +1,14 @@
 /nbproject/private/
 nbproject/project.xml
 nbproject/project.properties
+<<<<<<< Updated upstream
 .idea/codeStyles/codeStyleConfig.xml
 .idea/modules.xml
 .idea/Studentenplatform.iml
 .idea/vcs.xml
+=======
+.idea/vcs.xml
+.idea/Studentenplatform.iml
+.idea/modules.xml
+.idea/codeStyles/codeStyleConfig.xml
+>>>>>>> Stashed changes
