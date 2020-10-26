@@ -80,13 +80,18 @@
             		<input class="bloginput" type="submit" name="submitblogfeed" value="Submit"/>
             	</form>
             </div>
+            <div class="add-blog-button">
+                <a class="add-blog-button" href=AddBlog.php>   
+                    <p><i class="fas fa-plus-circle"></i></p>                    
+                </a>
+            </div>
             <!-- Searchbox code geleend van de FAQ code -->
             <div class="searchcontainer">
                 <div>
 		            <input type="text" id="search" placeholder="Search..." class="blogsearchbarbutton">
-		            <input class="bloginput" type="button" name="search" value="Go" onclick="search(document.getElementById('search').value)">
+		            <input class="searchButton" type="button" name="search" value="Go" onclick="search(document.getElementById('search').value)">
                    <!--  Moet nog vervangen worden door een echte reset -->
-                    <input class="bloginput" type="button" name="reset" value="Reset" onclick="document.location.href='template.php?Blog'">
+                    <input class="searchButton" type="button" name="reset" value="Reset" onclick="document.location.href='template.php?Blog'">
         		</div>
             </div>        	
         </div>

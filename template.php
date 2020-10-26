@@ -5,6 +5,7 @@
         <title>Home</title>
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://kit.fontawesome.com/27922e58ca.js" crossorigin="anonymous"></script>
     </head>
     <body>
         <header>
@@ -19,8 +20,6 @@
                         <option value="nl">NL</option>
                     </select>
                 </div>
-                <?php
-                ?>
         </header>
         <div id="banner">
             <?php
@@ -32,6 +31,8 @@
                     $page = "FAQ";
                 } else if(isset($_GET['Contact'])) {
                     $page = "Contact";
+                } else if(isset($_GET['addBlog'])) {
+                    $page = "Add Blog";
                 }
                 echo "<h1 id='title'> $page </h1>"
             ?>
@@ -43,7 +44,7 @@
         </main>
         <footer>       
             <p id="footerdate">	&copy; 2020 - 2021</p>
-            <p id="footerprivacy">privacystatement - profile XX</p>
+            <p id="footerprivacy">privacystatement - <a href="profile.php">profile</a></p>
         </footer>
     </body>
 </html>

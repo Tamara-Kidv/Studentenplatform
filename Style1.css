@@ -1,0 +1,106 @@
+#addblogform
+{
+    display: grid;
+    grid-template-columns: auto auto;
+    width: 1900px;
+    height: 800px;
+}
+.div1
+{
+    margin: auto;
+    background-color: white;
+    overflow: none;
+    border-radius: 15px;
+    box-shadow: 5px 5px 20px;
+    display: grid;
+    grid-template-rows: 50px 20px 50px 1px 20px 300px 50px auto;
+    padding: 35px;
+    padding-left: 25px;
+    width: 400px;
+    min-height: 600px;
+    font-weight: bold;
+    font-family: Arial; 
+}
+.div1 input
+{
+    margin-bottom: 20px;
+    min-width: 25px;
+    height: 25px;
+    border: none;
+    border-bottom: solid lightgrey 2px;
+    font-size: 10pt;
+}
+.div1 select
+{
+    margin-bottom: 20px;
+    width: 390px;
+    height: 30px;
+    border-radius: 5px;
+    text-align: center;
+}
+.div1 textarea
+{
+    resize: none;
+    min-height: 150px;
+    width: 400px;
+    background-color: white;
+    display: block;
+    overflow: auto;
+    border: none;
+    border-bottom: solid lightgrey 2px;
+    font-size: 10pt;
+    margin-bottom: 50px;
+}
+
+.div2
+{
+    width: 900px;
+    min-height: 920px; 
+    background-color: white;
+    box-shadow: 2px 2px 20px;
+    background-color: lightgray;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.div2txt
+{
+    resize: none;
+    overflow: auto;
+    width: 800px;
+    min-height: 700px;
+    border-radius: 5px;
+    padding: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    /*Margin met raad van: Tim(GrandDynamo)*/
+    display: block;
+    border: 1px black outset;
+}
+.buttonsAB
+{
+    width: 320px;
+    height: 50px;
+    margin: auto;
+    margin-top: 20px;
+}
+.buttonblue
+{
+    width: 150px;
+    height: 50px;
+    border-radius: 5px;
+    background-color:#008487;
+    color: white;
+    font-size: 15pt;
+}
+.buttonwhite
+{
+    width: 150px;
+    height: 50px;
+    border-radius: 5px;
+    font-size: 15pt;
+}
+.h1AB
+{
+    margin-left: 44px;
+}
