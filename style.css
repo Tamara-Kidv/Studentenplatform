@@ -102,9 +102,9 @@
 /*Blog styling*/
 .blogcontent {
 	display: grid;
-    grid-template-columns: auto 32.5vw 32.5vw auto;
+    grid-template-columns: auto auto auto auto auto;
     grid-template-rows: 53px;
-    grid-template-areas: "search . . selector";
+    grid-template-areas: "search . add-blog-button . selector";
 }
 div .selectorcontainer{
     grid-area: selector;
@@ -115,7 +115,10 @@ div .searchcontainer{
     margin-top: auto;
     margin-right: auto;
 }
-
+div .add-blog-button {
+    grid-area: add-blog-button;
+    margin: auto;
+}
 .blogcontentflex {
 	display: flex;
 	flex-wrap: wrap;
@@ -123,7 +126,6 @@ div .searchcontainer{
 	margin: auto;
 /*	border: 1px dotted;*/
 }
-
 .blogcontentflex div{
 	width: 400px;
 	height: 550px;
@@ -150,17 +152,6 @@ div .searchcontainer{
     padding-left: 25px;
     padding-right: 25px;
 }
-/*.blogcategorie {
-    text-align: center;
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px; 
-    margin-right: -50px;
-    margin-left: 250px;
-    border: 3px;
-    border-style: solid;
-    border-color: #FF0000;
-    background-color: red;
-}*/
 .blogcategorie {
     width: 200px;
     height: 40px;
@@ -217,6 +208,26 @@ div .searchcontainer{
 .blogsearch {
     width: 150px;
 }
+.add-blog-button {
+    background-color:#005AA7;
+    border-radius:8px;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-size:20px;
+    font-weight:bold;
+    padding:8px 8px;
+    text-decoration:none;
+}
+.add-blog-button:hover {
+    background-color:#008587;
+}
+.add-blog-button:active {
+    position:relative;
+    top:1px;
+}
+
+
 
 /*FAQ styling*/
 #faqMain {
