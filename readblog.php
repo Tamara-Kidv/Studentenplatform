@@ -25,23 +25,39 @@
         </header>
         <div id="banner">
             <?php
-                if(isset($_GET['Home'])) {
-                    $page = "Home";
-                } else if(isset($_GET['Blog'])) {
-                    $page = "Blog";
-                } else if(isset($_GET['FAQ'])) {
-                    $page = "FAQ";
-                } else if(isset($_GET['Contact'])) {
-                    $page = "Contact";
-                } else if(isset($_GET['AddBlog'])) {
-                    $page = "AddBlog";
-                }
-                echo "<h1 id='title'> $page </h1>"
+            	/*Read title from url*/
+                $contenttitle = $_GET['title'];
+                echo "<h1 id='title'> Blog </h1>";
             ?>
         </div>
         <main>
             <?php
-                include($page .'.php');
+            	/*RSS reader*/
+            	$feed = "Article.xml";
+            	$entries = array();
+	            $xml = simplexml_load_file($feed);
+	            $entries = array_merge($entries, $xml->xpath("//item"));	     
+	        	foreach($entries as $entry){
+	        		if ($entry->title == $contenttitle) {
+	        			if(empty($entry->img)) {
+			?>				<!-- Article content if image is empty-->
+	        				<div class="articlecontainer">
+	        				<h1><?= $entry->title ?></h1>
+			        		<p class="readblogdesc"><?= $entry->description ?></p>
+			        		<p class="readblogcontent"><?= $entry->content ?></p>
+	        		</div>
+	        		<?php
+	        			}
+	        			else {
+	        ?>				<!-- Article content if image is not empty-->	        		
+	        			<div class="articlecontainer">
+		        		<p class="readblogdesc"><?= $entry->description ?></p>
+		        		<img class="readblogimg" src="<?= $entry->img ?>" alt="Article image">
+		        		<p class="readblogcontent"><?= $entry->content ?></p>
+	        		</div>
+
+	        <?php
+	        	} } } /*Closing brackets. 3 of them.*/
             ?>
         </main>
         <footer>       
