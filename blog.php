@@ -48,6 +48,7 @@
     	        		<option value="News">News</option>
     	        		<option value="Corona">Corona</option>
                         <option value="Evenementen">Events</option>
+                        <option value="Important">Important</option>
             		</select>
             		<input class="bloginput" type="submit" name="submitblogfeed" value="Submit"/>
             	</form>

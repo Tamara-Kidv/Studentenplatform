@@ -52,7 +52,7 @@
 	        ?>				<!-- Article content if image is not empty-->	        		
 	        			<div class="articlecontainer">
 		        		<p class="readblogdesc"><?= $entry->description ?></p>
-		        		<img class="readblogimg" src="<?= $entry->img ?>" alt="Article image">
+		        		<img class="readblogimg" src=<?= $entry->img ?> alt="Article image">
 		        		<p class="readblogcontent"><?= $entry->content ?></p>
 	        		</div>
 
