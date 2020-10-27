@@ -22,10 +22,6 @@
                     <textarea class="AddBlog" required placeholder="Input text..." name="descriptionAB"></textarea>
                     <label for="Image">insert image here</label>
                     <input type="file" name="image"/>
-
-
-
-
                     <?php
                     if(isset($_POST['submitpost']))
                     {
@@ -39,7 +35,7 @@
                                 $tmp_name = $_FILES["image"]["tmp_name"];
                                 $name = $_POST["titleAB"].'_'.basename($_FILES["image"]["name"]);
                                 move_uploaded_file($tmp_name, "$uploads_dir/$name");
-                                $link = "<img src='$uploads_dir/$name'> alt='$name'";
+                                $link = "<img src='$uploads_dir/$name'alt='$name'>";
                                 $xml = simplexml_load_file('Article.xml');
                                 $post = $xml->addChild('item', '');
                                 $post->addChild('category', $_POST["CategoryAB"]);
@@ -67,13 +63,6 @@
                         }
                     }
                     ?>
-
-
-
-
-
-
-
                     <div class="buttonsAB">
                         <button class="buttonwhite" type="reset">Reset</button>
                         <button class="buttonblue" type="submit" name="submitpost"><u>Submit</u></button>
