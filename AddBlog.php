@@ -35,7 +35,7 @@
                                 $tmp_name = $_FILES["image"]["tmp_name"];
                                 $name = $_POST["titleAB"].'_'.basename($_FILES["image"]["name"]);
                                 move_uploaded_file($tmp_name, "$uploads_dir/$name");
-                                $link = "<img src='$uploads_dir/$name'alt='$name'>";
+                                $link = "$uploads_dir/$name'alt='$name'";
                                 $xml = simplexml_load_file('Article.xml');
                                 $post = $xml->addChild('item', '');
                                 $post->addChild('category', $_POST["CategoryAB"]);
