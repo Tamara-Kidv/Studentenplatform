@@ -1,17 +1,4 @@
 <!DOCTYPE html>
-<?php
-session_start();
-
-if($_SESSION['login'] != true)
-{
-
-}
-else{
-            echo <<<HTML
-        <a href="errorpage.php"> </a> 
-        HTML;
-}
-?>
 <html lang="en">
     <head>
         <link rel="StyleSheet" href="Style1.css">
