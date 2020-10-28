@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="stylesheet.css">
+        <meta charset="UTF-8">
+        <title>Register page</title>
+    </head>
+    <body> 
+        <main> 
+            <div class="container"> 
+            <div class="formbox">
+            <h1>Register</h1>
+            <p>Vul dit form in om een account aan te maken</p>
+            <hr>
+<form action="indexlogin.php" method="POST">
+                <label for="email"><b>Email</b></label>
+                <input type="text" placeholder="Enter Email" name="email" id="email" required>
+
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
+
+                <label for="psw-repeat"><b>Repeat Password</b></label>
+                <input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" required>
+                <hr>
+
+                <p>Door het creeren van een account accepteer je  onze <a href="https://www.nhlstenden.com/privacyverklaring">Terms & Conditions</a>.</p>
+                <input type="submit" value="Registreer" name="register" class="registerbtn">
+</form>
+            </div>
+
+            <div class="signin">
+              <p>Already have an account? <a href="inlog.php">Sign in</a>.</p>
+            </div>
+            </div>
+        </main>
+    </body>
+</html>
