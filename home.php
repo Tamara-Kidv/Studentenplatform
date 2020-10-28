@@ -39,8 +39,8 @@
                                 <div>
                                     <br>
                                     <h3><?= $entry->title ?></h3>
-                                    <p><?= strftime('%A %e %B %Y %T', strtotime($entry->pubDate)) ?></p>
-                                    <p><?= $entry->description ?></p>
+                                    <p id="homep"><?= strftime('%A %e %B %Y %T', strtotime($entry->pubDate)) ?></p>
+                                    <p id="homep"><?= $entry->description ?></p>
                                     <a class="leesmeer" href="<?= $entry->link ?>">Lees Meer</a>
                                     <hr>
                                 </div>
@@ -82,8 +82,8 @@
                             <div>
                                 <br>
                                 <h3><?= $entry->title ?></h3>
-                                <p><?= strftime('%A %e %B %Y %T', strtotime($entry->pubDate)) ?></p>
-                                <p><?= $entry->description ?></p>
+                                <p id="homep"><?= strftime('%A %e %B %Y %T', strtotime($entry->pubDate)) ?></p>
+                                <p id="homep"><?= $entry->description ?></p>
                                 <a class="leesmeer" href="<?= $entry->link ?>">Lees Meer</a>
                                 <hr>
                             </div>
