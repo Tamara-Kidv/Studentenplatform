@@ -20,9 +20,10 @@
         }
         $feeds = array(
         /*XML files go here*/
+/*      Old blogs  
         "https://www.nu.nl/rss/Tech",
         "blog.xml",
-        "http://feeds.feedburner.com/tweakers/nieuws",
+        "http://feeds.feedburner.com/tweakers/nieuws",*/
         "Article.xml"
         );
 
