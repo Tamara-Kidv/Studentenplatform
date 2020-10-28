@@ -89,18 +89,19 @@ elseif($_POST['login'])
         
        
         //inlog gegevens controleren met loop data
-        
         if($email == $XMLuser && hash('sha256',$password) == $XMLpsw)
         {
+          var_dump("Hij pakt inlog yes");
             //Login gelukt
             $login = true;
             $_SESSION['login'] = true;
             //$_SESSION['userid'] = 
+            echo "<meta http-equiv='refresh' content='1; url=index.php' />";
             break;
         }
     }
     // terug naar login
-
+    echo "<meta http-equiv='refresh' content='1; url=inlog.php' />";
     
     
 }
@@ -120,7 +121,7 @@ else
 
 	?>
     
-     <meta http-equiv="refresh" content="3; url=homepage.php" />
+
     
 
                
