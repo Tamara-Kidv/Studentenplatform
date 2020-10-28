@@ -28,7 +28,6 @@ else{
                         <?php 
                             $feeds = array(
                             "https://www.nu.nl/rss/Tech",
-                            "blog.xml",
                             "http://feeds.feedburner.com/tweakers/nieuws"
                             );
                             $entries = array();
@@ -70,9 +69,7 @@ else{
                         <h5 class="Homekopje">Soon in agenda:</h5>
                         <?php 
                             $feeds = array(
-                            "https://www.nu.nl/rss/Tech",
-                            "blog.xml",
-                            "http://feeds.feedburner.com/tweakers/nieuws"
+                            "Article.xml"
                             );
                             $entries = array();
                         foreach($feeds as $feed) {
@@ -97,7 +94,7 @@ else{
                                 <h3><?= $entry->title ?></h3>
                                 <p id="homep"><?= strftime('%A %e %B %Y %T', strtotime($entry->pubDate)) ?></p>
                                 <p id="homep"><?= $entry->description ?></p>
-                                <a class="leesmeer" href="<?= $entry->link ?>">Lees Meer</a>
+                                <a class="leesmeer" href="readblog.php?title=<?= $entry->title ?>">Lees Meer</a>
                                 <hr>
                             </div>
                         </div>
