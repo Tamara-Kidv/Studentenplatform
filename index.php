@@ -7,8 +7,9 @@
             if($_SESSION['login'] != true) {
                 header('Location: inlog.php');
                 exit;*/
-        } 
 
+        } 
+        ?>
         <meta charset="UTF-8">
         <title>Home</title>
         <link rel="stylesheet" href="style.css">
