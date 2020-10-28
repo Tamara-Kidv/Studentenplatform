@@ -1,17 +1,4 @@
 <!DOCTYPE html>
-<?php
-session_start();
-
-if($_SESSION['login'] != true)
-{
-
-}
-else{
-            echo <<<HTML
-        <a href="errorpage.php"> </a> 
-        HTML;
-}
-?>
 <html lang="en">
     <head>
         <link rel="StyleSheet" href="Style1.css">
@@ -57,7 +44,7 @@ else{
                                 $post->addChild('title', $_POST["titleAB"]);
                                 $post->addChild('description', $_POST["descriptionAB"]);
                                 $xml->saveXML("Article.xml");
-                                header('Location: template.php?Blog', true, 301);
+                                header('Location: index.php?Blog', true, 301);
                                 exit();
                             }
                             else
@@ -74,7 +61,7 @@ else{
                             $post->addChild('title', $_POST["titleAB"]);
                             $post->addChild('description', $_POST["descriptionAB"]);
                             $xml->saveXML("Article.xml");
-                            header('Location: template.php?Blog', true, 301);
+                            header('Location: index.php?Blog', true, 301);
                             exit();
                         }
                     }

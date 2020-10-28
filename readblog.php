@@ -1,4 +1,4 @@
-<?php
+<!-- <?php
 	session_start();
 
 	if($_SESSION['login'] != true)
@@ -6,7 +6,7 @@
 		header('Location: inlog.php');
 		exit;
 	}
-?>
+?> -->
 <!DOCTYPE html>
 <html lang="en">
     <head>
