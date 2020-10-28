@@ -10,7 +10,7 @@
     <div class="grid-container">
     <div class="grid=item-1">
       <div class="p_contact"></div>
-    <form class="contact-form" action="contact.php" method="POST">
+    <form class="contact-form" action="contactform.php" method="POST">
       <div class="lerarencontact">
       <select name="contactleraren">
         <option value="" disabled selected>Selecteer leraar</option>
