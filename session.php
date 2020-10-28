@@ -3,7 +3,10 @@ session_start();
 
 if($_SESSION['login'] != true)
 {
-        echo <<<HTML
+
+}
+else{
+            echo <<<HTML
         <a href="errorpage.php"> </a> 
         HTML;
 }
