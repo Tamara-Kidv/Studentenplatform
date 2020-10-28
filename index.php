@@ -17,7 +17,7 @@
     </head>
     <body>
         <header>
-            <img id="logo" src="images/logo.png" alt="logo">
+            <a href="?Home" alt="Home"><img id="logo" src="images/logo.png" alt="logo"></a>
                 <a id="navhome" href="?Home">Home</a>
                 <a id="navblog" href="?Blog">Blog</a>
                 <a id="navfaq" href="?FAQ">FAQ</a>
