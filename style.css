@@ -461,6 +461,8 @@ div .add-blog-button {
 }
 .readblogimg {
     grid-area: readblogimg;
+    max-width: 30vw;
+    max-height: auto;
 }
 .readblogtitle {
     grid-area: readblogtitle;

@@ -3,7 +3,12 @@ session_start();
 
 if($_SESSION['login'] != true)
 {
-    //user is niet ingelogd, redirect naar error pagina
+
+}
+else{
+            echo <<<HTML
+        <a href="errorpage.php"> </a> 
+        HTML;
 }
 
 

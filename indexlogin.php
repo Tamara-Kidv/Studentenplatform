@@ -33,10 +33,10 @@ else{
        //echo "$result";
        
        if(strpos($result, "student") === FALSE){
-           $level = "0";
+           $level = "docent";
        }
        else{
-           $level = "1";
+           $level = "student";
        }       
         //check for word student in email
 
@@ -120,7 +120,7 @@ else
 
 	?>
     
-     <meta http-equiv="refresh" content="3; url=inlog.php" />
+     <meta http-equiv="refresh" content="3; url=homepage.php" />
     
 
                
