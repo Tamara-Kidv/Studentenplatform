@@ -10,10 +10,10 @@
     <body>
         <header>
             <img id="logo" src="images/logo.png" alt="logo">
-                <a id="navhome" href="template.php?Home">Home</a>
-                <a id="navblog" href="template.php?Blog">Blog</a>
-                <a id="navfaq" href="template.php?FAQ">FAQ</a>
-                <a id="navcontact" href="template.php?Contact">Contact</a> 
+                <a id="navhome" href="index.php?Home">Home</a>
+                <a id="navblog" href="index.php?Blog">Blog</a>
+                <a id="navfaq" href="?FAQ">FAQ</a>
+                <a id="navcontact" href="index.php?Contact">Contact</a> 
                 <div id="placelang">
                     <select id="lang" name="language">
                         <option value="eng">ENG</option>
@@ -33,6 +33,10 @@
                     $page = "Contact";
                 } else if(isset($_GET['AddBlog'])) {
                     $page = "AddBlog";
+                } else if (isset($_GET['Profile'])){
+                    $page = "Profiel";
+                } else {
+                    $page = "Home";
                 }
                 echo "<h1 id='title'> $page </h1>"
             ?>
