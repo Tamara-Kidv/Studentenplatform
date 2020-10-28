@@ -109,16 +109,16 @@
 /*Home styling*/
 #homeimg {
     width: 1517px;
-    heigth: 370px;
+    height: 370px;
 }
 
 #homekopjes {
     width: 500px;
-    heigth: 50px;
+    height: 50px;
 }
 
 .Homekopje, h2, h5 {
-    font-family: Verdana;
+    font-family: Arial;
     font-size: 16px;
     color: blue;
     width: 150px;
@@ -129,7 +129,7 @@
 
 .onderkopje {
     margin: 10px;
-    font-family: Verdana;
+    font-family: Arial;
     font-size: 13px;
 }
 
@@ -150,8 +150,8 @@
     height: 800px;
 }
 
-p {
-    font-family: Verdana;
+#homep {
+    font-family: Arial;
     font-size: 11px;
     margin: 10px;
 }
