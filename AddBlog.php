@@ -1,4 +1,17 @@
 <!DOCTYPE html>
+<?php
+session_start();
+
+if($_SESSION['login'] != true)
+{
+
+}
+else{
+            echo <<<HTML
+        <a href="errorpage.php"> </a> 
+        HTML;
+}
+?>
 <html lang="en">
     <head>
         <link rel="StyleSheet" href="Style1.css">
@@ -44,12 +57,13 @@
                                 $post->addChild('title', $_POST["titleAB"]);
                                 $post->addChild('description', $_POST["descriptionAB"]);
                                 $xml->saveXML("Article.xml");
-                                header("template.php?blog.php") ; 
+                                header('Location: template.php?Blog', true, 301);
+                                exit();
                             }
                             else
                             {
-                                echo "error, verkeerd type bestand toegevoegd. De pagina wordt herladen binnen 5 seconden";
-                                header('refresh: 5');
+                                echo "error, verkeerd type bestand toegevoegd. De pagina wordt herladen binnen 3 seconden";
+                                header('refresh: 3');
                             }
                         }
                         else
@@ -60,7 +74,8 @@
                             $post->addChild('title', $_POST["titleAB"]);
                             $post->addChild('description', $_POST["descriptionAB"]);
                             $xml->saveXML("Article.xml");
-                            header("template.php?blog.php") ; 
+                            header('Location: template.php?Blog', true, 301);
+                            exit();
                         }
                     }
                     ?>
