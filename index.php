@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-<!--         <?php
-            session_start();
+       <?php
+/*            session_start();
 
             if($_SESSION['login'] != true) {
                 header('Location: inlog.php');
                 exit;
-            } 
-        ?> -->
+
+        } */
+        ?>
         <meta charset="UTF-8">
         <title>Home</title>
         <link rel="stylesheet" href="style.css">
@@ -17,7 +18,7 @@
     </head>
     <body>
         <header>
-            <img id="logo" src="images/logo.png" alt="logo">
+            <a href="?Home" alt="Home"><img id="logo" src="images/logo.png" alt="logo"></a>
                 <a id="navhome" href="?Home">Home</a>
                 <a id="navblog" href="?Blog">Blog</a>
                 <a id="navfaq" href="?FAQ">FAQ</a>
