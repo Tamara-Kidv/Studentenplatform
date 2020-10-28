@@ -107,9 +107,213 @@
 
 
 /*Home styling*/
+#homeimg {
+    width: 1517px;
+    heigth: 370px;
+}
 
+#homekopjes {
+    width: 500px;
+    heigth: 50px;
+}
 
+.Homekopje, h2, h5 {
+    font-family: Verdana;
+    font-size: 16px;
+    color: blue;
+    width: 150px;
+    color: #0c70c7;
+    margin-left: 10px;
+    height: 20px;
+}
 
+.onderkopje {
+    margin: 10px;
+    font-family: Verdana;
+    font-size: 13px;
+}
+
+#Hgrid {
+    margin-top: 50px;
+    margin-left: 50px;
+    display: grid;
+    grid-template-columns: 400px 200px 200px auto auto;
+    grid-template-rows: auto; 
+    grid-template-areas: Homeleft homemiddle calendar;
+    grid-column-gap: 0px;
+    width: 1200px;
+}
+
+.Homeline {
+    width: 3px;
+    background-color: #0c70c7;    
+    height: 800px;
+}
+
+p {
+    font-family: Verdana;
+    font-size: 11px;
+    margin: 10px;
+}
+
+hr {
+    margin: 30px;
+    color: cyan;
+}
+
+#Homeleft {
+    width: 300px;
+}
+
+#Homemid {
+    width: 300px;
+}
+
+#homeright {
+    background-color: orange;
+    width: 300px;
+}
+
+.homenews {
+    width: 300px;
+}
+
+#FaQhome {
+    width: 300px;
+    height: 200px;
+    margin-top: 50px;
+    margin-left: 250px;
+}
+
+#homelist{
+    padding-top: 10px;
+    margin: 10px;
+    list-style-type: none;
+}
+
+/* calendar */
+
+div#calendar{
+  margin:0px auto;
+  margin-left: 250px;
+  padding:0px;
+  width: 320px;
+  font-family:Helvetica, "Times New Roman", Times, serif;
+}
+ 
+div#calendar div.box{
+    position:relative;
+    top:0px;
+    left:0px;
+    width:100%;
+    height:30px;
+    background-color:   #787878 ;      
+}
+ 
+div#calendar div.header{
+    line-height:30px;  
+    vertical-align:middle;
+    position:absolute;
+    left:11px;
+    top:0px;
+    width:300px;
+    height:30px;   
+    text-align:center;
+}
+ 
+div#calendar div.header a.prev,div#calendar div.header a.next{ 
+    position:absolute;
+    top:0px;   
+    height: 17px;
+    display:block;
+    cursor:pointer;
+    text-decoration:none;
+    color:#FFF;
+}
+ 
+div#calendar div.header span.title{
+    color:#FFF;
+    font-size:18px;
+}
+ 
+ 
+div#calendar div.header a.prev{
+    left:0px;
+}
+ 
+div#calendar div.header a.next{
+    right:0px;
+}
+ 
+ 
+ 
+ 
+/*******************************Calendar Content Cells*********************************/
+div#calendar div.box-content{
+    border:1px solid #787878 ;
+    border-top:none;
+}
+ 
+ 
+ 
+div#calendar ul.label{
+    float:left;
+    margin: 0px;
+    padding: 0px;
+    margin-top:5px;
+    margin-left: 5px;
+}
+ 
+div#calendar ul.label li{
+    margin:0px;
+    padding:0px;
+    margin-right:5px;  
+    float:left;
+    list-style-type:none;
+    width: 35px;
+    height:30px;
+    line-height:30px;
+    vertical-align:middle;
+    text-align:center;
+    color:#000;
+    font-size: 10px;
+    background-color: transparent;
+}
+ 
+ 
+div#calendar ul.dates{
+    float:left;
+    margin: 0px;
+    padding: 0px;
+    margin-left: 5px;
+    margin-bottom: 5px;
+}
+ 
+/** overall width = width+padding-right**/
+div#calendar ul.dates li{
+    margin:0px;
+    padding:0px;
+    margin-right:5px;
+    margin-top: 5px;
+    line-height:40px;
+    vertical-align:middle;
+    float:left;
+    list-style-type:none;
+    width:35px;
+    height:40px;
+    font-size:10px;
+    background-color: #DDD;
+    color:#000;
+    text-align:center; 
+}
+ 
+:focus{
+    outline:none;
+}
+ 
+div.clear{
+    clear:both;
+} 
 /*Blog styling*/
 .blogcontent {
 	display: grid;
