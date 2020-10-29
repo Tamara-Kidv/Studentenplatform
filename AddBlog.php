@@ -28,7 +28,7 @@
                     if(isset($_POST['submitpost']))
                     {
                         date_default_timezone_set('Europe/Amsterdam');
-                        $date = date('d/m/y H:i');
+                        $date = date('d-m-Y H:i');
                         if(isset($_FILES['image']['type']) && $_FILES['image']['type'] !== "") 
                         {
                             $uploads_dir ='Files';
