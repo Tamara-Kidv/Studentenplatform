@@ -366,7 +366,15 @@ div .add-blog-button {
 #blogcontentflex div div p, #blogcontentflex div div a , #blogcontentflex div div h3, #searchResults div div p, #searchResults div div a , #searchResults div div h3 {
     padding-left: 25px;
     padding-right: 25px;
+    /*overflow: hidden;*/
+}
+.nooverflow {
     overflow: hidden;
+}
+.blogimg {
+    width: 300px;
+    height: auto;
+    margin: auto;
 }
 .blogcategorie {
     width: 200px;
@@ -390,7 +398,7 @@ div .add-blog-button {
     border: 20px;
     border-style: solid;
     border-color: #005AA7;
-    background-color: #005AA7; 
+    background-color: #005AA7;
     }
 .blogcategorie:after {
     content: "";
