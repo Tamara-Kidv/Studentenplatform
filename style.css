@@ -366,6 +366,7 @@ div .add-blog-button {
 #blogcontentflex div div p, #blogcontentflex div div a , #blogcontentflex div div h3, #searchResults div div p, #searchResults div div a , #searchResults div div h3 {
     padding-left: 25px;
     padding-right: 25px;
+    overflow: hidden;
 }
 .blogcategorie {
     width: 200px;
