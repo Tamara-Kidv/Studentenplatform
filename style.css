@@ -175,6 +175,7 @@ hr {
 }
 
 .homenews {
+    overflow: hidden;
     width: 300px;
 }
 

@@ -315,13 +315,13 @@
                     <div id="FaQhome">
                         <h2 class="Homekopje">FAQ:</h2>
                         <ul id="homelist">
-                            <li><a href="http://localhost/studentenplatform/template.php?FAQ">How is NHL Stenden handeling the situation around Covid-19 virus?</a></li>
+                            <li><a href="http://localhost/studentenplatform/index.php?FAQ">How is NHL Stenden handeling the situation around Covid-19 virus?</a></li>
                             <li><br></li>
-                            <li><a href="http://localhost/studentenplatform/template.php?FAQ">Where can i order my books?</a></li>
+                            <li><a href="http://localhost/studentenplatform/index.php?FAQ">Where can i order my books?</a></li>
                             <li><br></li>
-                            <li><a href="http://localhost/studentenplatform/template.php?FAQ">How can i see my schedule?</a></li>
+                            <li><a href="http://localhost/studentenplatform/index.php?FAQ">How can i see my schedule?</a></li>
                             <li><br></li>
-                            <li><a href="http://localhost/studentenplatform/template.php?FAQ">See more...</a></li>
+                            <li><a href="http://localhost/studentenplatform/index.php?FAQ">See more...</a></li>
                         </ul>
                     </div>
                 </div>
