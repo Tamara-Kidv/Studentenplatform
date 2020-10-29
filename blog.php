@@ -83,7 +83,7 @@
                         <br>
                         <p class="blogcategorie"><?= $entry->category?></p>
 	                    <h3><?= $entry->title ?></h3>
-	                    <p><?= strftime('%A %e %B %Y %T', strtotime($entry->pubDate)) ?></p>
+	                    <p><i><?= strftime('%A %e %B %Y %T', strtotime($entry->pubDate)) ?></i></p>
 	                    <p><?= $entry->description ?></p>
 	                    <!-- <a class="leesmeer" href="<?= $entry->link ?>">Lees Meer</a> -->
                         <a class="leesmeer" href="readblog.php?title=<?= $entry->title ?>">Lees Meer</a>

@@ -2,11 +2,11 @@
 		margin: 0;
 		padding: 0;
 	}
-    a {
+    header a {
         text-decoration: none;
         color: #0464b3;
     }
-    a:hover{
+    header a:hover{
         color: #012340;
         text-decoration: underline;
     }
@@ -461,8 +461,8 @@ div .add-blog-button {
 }
 .readblogimg {
     grid-area: readblogimg;
-    max-width: 30vw;
-    max-height: auto;
+    height: 250px;
+    width: auto;
 }
 .readblogtitle {
     grid-area: readblogtitle;
