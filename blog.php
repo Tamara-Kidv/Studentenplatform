@@ -87,7 +87,7 @@
 	                    <p><i><?= strftime('%A %e %B %Y %R', strtotime($entry->pubDate)) ?></i></p>
 	                    <p class="nooverflow"><?= $entry->description ?></p>                        
 	                    <!-- <a class="leesmeer" href="<?= $entry->link ?>">Lees Meer</a> -->
-                        <a class="leesmeer" href="readblog.php?title=<?= $entry->title ?>">Lees Meer</a>
+                        <a class="leesmeer" href="readblog.php?title=<?= $entry->title ?>">Read More</a>
                 	</div>	            
             	</div>
             <?php } else {                
@@ -101,7 +101,7 @@
                     <img class="blogimg" src=<?= $entry->img ?> alt="Article image">
                     <p class="nooverflow"><?= $entry->description ?></p>                        
                     <!-- <a class="leesmeer" href="<?= $entry->link ?>">Lees Meer</a> -->
-                    <a class="leesmeer" href="readblog.php?title=<?= $entry->title ?>">Lees Meer</a>
+                    <a class="leesmeer" href="readblog.php?title=<?= $entry->title ?>">Read More</a>
                     </div>              
                 </div>
             <?php  } } }
