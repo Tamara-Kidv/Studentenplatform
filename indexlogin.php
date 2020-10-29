@@ -47,10 +47,10 @@ else{
         
         $xml = simplexml_load_file("login.xml");
         $sxe = new simpleXMLElement($xml->asXML());
-        $user = $sxe->addChild("user\n");
-        $user->addChild("gebruiker\n",$email);
-        $user->addChild("wachtwoord\n",$hash);
-        $user->addChild("level\n",$level);
+        $user = $sxe->addChild("user");
+        $user->addChild("gebruiker",$email);
+        $user->addChild("wachtwoord",$hash);
+        $user->addChild("level",$level);
         $sxe->asXML("login.xml");
         
             //$xml = simplexml_load_file("login.xml");
@@ -84,8 +84,8 @@ elseif($_POST['login'])
     
     foreach($xml->user as $user)
     {
-        $XMLpsw = $user->psw;
-        $XMLuser = $user->username;
+        $XMLpsw = $user->wachtwoord;
+        $XMLuser = $user->gebruiker;
         
        
         //inlog gegevens controleren met loop data
@@ -93,15 +93,19 @@ elseif($_POST['login'])
         if($email == $XMLuser && hash('sha256',$password) == $XMLpsw)
         {
             //Login gelukt
-            $login = true;
             $_SESSION['login'] = true;
-            //$_SESSION['userid'] = 
+            $_SESSION['userid'] = $user->level; 
             break;
         }
+    }    
+    if($_SESSION['login'] === true)
+    {
+        header('location:homepage.php');
     }
-    // terug naar login
-
-    
+    else 
+    {
+        header('location:inlog.php');
+    }
     
 }
 else
@@ -117,10 +121,9 @@ else
 ////fwrite  A+!!!! /n is een enter
 ////
 ////fclose
-
+        
 	?>
     
-     <meta http-equiv="refresh" content="3; url=homepage.php" />
     
 
                

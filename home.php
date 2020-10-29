@@ -3,13 +3,9 @@ session_start();
 
 if($_SESSION['login'] != true)
 {
+            header('login.php');
+            exit;
 
-}
-else{
-            echo <<<HTML
-        <a href="errorpage.php"> </a> 
-        HTML;
-}
 ?>
 <!DOCTYPE html>
 <html lang="en">
