@@ -20,6 +20,7 @@ if(isset($_POST['register']))
         }
         else{
             $acces = "ACCEPTED";
+            
         }
         
         if($acces == "DENIED"){
@@ -53,6 +54,7 @@ else{
         $user->addChild("level",$level);
         $sxe->asXML("login.xml");
         
+        header('location:inlog.php');
             //$xml = simplexml_load_file("login.xml");
         
             //$user = $xml->addChild("user");
@@ -95,18 +97,17 @@ elseif($_POST['login'])
             //Login gelukt
             $_SESSION['login'] = true;
             $_SESSION['userid'] = $user->level; 
-            break;
+            //break;
         }
+//        else{
+//            $_SESSION['login'] = false;
+//        }
+
     }    
     if($_SESSION['login'] === true)
     {
         header('location:homepage.php');
-    }
-    else 
-    {
-        header('location:inlog.php');
-    }
-    
+    } 
 }
 else
 {
