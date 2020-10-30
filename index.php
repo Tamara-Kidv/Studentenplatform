@@ -63,7 +63,7 @@
                 } else if(isset($_GET['AddBlog'])) {
                     $page = "AddBlog";
                 } else if (isset($_GET['Profile'])){
-                    $page = "Profiel";
+                    $page = "Profile";
                 } else {
                     $page = "Home";
                 }
@@ -79,20 +79,5 @@
             <p id="footerdate">	&copy; 2020 - 2021</p>
             <p id="footerprivacy"> <a class="footerwhite" href="https://www.nhlstenden.com/over-nhl-stenden/over-deze-website/privacy-statement" target="_blank">privacystatement</a> - <a class="footerwhite" href="?Profile">profile <i class="fas fa-user"></i></a></p>
         </footer>
-
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title></title>
-    </head>
-    <body>
-        <?php
-        // put your code here
-        ?>
     </body>
 </html>

@@ -63,7 +63,7 @@
     }
     #banner{
         display: grid;
-        height: 10vh;
+        height: 70px;
         background-image: url("images/background.png");
         background-size: cover;
     }
@@ -80,7 +80,7 @@
     footer {
         display: grid;
         grid-template-columns: 45% 40% auto;
-        height: 3vh;
+        height: 5vh;
         width: 100%;
         background-color: #0464b3 ;
     }
