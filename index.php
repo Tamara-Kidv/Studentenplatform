@@ -48,7 +48,7 @@
                 } else if(isset($_GET['AddBlog'])) {
                     $page = "AddBlog";
                 } else if (isset($_GET['Profile'])){
-                    $page = "Profiel";
+                    $page = "Profile";
                 } else {
                     $page = "Home";
                 }
