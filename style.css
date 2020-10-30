@@ -113,7 +113,7 @@
 
 /*Home styling*/
 #homeimg {
-    width: 98vw;
+    width: 99vw;
     height: 17vw;
 }
 
@@ -140,13 +140,13 @@
 
 #Hgrid {
     margin-top: 50px;
-    margin-left: 8vw;
+    margin-left: 50px;
     display: grid;
     grid-template-columns: 400px 200px 200px auto auto;
     grid-template-rows: auto;
     grid-template-areas: Homeleft homemiddle calendar;
     grid-column-gap: 0px;
-    width: 1200px;
+    width: 90vw;
 
 }
 
