@@ -106,15 +106,15 @@
     body {
         font-family: arial;
     }
-    
+
 /*Login styling*/
 
 
 
 /*Home styling*/
 #homeimg {
-    width: 1517px;
-    height: 370px;
+    width: 99vw;
+    height: 17vw;
 }
 
 #homekopjes {
@@ -143,15 +143,16 @@
     margin-left: 50px;
     display: grid;
     grid-template-columns: 400px 200px 200px auto auto;
-    grid-template-rows: auto; 
+    grid-template-rows: auto;
     grid-template-areas: Homeleft homemiddle calendar;
     grid-column-gap: 0px;
-    width: 1200px;
+    width: 90vw;
+
 }
 
 .Homeline {
     width: 3px;
-    background-color: #0c70c7;    
+    background-color: #0c70c7;
     height: 800px;
 }
 
@@ -200,18 +201,19 @@ hr {
 /*Blog styling*/
 .blogcontent {
 	display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 53px;
-    grid-template-areas: "search . add-blog-button . selector";
+    grid-template-areas: "search add-blog-button selector";
 }
 div .selectorcontainer{
     grid-area: selector;
-    margin-left: auto;
+    padding-right: 50px;
+    margin: auto;
 }
 div .searchcontainer{
     grid-area: search;
-    margin-top: auto;
-    margin-right: auto;
+    margin: auto;
+    padding-left: 50px;
 }
 div .add-blog-button {
     grid-area: add-blog-button;
@@ -300,7 +302,7 @@ div .add-blog-button {
 	text-align: right;
 }
     /*button styling*/
-.blogselect, .blogsearchbarbutton, .bloginput { 
+.blogselect, .blogsearchbarbutton, .bloginput {
     font-size: 13px;
     border: 1px solid #ccc;
     height: 35px;
@@ -308,7 +310,7 @@ div .add-blog-button {
     background-color: white;
 }
 .blogselect{
-    width: 150px;    
+    width: 150px;
 }
 .bloginput {
     width: 50px;
@@ -422,7 +424,7 @@ summary:focus {
 }
 
 /*Contact styling*/
-.grid-container{
+.grid-container {
 	display:grid;
 	grid-template-columns: repeat(2, 100px);
 	grid-auto-rows: minmax(150px, auto);
@@ -431,18 +433,19 @@ summary:focus {
 	align-content: stretch;
 }
 
-
-textarea{
+textarea {
 	resize: none;
 	height: 250px;
 	width:542px;
 }
 
-#footer_contact{
-	position: absolute;
-	text-align: center;
-	color: white;
-	bottom: 0%;
-	width: 100%;
-	height: 2.5rem;
+#submitcontact {
+	background-color: #005AA7
+	color:white;
+	width:150px;
+	height:40px;
+}
+
+#onderwerpcontact {
+width:540px;
 }

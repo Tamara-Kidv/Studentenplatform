@@ -1,4 +1,5 @@
 <?php
+/*
 session_start();
 
 if($_SESSION['login'] != true)
@@ -6,6 +7,7 @@ if($_SESSION['login'] != true)
             header('login.php');
             exit;
 }
+*/
 ?>
 
 <!DOCTYPE html>
@@ -48,7 +50,7 @@ if($_SESSION['login'] != true)
                                 <div>
                                     <br>
                                     <h3><?= $entry->title ?></h3>
-                                    <p id="homep"><?= strftime('%A %e %B %Y %T', strtotime($entry->pubDate)) ?></p>
+                                    <p id="homep"><?= strftime('%A %e %B %Y %R', strtotime($entry->pubDate)) ?></p>
                                     <p id="homep"><?= $entry->description ?></p>
                                     <a class="leesmeer" href="<?= $entry->link ?>">Lees Meer</a>
                                     <hr>
@@ -89,7 +91,7 @@ if($_SESSION['login'] != true)
                             <div>
                                 <br>
                                 <h3><?= $entry->title ?></h3>
-                                <p id="homep"><?= strftime('%A %e %B %Y %T', strtotime($entry->pubDate)) ?></p>
+                                <p id="homep"><?= strftime('%A %e %B %Y %R', strtotime($entry->pubDate)) ?></p>
                                 <p id="homep"><?= $entry->description ?></p>
                                 <a class="leesmeer" href="readblog.php?title=<?= $entry->title ?>">Lees Meer</a>
                                 <hr>
@@ -101,8 +103,6 @@ if($_SESSION['login'] != true)
                         ?>
                         </div>
                     </div>
-                    <div id="homecalendar">
- 
             
                     <div id="FaQhome">
                         <h2 class="Homekopje">FAQ:</h2>

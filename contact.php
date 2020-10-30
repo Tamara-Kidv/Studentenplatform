@@ -32,14 +32,10 @@
     </div>
     </div>
     <div class="grid=item-3">
-      <input type="text" style="width:540px;" name="subject" placeholder="Onderwerp"> <br /> <br />
+      <input id="onderwerpcontact" type="text" name="subject" placeholder="Onderwerp"> <br /> <br />
       <textarea name="message"  placeholder="Bericht"></textarea> <br />
-      <input type="submit" style="background-color:#005AA7;color:white;width:150px;
-      height:40px;" value="Submit">  <br /> <br />
+      <input id="submitcontact" type="submit" value="Submit">  <br /> <br />
     </div>
     </div>
-  <footer id="footer_contact">
-    <p>@2020-2021</p>
-</footer>
 </body>
 </html>
