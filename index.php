@@ -2,15 +2,12 @@
 
 <html lang="en">
     <head>
-       <?php
-/*            session_start();
-
-            if($_SESSION['login'] != true) {
-                header('Location: inlog.php');
-                exit;
-
-        } */
-        ?>
+<?PHP
+session_start();
+if (!(isset($_SESSION['login']) && $_SESSION['login'] != '')) {
+header ("Location: inlog.php");
+}
+?>
         <meta charset="UTF-8">
         <title>Home</title>
         <link rel="stylesheet" href="style.css">
