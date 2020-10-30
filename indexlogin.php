@@ -106,7 +106,7 @@ elseif($_POST['login'])
     }    
     if($_SESSION['login'] === true)
     {
-        header('location:homepage.php');
+        header('location:index.php');
     } 
 }
 else
