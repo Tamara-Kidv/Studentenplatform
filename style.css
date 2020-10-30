@@ -132,7 +132,7 @@
     height: 20px;
 }
 
-.onderkopje {
+.Honderkopje {
     margin: 10px;
     font-family: Arial;
     font-size: 13px;
@@ -142,7 +142,7 @@
     margin-top: 50px;
     margin-left: 50px;
     display: grid;
-    grid-template-columns: 400px 200px 200px auto auto;
+    grid-template-columns: 33% 12% 16% auto auto;
     grid-template-rows: auto;
     grid-template-areas: Homeleft homemiddle calendar;
     grid-column-gap: 0px;
@@ -160,10 +160,17 @@
     font-family: Arial;
     font-size: 11px;
     margin: 10px;
+    padding-bottom: 5px;
+}
+
+.Hleesmeer {
+    margin-top: auto;
+    margin-left: 10px;
+    text-align: right;
 }
 
 hr {
-    margin: 30px;
+    margin-top: 30px;
     color: cyan;
 }
 

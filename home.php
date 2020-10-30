@@ -49,10 +49,10 @@ if($_SESSION['login'] != true)
                             <div>
                                 <div>
                                     <br>
-                                    <h3><?= $entry->title ?></h3>
-                                    <p id="homep"><?= strftime('%A %e %B %Y %R', strtotime($entry->pubDate)) ?></p>
+                                    <h3 class="Honderkopje"><?= $entry->title ?></h3>
+                                    <p id="homep"><?= strftime('%A %e %B %Y %R', strtotime($entry->pubDate))?></p>
                                     <p id="homep"><?= $entry->description ?></p>
-                                    <a class="leesmeer" href="<?= $entry->link ?>">Lees Meer</a>
+                                    <a class="Hleesmeer" href="<?= $entry->link ?>">Read More</a>
                                     <hr>
                                 </div>
                             </div>
@@ -90,10 +90,10 @@ if($_SESSION['login'] != true)
                         <div>
                             <div>
                                 <br>
-                                <h3><?= $entry->title ?></h3>
+                                <h3 class="Honderkopje"><?= $entry->title ?></h3>
                                 <p id="homep"><?= strftime('%A %e %B %Y %R', strtotime($entry->pubDate)) ?></p>
                                 <p id="homep"><?= $entry->description ?></p>
-                                <a class="leesmeer" href="readblog.php?title=<?= $entry->title ?>">Lees Meer</a>
+                                <a class="Hleesmeer" href="readblog.php?title=<?= $entry->title ?>">Read More</a>
                                 <hr>
                             </div>
                         </div>
