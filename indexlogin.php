@@ -101,15 +101,7 @@ elseif($_POST['login'])
             echo "<meta http-equiv='refresh' content='1; url=index.php' />";
             break;
         }
-    }
-    // terug naar login
-    echo "<meta http-equiv='refresh' content='1; url=inlog.php' />";
-    
-    
 
-            $_SESSION['userid'] = $user->level; 
-            //break;
-        }
 //        else{
 //            $_SESSION['login'] = false;
 //        }
@@ -117,9 +109,8 @@ elseif($_POST['login'])
     }    
     if($_SESSION['login'] === true)
     {
-        header('location:homepage.php');
+        header('location:index.php');
     } 
-
 }
 else
 {
