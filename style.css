@@ -201,18 +201,19 @@ hr {
 /*Blog styling*/
 .blogcontent {
 	display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 53px;
-    grid-template-areas: "search . add-blog-button . selector";
+    grid-template-areas: "search add-blog-button selector";
 }
 div .selectorcontainer{
     grid-area: selector;
-    margin-left: auto;
+    padding-right: 50px;
+    margin: auto;
 }
 div .searchcontainer{
     grid-area: search;
-    margin-top: auto;
-    margin-right: auto;
+    margin: auto;
+    padding-left: 50px;
 }
 div .add-blog-button {
     grid-area: add-blog-button;
