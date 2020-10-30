@@ -20,6 +20,7 @@ if(isset($_POST['register']))
         }
         else{
             $acces = "ACCEPTED";
+            
         }
         
         if($acces == "DENIED"){
@@ -47,12 +48,13 @@ else{
         
         $xml = simplexml_load_file("login.xml");
         $sxe = new simpleXMLElement($xml->asXML());
-        $user = $sxe->addChild("user\n");
-        $user->addChild("gebruiker\n",$email);
-        $user->addChild("wachtwoord\n",$hash);
-        $user->addChild("level\n",$level);
+        $user = $sxe->addChild("user");
+        $user->addChild("gebruiker",$email);
+        $user->addChild("wachtwoord",$hash);
+        $user->addChild("level",$level);
         $sxe->asXML("login.xml");
         
+        header('location:inlog.php');
             //$xml = simplexml_load_file("login.xml");
         
             //$user = $xml->addChild("user");
@@ -84,8 +86,8 @@ elseif($_POST['login'])
     
     foreach($xml->user as $user)
     {
-        $XMLpsw = $user->psw;
-        $XMLuser = $user->username;
+        $XMLpsw = $user->wachtwoord;
+        $XMLuser = $user->gebruiker;
         
        
         //inlog gegevens controleren met loop data
@@ -93,8 +95,8 @@ elseif($_POST['login'])
         {
           var_dump("Hij pakt inlog yes");
             //Login gelukt
-            $login = true;
             $_SESSION['login'] = true;
+
             //$_SESSION['userid'] = 
             echo "<meta http-equiv='refresh' content='1; url=index.php' />";
             break;
@@ -104,6 +106,20 @@ elseif($_POST['login'])
     echo "<meta http-equiv='refresh' content='1; url=inlog.php' />";
     
     
+
+            $_SESSION['userid'] = $user->level; 
+            //break;
+        }
+//        else{
+//            $_SESSION['login'] = false;
+//        }
+
+    }    
+    if($_SESSION['login'] === true)
+    {
+        header('location:homepage.php');
+    } 
+
 }
 else
 {
@@ -118,9 +134,8 @@ else
 ////fwrite  A+!!!! /n is een enter
 ////
 ////fclose
-
+        
 	?>
-    
 
     
 

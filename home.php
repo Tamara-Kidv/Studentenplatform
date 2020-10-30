@@ -1,3 +1,14 @@
+
+<?php
+session_start();
+
+if($_SESSION['login'] != true)
+{
+            header('login.php');
+            exit;
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>

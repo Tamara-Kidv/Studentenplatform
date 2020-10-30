@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
     <head>
        <?php
@@ -63,5 +64,20 @@
             <p id="footerdate">	&copy; 2020 - 2021</p>
             <p id="footerprivacy">privacystatement - <a href="?Profile">profile</a></p>
         </footer>
+
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+    </head>
+    <body>
+        <?php
+        // put your code here
+        ?>
     </body>
 </html>
