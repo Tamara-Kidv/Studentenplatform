@@ -1,17 +1,4 @@
 <!DOCTYPE html>
-<?php
-session_start();
-
-if($_SESSION['login'] != true)
-{
-
-}
-else{
-            echo <<<HTML
-        <a href="errorpage.php"> </a> 
-        HTML;
-}
-?>
 <html lang="en">
     <head>
         <link rel="StyleSheet" href="Style1.css">
@@ -31,13 +18,17 @@ else{
                     </select>
                     <label for="NameArticle">Title: *</label>
                     <input type="text" required id="NameArticle" placeholder="Input Title" name="titleAB" autocomplete="off" /><br>
-                    <label for= "AddBlog">Description *</label>
-                    <textarea class="AddBlog" required placeholder="Input text..." name="descriptionAB"></textarea>
+                    <label for= "AddBlogdescription">Description *</label>
+                    <textarea class="AddBlogdescription" required placeholder="Input text..." name="descriptionAB" maxlength="150"></textarea>
+                    <label for= "AddBlogcontent">Content *</label>
+                    <textarea class="AddBlogcontent" required placeholder="Input text..." name="contentAB" minlength="150"></textarea>
                     <label for="Image">insert image here</label>
                     <input type="file" name="image"/>
                     <?php
                     if(isset($_POST['submitpost']))
                     {
+                        date_default_timezone_set('Europe/Amsterdam');
+                        $date = date('d-m-Y H:i');
                         if(isset($_FILES['image']['type']) && $_FILES['image']['type'] !== "") 
                         {
                             $uploads_dir ='Files';
@@ -55,9 +46,11 @@ else{
                                 $post->addChild('category', $_POST["CategoryAB"]);
                                 $post->addchild('img', $link);
                                 $post->addChild('title', $_POST["titleAB"]);
+                                $post->addChild('pubDate', $date);
                                 $post->addChild('description', $_POST["descriptionAB"]);
+                                $post->addChild('content', $_POST['contentAB']);
                                 $xml->saveXML("Article.xml");
-                                header('Location: template.php?Blog', true, 301);
+                                header('Location: index.php?Blog', true, 301);
                                 exit();
                             }
                             else
@@ -72,9 +65,11 @@ else{
                             $post = $xml->addChild('item', '');
                             $post->addChild('category', $_POST["CategoryAB"]);
                             $post->addChild('title', $_POST["titleAB"]);
+                            $post->addChild('pubDate', $date);
                             $post->addChild('description', $_POST["descriptionAB"]);
+                            $post->addChild('content', $_POST['contentAB']);
                             $xml->saveXML("Article.xml");
-                            header('Location: template.php?Blog', true, 301);
+                            header('Location: index.php?Blog', true, 301);
                             exit();
                         }
                     }

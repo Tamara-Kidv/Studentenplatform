@@ -1,3 +1,12 @@
+<?php
+/*	session_start();
+
+	if($_SESSION['login'] !== true)
+	{
+		header('Location: inlog.php');
+		exit;
+	}*/
+?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -41,20 +50,23 @@
 	        		if ($entry->title == $contenttitle) {
 	        			if(empty($entry->img)) {
 			?>				<!-- Article content if image is empty-->
-	        				<div class="articlecontainer">
+	        			<div class="articlecontainer">
 	        				<h1><?= $entry->title ?></h1>
 			        		<p class="readblogdesc"><?= $entry->description ?></p>
 			        		<p class="readblogcontent"><?= $entry->content ?></p>
-	        		</div>
+	        		    </div>
 	        		<?php
 	        			}
 	        			else {
 	        ?>				<!-- Article content if image is not empty-->	        		
 	        			<div class="articlecontainer">
-		        		<p class="readblogdesc"><?= $entry->description ?></p>
-		        		<img class="readblogimg" src=<?= $entry->img ?> alt="Article image">
-		        		<p class="readblogcontent"><?= $entry->content ?></p>
-	        		</div>
+                            <h1><?= $entry->title ?></h1>
+                                <p class="readblogdesc"><?= $entry->description ?></p>
+                            <div>
+                                <img class="readblogimg" src=<?= $entry->img ?> alt="Article image">
+                                <p class="readblogcontent"><?= $entry->content ?></p>
+                            </div>
+	        		    </div>
 
 	        <?php
 	        	} } } /*Closing brackets. 3 of them.*/

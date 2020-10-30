@@ -1,3 +1,4 @@
+
 <?php
 session_start();
 
@@ -7,6 +8,7 @@ if($_SESSION['login'] != true)
             exit;
 
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -24,7 +26,6 @@ if($_SESSION['login'] != true)
                         <?php 
                             $feeds = array(
                             "https://www.nu.nl/rss/Tech",
-                            "blog.xml",
                             "http://feeds.feedburner.com/tweakers/nieuws"
                             );
                             $entries = array();
@@ -66,9 +67,7 @@ if($_SESSION['login'] != true)
                         <h5 class="Homekopje">Soon in agenda:</h5>
                         <?php 
                             $feeds = array(
-                            "https://www.nu.nl/rss/Tech",
-                            "blog.xml",
-                            "http://feeds.feedburner.com/tweakers/nieuws"
+                            "Article.xml"
                             );
                             $entries = array();
                         foreach($feeds as $feed) {
@@ -93,7 +92,7 @@ if($_SESSION['login'] != true)
                                 <h3><?= $entry->title ?></h3>
                                 <p id="homep"><?= strftime('%A %e %B %Y %T', strtotime($entry->pubDate)) ?></p>
                                 <p id="homep"><?= $entry->description ?></p>
-                                <a class="leesmeer" href="<?= $entry->link ?>">Lees Meer</a>
+                                <a class="leesmeer" href="readblog.php?title=<?= $entry->title ?>">Lees Meer</a>
                                 <hr>
                             </div>
                         </div>
@@ -327,13 +326,13 @@ if($_SESSION['login'] != true)
                     <div id="FaQhome">
                         <h2 class="Homekopje">FAQ:</h2>
                         <ul id="homelist">
-                            <li><a href="http://localhost/studentenplatform/template.php?FAQ">How is NHL Stenden handeling the situation around Covid-19 virus?</a></li>
+                            <li><a href="http://localhost/studentenplatform/index.php?FAQ">How is NHL Stenden handeling the situation around Covid-19 virus?</a></li>
                             <li><br></li>
-                            <li><a href="http://localhost/studentenplatform/template.php?FAQ">Where can i order my books?</a></li>
+                            <li><a href="http://localhost/studentenplatform/index.php?FAQ">Where can i order my books?</a></li>
                             <li><br></li>
-                            <li><a href="http://localhost/studentenplatform/template.php?FAQ">How can i see my schedule?</a></li>
+                            <li><a href="http://localhost/studentenplatform/index.php?FAQ">How can i see my schedule?</a></li>
                             <li><br></li>
-                            <li><a href="http://localhost/studentenplatform/template.php?FAQ">See more...</a></li>
+                            <li><a href="http://localhost/studentenplatform/index.php?FAQ">See more...</a></li>
                         </ul>
                     </div>
                 </div>
