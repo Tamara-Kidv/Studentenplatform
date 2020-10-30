@@ -113,8 +113,8 @@
 
 /*Home styling*/
 #homeimg {
-    width: 1517px;
-    height: 370px;
+    width: 100vw;
+    height: 17vw;
 }
 
 #homekopjes {
@@ -140,13 +140,14 @@
 
 #Hgrid {
     margin-top: 50px;
-    margin-left: 50px;
+    margin-left: 8vw;
     display: grid;
     grid-template-columns: 400px 200px 200px auto auto;
     grid-template-rows: auto;
     grid-template-areas: Homeleft homemiddle calendar;
     grid-column-gap: 0px;
-    width: 1200px;
+    width: 1200vw;
+
 }
 
 .Homeline {

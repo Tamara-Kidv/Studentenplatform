@@ -1,4 +1,5 @@
 <?php
+/*
 session_start();
 
 if($_SESSION['login'] != true)
@@ -6,6 +7,7 @@ if($_SESSION['login'] != true)
             header('login.php');
             exit;
 }
+*/
 ?>
 
 <!DOCTYPE html>
@@ -101,8 +103,6 @@ if($_SESSION['login'] != true)
                         ?>
                         </div>
                     </div>
-                    <div id="homecalendar">
- 
             
                     <div id="FaQhome">
                         <h2 class="Homekopje">FAQ:</h2>
