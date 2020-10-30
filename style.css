@@ -2,6 +2,9 @@
 		margin: 0;
 		padding: 0;
 	}
+    .footerwhite{
+        color:white ;
+    }
     header a {
         text-decoration: none;
         color: #0464b3;
@@ -16,6 +19,7 @@
         grid-template-columns: 100px auto auto auto auto 60px;
         font-family: arial;
     }
+
     #logo{
         height: 100%;
         grid-column-start: 1;
@@ -64,6 +68,7 @@
         background-size: cover;
     }
     #title{
+        color: white;
         background-color:#0065b1;
         margin: auto;
         padding: 5px;
