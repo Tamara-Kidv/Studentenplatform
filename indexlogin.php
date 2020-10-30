@@ -108,7 +108,7 @@ elseif($_POST['login'])
     
 
             $_SESSION['userid'] = $user->level; 
-            //break;
+            break;
         }
 //        else{
 //            $_SESSION['login'] = false;
