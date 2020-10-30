@@ -2,24 +2,39 @@
 
 <html lang="en">
     <head>
-       <?php
-/*            session_start();
-
-            if($_SESSION['login'] != true) {
-                header('Location: inlog.php');
-                exit;
-
-        } */
+        <?php
+           /* session_start();
+            if (!(isset($_SESSION['login']) && $_SESSION['login'] != '')) {
+            header ("Location: inlog.php");
+            }*/
         ?>
         <meta charset="UTF-8">
-        <title>Home</title>
+        <?php
+                if(isset($_GET['Home'])) {
+                    $page = "Home";
+                } else if(isset($_GET['Blog'])) {
+                    $page = "Blog";
+                } else if(isset($_GET['FAQ'])) {
+                    $page = "FAQ";
+                } else if(isset($_GET['Contact'])) {
+                    $page = "Contact";
+                } else if(isset($_GET['AddBlog'])) {
+                    $page = "AddBlog";
+                } else if (isset($_GET['Profile'])){
+                    $page = "Profiel";
+                } else {
+                    $page = "Home";
+                }
+                echo "<title>$page</title>"
+                ?> 
+
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <script src="https://kit.fontawesome.com/27922e58ca.js" crossorigin="anonymous"></script>
     </head>
     <body>
         <header>
-            <img id="logo" src="images/logo.png" alt="logo">
+                <img id="logo" src="images/logo.png" alt="logo">
                 <a id="navhome" href="?Home">Home</a>
                 <a id="navblog" href="?Blog">Blog</a>
                 <a id="navfaq" href="?FAQ">FAQ</a>
@@ -62,7 +77,7 @@
         </main>
         <footer>       
             <p id="footerdate">	&copy; 2020 - 2021</p>
-            <p id="footerprivacy">privacystatement - <a href="?Profile">profile</a></p>
+            <p id="footerprivacy"> <a class="footerwhite" href="https://www.nhlstenden.com/over-nhl-stenden/over-deze-website/privacy-statement" target="_blank">privacystatement</a> - <a class="footerwhite" href="?Profile">profile <i class="fas fa-user"></i></a></p>
         </footer>
 
 <!--
