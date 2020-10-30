@@ -2,11 +2,11 @@
 		margin: 0;
 		padding: 0;
 	}
-    a {
+    header a {
         text-decoration: none;
         color: #0464b3;
     }
-    a:hover{
+    header a:hover{
         color: #012340;
         text-decoration: underline;
     }
@@ -175,6 +175,7 @@ hr {
 }
 
 .homenews {
+    overflow: hidden;
     width: 300px;
 }
 
@@ -366,6 +367,15 @@ div .add-blog-button {
 #blogcontentflex div div p, #blogcontentflex div div a , #blogcontentflex div div h3, #searchResults div div p, #searchResults div div a , #searchResults div div h3 {
     padding-left: 25px;
     padding-right: 25px;
+    /*overflow: hidden;*/
+}
+.nooverflow {
+    overflow: hidden;
+}
+.blogimg {
+    width: 300px;
+    height: auto;
+    margin: auto;
 }
 .blogcategorie {
     width: 200px;
@@ -389,7 +399,7 @@ div .add-blog-button {
     border: 20px;
     border-style: solid;
     border-color: #005AA7;
-    background-color: #005AA7; 
+    background-color: #005AA7;
     }
 .blogcategorie:after {
     content: "";
@@ -443,31 +453,36 @@ div .add-blog-button {
     top:1px;
 }
 .articlecontainer {
-    display: grid;
+    display: flex;
     width: 65vw;
     margin: auto;
-    grid-template-areas:
-    "readblogtitle readblogtitle"
-    "readblogdesc readblogimg"
-    "readblogcontent readblogcontent";
+    flex-direction: column;
+    align-items: baseline;
+    flex-wrap: wrap;
 }
 .readblogdesc {
-    grid-area: readblogdesc;
-    padding-top: 1em;
+    padding-top: 2em;
+    width: 100%;
 }
 .readblogcontent {
-    grid-area: readblogcontent;
-    padding-top: 1em;
+    padding-top: 0em;
+    width: 100%;
+    text-align: justify
 }
 .readblogimg {
-    grid-area: readblogimg;
-    max-width: 30vw;
-    max-height: auto;
+    height: 250px;
+    width: auto;
+    object-fit: contain;
+    float: left;
+    margin-right: 8px;
+    margin-bottom: 8px;
 }
 .readblogtitle {
-    grid-area: readblogtitle;
+    width: 100%;
 }
-
+.articlecontainer div{
+    margin-top: 2em;
+}
 
 /*FAQ styling*/
 #faqMain {

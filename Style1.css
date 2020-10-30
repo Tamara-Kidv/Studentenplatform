@@ -7,7 +7,7 @@
     border-radius: 15px;
     box-shadow: 5px 5px 15px;
     display: grid;
-    grid-template-rows: 50px 20px 50px 1px 20px 450px 25px 150px auto;
+    grid-template-rows: 50px 20px 50px 1px 20px 60px auto auto 25px auto;
     padding: 35px;
     padding-left: 25px;
     width: 30vw;
@@ -33,14 +33,25 @@
     border-radius: 5px;
     text-align: center;
 }
-.div1 textarea
+.div1 .AddBlogdescription
 {
     resize: none;
-    min-height: 150px;
+    height: 50px;
     width: 100%;
     background-color: white;
     display: block;
     overflow: auto;
+    border: none;
+    border-bottom: solid lightgrey 2px;
+    font-size: 10pt;
+    margin-bottom: 50px;
+}
+.div1 .AddBlogcontent
+{
+    min-height: 150px;
+    width: 100%;
+    background-color: white;
+    display: block;
     border: none;
     border-bottom: solid lightgrey 2px;
     font-size: 10pt;

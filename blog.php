@@ -20,9 +20,10 @@
         }
         $feeds = array(
         /*XML files go here*/
+/*      Old blogs  
         "https://www.nu.nl/rss/Tech",
         "blog.xml",
-        "http://feeds.feedburner.com/tweakers/nieuws",
+        "http://feeds.feedburner.com/tweakers/nieuws",*/
         "Article.xml"
         );
 
@@ -76,19 +77,34 @@
             foreach($entries as $entry){
                 /*Check if the category matches the selected value before printing it*/
                 if (stristr($entry->category, $selectedcategory) OR ($selectedcategory == "everything")) {
+                    if(empty($entry->img)) {
                 ?>            
                 <div>
                 	<div class="blogs">
                         <br>
                         <p class="blogcategorie"><?= $entry->category?></p>
 	                    <h3><?= $entry->title ?></h3>
-	                    <p><?= strftime('%A %e %B %Y %T', strtotime($entry->pubDate)) ?></p>
-	                    <p><?= $entry->description ?></p>
+	                    <p><i><?= strftime('%A %e %B %Y %R', strtotime($entry->pubDate)) ?></i></p>
+	                    <p class="nooverflow"><?= $entry->description ?></p>                        
 	                    <!-- <a class="leesmeer" href="<?= $entry->link ?>">Lees Meer</a> -->
-                        <a class="leesmeer" href="readblog.php?title=<?= $entry->title ?>">Lees Meer</a>
+                        <a class="leesmeer" href="readblog.php?title=<?= $entry->title ?>">Read More</a>
                 	</div>	            
             	</div>
-            <?php  } }
+            <?php } else {                
+            ?>
+            <div>
+                <div class="blogs">
+                    <br>
+                    <p class="blogcategorie"><?= $entry->category?></p>
+                    <h3><?= $entry->title ?></h3>
+                    <p><i><?= strftime('%A %e %B %Y %R', strtotime($entry->pubDate)) ?></i></p>
+                    <img class="blogimg" src=<?= $entry->img ?> alt="Article image">
+                    <p class="nooverflow"><?= $entry->description ?></p>                        
+                    <!-- <a class="leesmeer" href="<?= $entry->link ?>">Lees Meer</a> -->
+                    <a class="leesmeer" href="readblog.php?title=<?= $entry->title ?>">Read More</a>
+                    </div>              
+                </div>
+            <?php  } } }
         	?>
             <!-- end of print -->
         </div>

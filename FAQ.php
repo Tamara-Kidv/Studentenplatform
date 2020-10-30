@@ -1,6 +1,4 @@
-
-
- <div id="faqMain">
+<div id="faqMain">
 	<section id="faqUserSearchBox">
 		<div>
 			<input type="text" id="search" placeholder="Search..." class="searchBarButton">

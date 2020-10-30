@@ -91,11 +91,22 @@ elseif($_POST['login'])
         
        
         //inlog gegevens controleren met loop data
-        
         if($email == $XMLuser && hash('sha256',$password) == $XMLpsw)
         {
+          var_dump("Hij pakt inlog yes");
             //Login gelukt
             $_SESSION['login'] = true;
+
+            //$_SESSION['userid'] = 
+            echo "<meta http-equiv='refresh' content='1; url=index.php' />";
+            break;
+        }
+    }
+    // terug naar login
+    echo "<meta http-equiv='refresh' content='1; url=inlog.php' />";
+    
+    
+
             $_SESSION['userid'] = $user->level; 
             //break;
         }
@@ -108,6 +119,7 @@ elseif($_POST['login'])
     {
         header('location:index.php');
     } 
+
 }
 else
 {
@@ -124,7 +136,7 @@ else
 ////fclose
         
 	?>
-    
+
     
 
                
