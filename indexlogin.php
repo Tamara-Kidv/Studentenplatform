@@ -97,7 +97,7 @@ elseif($_POST['login'])
             //Login gelukt
             $_SESSION['login'] = true;
             $_SESSION['userid'] = $user->level; 
-            break;
+            //break;
         }
 //        else{
 //            $_SESSION['login'] = false;
