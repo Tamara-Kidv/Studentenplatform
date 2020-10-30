@@ -311,11 +311,13 @@ else{
     */
     private function _daysInMonth($month=null,$year=null){
          
-        if(null==($year))
+        if(null==($year){
             $year =  date("Y",time()); 
+        }
  
-        if(null==($month))
+        if(null==($month){
             $month = date("m",time());
+        }
              
         return date('t',strtotime($year.'-'.$month.'-01'));
     }
@@ -324,20 +326,20 @@ else{
 
     $calendar = new Calendar();
 
-    echo $calendar->show();
+    echo   $calendar->show();
         ?>
              
             
                     <div id="FaQhome">
                         <h2 class="Homekopje">FAQ:</h2>
                         <ul id="homelist">
-                            <li><a href="http://localhost/studentenplatform/template.php?FAQ">How is NHL Stenden handeling the situation around Covid-19 virus?</a></li>
+                            <li><a href="index.php?FAQ">How is NHL Stenden handeling the situation around Covid-19 virus?</a></li>
                             <li><br></li>
-                            <li><a href="http://localhost/studentenplatform/template.php?FAQ">Where can i order my books?</a></li>
+                            <li><a href="index.php?FAQ">Where can i order my books?</a></li>
                             <li><br></li>
-                            <li><a href="http://localhost/studentenplatform/template.php?FAQ">How can i see my schedule?</a></li>
+                            <li><a href="index.php?FAQ">How can i see my schedule?</a></li>
                             <li><br></li>
-                            <li><a href="http://localhost/studentenplatform/template.php?FAQ">See more...</a></li>
+                            <li><a href="index.php?FAQ">See more...</a></li>
                         </ul>
                     </div>
                 </div>

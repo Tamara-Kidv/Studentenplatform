@@ -108,6 +108,7 @@
 
 /*Home styling*/
 #homeimg {
+    position: center;
     width: 1517px;
     heigth: 370px;
 }
@@ -134,6 +135,7 @@
 }
 
 #Hgrid {
+    position: center;
     margin-top: 50px;
     margin-left: 50px;
     display: grid;
