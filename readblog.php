@@ -28,6 +28,7 @@
                         <option value="eng">ENG</option>
                         <option value="nl">NL</option>
                     </select>
+                    <div><a href="index.php?Loguit">Log uit</a></div>
                 </div>
                 <?php
                 ?>
@@ -73,8 +74,8 @@
             ?>
         </main>
         <footer>       
-            <p id="footerdate">	&copy; 2020 - 2021</p>
-            <p id="footerprivacy">privacystatement - profile XX</p>
+            <p id="footerdate"> &copy; 2020 - 2021</p>
+            <p id="footerprivacy"> <a class="footerwhite" href="https://www.nhlstenden.com/over-nhl-stenden/over-deze-website/privacy-statement" target="_blank">privacystatement</a> - <a class="footerwhite" href="index.php?Profile">profile <i class="fas fa-user"></i></a></p>
         </footer>
     </body>
 </html>
