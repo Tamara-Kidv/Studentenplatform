@@ -41,7 +41,7 @@
     <p class="pstudentnumber">Studentnummer</p>
     <input id="student_number" type="text" name="student_number" placeholder="..." required > &nbsp;&nbsp;
     <p class="contactemail">E-mail</p>
-    <input id="email" type="text" name="email" placeholder="..." required > &nbsp;&nbsp;
+    <input id="email" type="email" name="Email" placeholder="..." required > &nbsp;&nbsp;
     <input id="onderwerpcontact" type="text" name="onderwerpcontact" placeholder="Onderwerp"> <br /> <br />
     <textarea name="message"  placeholder="Bericht"></textarea> <br />
     <input id="submitcontact" type="submit" value="Submit">
@@ -49,8 +49,6 @@
       <!-- Subject, textarea and the submit button -->
 </div>
 </div>
-
-
   <!-- Script voor het dynamische selectbox -->
 
   <script type="text/javascript">
