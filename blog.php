@@ -82,7 +82,7 @@
                 <div>
                 	<div class="blogs">
                         <br>
-                        <p class="blogcategorie"><?= $entry->category?></p>
+                        <p class="blogcategory <?= $entry->category?>"><?= $entry->category?></p>
 	                    <h3><?= $entry->title ?></h3>
 	                    <p><i><?= strftime('%A %e %B %Y %R', strtotime($entry->pubDate)) ?></i></p>
 	                    <p class="nooverflow"><?= $entry->description ?></p>                        
@@ -95,7 +95,7 @@
             <div>
                 <div class="blogs">
                     <br>
-                    <p class="blogcategorie"><?= $entry->category?></p>
+                    <p class="blogcategory <?= $entry->category?>"><?= $entry->category?></p>
                     <h3><?= $entry->title ?></h3>
                     <p><i><?= strftime('%A %e %B %Y %R', strtotime($entry->pubDate)) ?></i></p>
                     <img class="blogimg" src=<?= $entry->img ?> alt="Article image">
