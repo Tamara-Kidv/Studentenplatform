@@ -495,8 +495,8 @@ textarea {
 }
 
 #submitcontact {
-	background-color: #005AA7;
-	color:white;
+	background-color:/* #005AA7;*/purple;
+	color: white;
 	width:150px;
 	height:40px;
 }
