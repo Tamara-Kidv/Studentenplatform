@@ -34,7 +34,7 @@
     </head>
     <body>
         <header>
-                <img id="logo" src="images/logo.png" alt="logo">
+                <a href="?Home"?><img id="logo" src="images/logo.png" alt="logo"> </a>
                 <a id="navhome" href="?Home">Home</a>
                 <a id="navblog" href="?Blog">Blog</a>
                 <a id="navfaq" href="?FAQ">FAQ</a>
@@ -77,7 +77,7 @@
         </main>
         <footer>       
             <p id="footerdate">	&copy; 2020 - 2021</p>
-            <p id="footerprivacy"> <a class="footerwhite" href="https://www.nhlstenden.com/over-nhl-stenden/over-deze-website/privacy-statement" target="_blank">privacystatement</a> - <a class="footerwhite" href="?Profile">profile <i class="fas fa-user"></i></a></p>
+            <p id="footerprivacy"> <a class="footerwhite" href="https://www.nhlstenden.com/over-nhl-stenden/over-deze-website/privacy-statement" target="_blank">privacystatement</a> - <a class="footerwhite" href="?Profile">profile<i class="fas fa-user"></i></a></p>
         </footer>
     </body>
 </html>

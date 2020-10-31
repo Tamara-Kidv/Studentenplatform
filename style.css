@@ -26,6 +26,7 @@
         display:flex;
         justify-content: center;
         align-items: center;
+        height:8vh;
     }
     #navhome{
         grid-column-start: 2;
@@ -80,7 +81,8 @@
     footer {
         display: grid;
         grid-template-columns: 45% 40% auto;
-        height: 5vh;
+        grid-template-rows: 35% auto;
+        height: 6vh;
         width: 100%;
         background-color: #0464b3 ;
     }
@@ -88,12 +90,14 @@
         color: #ffffff;
         margin: 0px;
         grid-column: 2;
+        grid-row: 2;
     }
     #footerprivacy
     {
         color: #ffffff ;
         margin: 0px;
         grid-column: 3;
+        grid-row: 2;
     }
     .searchButton {
         font-size: 13px;
