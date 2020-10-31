@@ -1,7 +1,8 @@
 <?php>
 
 if (isset($_POST['submit'])) {
-  $name = $_POST['name'];
+  $name = $_POST['first_name'];
+  $student_number = $_POST['first_name'];
   $subject = $_POST['subject'];
   $mailFrom = $_POST['mail'];
   $message = $_POST['message'];
