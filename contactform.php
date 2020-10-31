@@ -6,8 +6,11 @@
   <meta charset="utf-8">
 </head>
 <body>
-  <?php
-#Mail opvangen en doorsturen naar het gegveven adres
+  <h1>Gelukt!</h1><br>
+    <p>Uw bericht is succesvol verzonden!</p><br>
+    <p> Klik <a href="index.php?Home">hier</a> om terug te gaan naar de homepagina</p>
+</body>
+<?php
 
   if (isset($_POST['submit']))
     {
@@ -16,27 +19,11 @@
       $onderwerpcontact = $_POST['onderwerpcontact'];
       $message = $_POST['message'];
 
+
       $to = 'tamme.tuncil@student.nhlstenden.com';
 
-      if (mail($to,$onderwerpcontact,$meesage,$email))
-    {
-      header('location:contactform.php');
-    }
-    }
+      $mail = array($to,$onderwerpcontact,$message,$email);
 
-
-#Gebruikers op de hoogte stellen en redirecten
-
+}
 ?>
-<html>
-<head>
-  <title>Verzonden</title>
-</head>
-<body>
-  <h1>Gelukt!</h1><br>
-    <p>Uw bericht is succesvol verzonden!</p><br>
-    <p> Klik <a href="index.php?Home">hier</a> om terug te gaan naar de homepagina</p>
-</body>
-</html>
-</body>
-</html>
+</hmtl>
