@@ -110,7 +110,7 @@
 		        $user->addChild("level",$level);
 		        $sxe->asXML("login.xml");
 		        
-		        header('location:inlog.php');
+		        header('location:login.php');
 			}
 			}
 			}
