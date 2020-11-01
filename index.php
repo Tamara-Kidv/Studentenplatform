@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
     <head>
         <?php
@@ -34,17 +33,17 @@
     </head>
     <body>
         <header>
-                <a href="?Home"?><img id="logo" src="images/logo.png" alt="logo"> </a>
+                <a href="?Home"><img id="logo" src="images/logo.png" alt="logo"> </a>
                 <a id="navhome" href="?Home">Home</a>
                 <a id="navblog" href="?Blog">Blog</a>
                 <a id="navfaq" href="?FAQ">FAQ</a>
                 <a id="navcontact" href="?Contact">Contact</a> 
                 <div id="placelang">
                     <select id="lang" name="language">
-                        <option value="eng">ENG</option>
+                        <option value="en">EN</option>
                         <option value="nl">NL</option>
                     </select>
-                    <div><a href="?Loguit">Log uit</a></div>
+                    <a id="Logout" href="?Loguit">Log uit</a>
                 </div>
         </header>
         <div id="banner">

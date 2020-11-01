@@ -87,7 +87,7 @@
 	                    <p><i><?= strftime('%A %e %B %Y %R', strtotime($entry->pubDate)) ?></i></p>
 	                    <p class="nooverflow"><?= $entry->description ?></p>                        
 	                    <!-- <a class="leesmeer" href="<?= $entry->link ?>">Lees Meer</a> -->
-                        <a class="leesmeer" href="readblog.php?title=<?= $entry->title ?>">Read More</a>
+                        <a class="leesmeer" href="readblog.php?title=<?= str_replace(" ", "_", $entry->title)?>">Read More</a>
                 	</div>	            
             	</div>
             <?php } else {                
@@ -98,17 +98,17 @@
                     <p class="blogcategory <?= $entry->category?>"><?= $entry->category?></p>
                     <h3><?= $entry->title ?></h3>
                     <p><i><?= strftime('%A %e %B %Y %R', strtotime($entry->pubDate)) ?></i></p>
-                    <img class="blogimg" src=<?= $entry->img ?> alt="Article image">
+                    <img class="blogimg" src=<?= $entry->img?> alt="Article image">
                     <p class="nooverflow"><?= $entry->description ?></p>                        
                     <!-- <a class="leesmeer" href="<?= $entry->link ?>">Lees Meer</a> -->
-                    <a class="leesmeer" href="readblog.php?title=<?= $entry->title ?>">Read More</a>
+                    <a class="leesmeer" href="readblog.php?title=<?= str_replace(" ", "_", $entry->title)?>">Read More</a>
                     </div>              
                 </div>
             <?php  } } }
         	?>
             <!-- end of print -->
         </div>
-	        <script type="text/javascript">
+	        <script>
 		        function search(string){
 		            var content = document.getElementsByClassName("blogs");
 		            var searchValue = string;

@@ -1,11 +1,3 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="UTF-8">
-  <title>Contact</title>
-    <link rel="stylesheet" href="style.css">
- </head>
-<body>
  &nbsp;&nbsp;
   <!-- Spacing tussen banner -->
 
@@ -53,7 +45,7 @@
 
   <!-- Script voor het dynamische selectbox -->
 
-  <script type="text/javascript">
+  <script>
   function removeAll(contactcourse){
     for (var i = contactcourse.options.length - 1; i >= 0; i--) {
       contactcourse.remove(i)
@@ -136,5 +128,3 @@
 }
   }
   </script>
-</body>
-</html>

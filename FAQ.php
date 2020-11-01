@@ -1,12 +1,12 @@
 <div id="faqMain">
-	<section id="faqUserSearchBox">
+	<div id="faqUserSearchBox">
 		<div>
 			<input type="text" id="search" placeholder="Search..." class="searchBarButton">
         	<input type="button" class="searchButton" name="search" value="Go" onclick="search(document.getElementById('search').value)">
         	<input type="button" class="searchButton" name="reset" value="Reset" onclick="document.location.href='template.php?FAQ'">
         </div>	        
-	</section>
-	<section id="faqQuestions">
+</div>
+	<div id="faqQuestions">
 		<?php 	
 			$questions_array = [
 				[
@@ -46,8 +46,8 @@
 			}
 			echo "</div>";
 		?>
-	</section>
-	<script type="text/javascript">
+	</div>
+	<script>
 		function search(string){
 			var content = document.getElementsByClassName("detailsFAQ");
 			var searchValue = string;

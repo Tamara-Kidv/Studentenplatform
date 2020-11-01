@@ -8,6 +8,7 @@
     header a {
         text-decoration: none;
         color: #0464b3;
+        font-size: 2vh;
     }
     header a:hover{
         color: #012340;
@@ -16,7 +17,7 @@
     header{
         height: 8vh;
         display: grid;
-        grid-template-columns: 100px auto auto auto auto 60px;
+        grid-template-columns: 5vw auto auto auto auto 3vw 2vw;
         font-family: arial;
     }
 
@@ -26,7 +27,7 @@
         display:flex;
         justify-content: center;
         align-items: center;
-        height:8vh;
+        height: 8vh;
     }
     #navhome{
         grid-column-start: 2;
@@ -52,27 +53,34 @@
         justify-content: center;
         align-items: center;
     }
-    .placelang{
-        display: flex;
+    #placelang{
+        display: grid;
+        grid-template-rows: auto auto 1.3vw;
         justify-content: flex-end;
         grid-column-start: 6;
+        align-items: center;
+        width: 4vw;
     }
     #lang{
-        height: 20px;
-        width:  60px;
+        height: 2vh;
+        width:  2.2vw;
         border: 0px;
+        font-size: 1vh;
+        -moz-text-size-adjust: 1vw;
+        -webkit-appearance: 1vw;
     }
     #banner{
         display: grid;
-        height: 100px;
+        height: 10vh;
         background-image: url("images/background.png");
         background-size: cover;
+        font-size: 2vh;
     }
     #title{
         color: white;
         background-color:#0065b1;
         margin: auto;
-        padding: 5px;
+        padding: 1vw;
         display: table;
     }
     main {
@@ -91,6 +99,7 @@
         margin: 0px;
         grid-column: 2;
         grid-row: 2;
+        font-size: 2vh;
     }
     #footerprivacy
     {
@@ -98,6 +107,7 @@
         margin: 0px;
         grid-column: 3;
         grid-row: 2;
+        font-size: 2vh;
     }
     .searchButton {
         font-size: 13px;
@@ -160,7 +170,7 @@
     height: 800px;
 }
 
-#homep {
+.homep {
     font-family: Arial;
     font-size: 11px;
     margin: 10px;
@@ -421,6 +431,94 @@ div .add-blog-button {
 }
 .articlecontainer div{
     margin-top: 2em;
+}
+/*Styling for the div surrounding all inputtypes*/
+.addblogdiv
+{
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+    overflow: none;
+    border-radius: 15px;
+    box-shadow: 5px 5px 15px;
+    display: grid;
+    grid-template-rows: 50px 20px 50px 1px 20px 60px auto auto 25px auto;
+    padding: 35px;
+    padding-left: 25px;
+    width: 600px;
+    min-height: 800px;
+    min-width: 500px;
+    font-weight: bold;
+    font-family: Arial; 
+}
+.addblogdiv input
+{
+    margin-bottom: 20px;
+    width: 100%;
+    height: 25px;
+    border: none;
+    border-bottom: solid lightgrey 2px;
+    font-size: 10pt;
+}
+.addblogdiv select
+{
+    margin-bottom: 20px;
+    width: 100%;
+    height: 30px;
+    border-radius: 5px;
+    text-align: center;
+}
+.addblogdiv #AddBlogdescription
+{
+    resize: none;
+    height: 50px;
+    width: 100%;
+    background-color: white;
+    display: block;
+    overflow: auto;
+    border: none;
+    border-bottom: solid lightgrey 2px;
+    font-size: 10pt;
+    margin-bottom: 50px;
+}
+.addblogdiv #AddBlogcontent
+{
+    min-height: 150px;
+    width: 100%;
+    background-color: white;
+    display: block;
+    border: none;
+    border-bottom: solid lightgrey 2px;
+    font-size: 10pt;
+    margin-bottom: 50px;
+}
+/*Styling for the addblog buttons*/
+.buttonsAB
+{
+    width: 320px;
+    height: 50px;
+    margin: auto;
+    margin-top: 20px;
+}
+.buttonblue
+{
+    width: 150px;
+    height: 50px;
+    border-radius: 5px;
+    background-color:#005AA7;
+    color: white;
+    font-size: 15pt;
+}
+.buttonwhite
+{
+    width: 150px;
+    height: 50px;
+    border-radius: 5px;
+    font-size: 15pt;
+}
+.h1AB
+{
+    margin-left: 44px;
 }
 
 /*FAQ styling*/
