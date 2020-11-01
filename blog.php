@@ -1,12 +1,3 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Blog</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body> -->
-        <!-- Check what feed is selected, and if none is set, load "everything" -->
         <?php
        /*Check the value from the category selector, and put it in the variable $selectedcategory*/
             if(isset($_POST["submitblogfeed"])) {
@@ -37,7 +28,7 @@
         usort($entries, function ($feed1, $feed2) {
             return strtotime($feed2->pubDate) - strtotime($feed1->pubDate);
         });
-        
+        var_dump($_SESSION);
         ?>
         <div class="blogcontent">
             <div class="selectorcontainer">

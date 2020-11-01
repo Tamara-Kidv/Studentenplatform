@@ -36,32 +36,23 @@
 			function logintrue() {
 				echo "login was true";
 				$_SESSION['login'] = true;
+				$_SESSION['uid'] = $uid;
 			    header ("Location: index.php");
 			}
 			if(isset($_POST['login'])) {
 				$email = $_POST['email'];
 		   		$password = $_POST['psw'];
 		   		$xml = simplexml_load_file("login.xml");
-		   		$login = false;
 		   		foreach($xml->user as $user) {
 			        $XMLpsw = $user->wachtwoord;
 			        $XMLuser = $user->gebruiker;
 			        $XMLlvl = $user->level;
 			        if($email == $XMLuser && password_verify($password, $XMLpsw)) {	        
 			            //Als username en password matchen
-			            $login = true;
 			            echo "goed gedaan jochie";
+			            $uid = $XMLuser;
 			            logintrue();
 					}
-					else {
-						echo "nice try<br>"; //debug code, hier moet niets komen
-					}
-				}
-				if ($login === true) {
-					echo "login was true"; //dit werkt blijkbaar dus niet
-				}
-				else {
-					echo "login was not true";
 				}
 			}
 			// old and not improved registratie systeem
