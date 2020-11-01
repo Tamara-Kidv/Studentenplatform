@@ -44,7 +44,7 @@
                         <option value="eng">ENG</option>
                         <option value="nl">NL</option>
                     </select>
-                    <div><a href="?Loguit">Log uit</a></div>
+                    <div><a href="logout.php">Log uit</a></div>
                 </div>
         </header>
         <div id="banner">
