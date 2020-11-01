@@ -1,4 +1,6 @@
-<?php session_start(); ?>
+<?php 
+session_start(); 
+?>
 <!DOCTYPE HTML>
 <html lang="en">
     <head>
@@ -11,7 +13,6 @@
             <div class="container"> 
                 <div class="formbox">
                     <h1>Login</h1>
-                    <?php var_dump($_SESSION); ?>
                     <hr>
                     <form action="login.php" method="POST">
                         <label for="email"><b>Email</b></label>
@@ -33,11 +34,12 @@
         </main>
 		<?php 
 		//New and improved login systeem
-			function logintrue() {
+			function logintrue($userName, $userLvl) {
 				echo "login was true";
-				$_SESSION['login'] = true;
-				$_SESSION['uid'] = $uid;
-			    header ("Location: index.php");
+				$_SESSION['email'] = $userName;
+				$_SESSION['userlevel'] = $userLvl;
+				header ("Location: index.php");
+				exit();
 			}
 			if(isset($_POST['login'])) {
 				$email = $_POST['email'];
@@ -45,13 +47,12 @@
 		   		$xml = simplexml_load_file("login.xml");
 		   		foreach($xml->user as $user) {
 			        $XMLpsw = $user->wachtwoord;
-			        $XMLuser = $user->gebruiker;
-			        $XMLlvl = $user->level;
-			        if($email == $XMLuser && password_verify($password, $XMLpsw)) {	        
+					$userName = $user->gebruiker;
+			        $userLvl = $user->level;
+			        if($email == $userName && password_verify($password, $XMLpsw)) {	        
 			            //Als username en password matchen
 			            echo "goed gedaan jochie";
-			            $uid = $XMLuser;
-			            logintrue();
+						logintrue($userName->__toString(), $userLvl->__toString());
 					}
 				}
 			}

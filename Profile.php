@@ -2,7 +2,7 @@
 <div id="container">
 
 	<?php
-		$email= "julian.veringa@student.nhlstenden.com";
+		$email = $_SESSION['email'];
 		$een = strpos($email, '@');
 		$naam1 = substr($email, 0, $een);
 		$bak2 = strpos($naam1, '.');

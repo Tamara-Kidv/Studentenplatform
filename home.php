@@ -1,14 +1,3 @@
-<?php
-/*
-session_start();
-
-if($_SESSION['login'] != true)
-{
-            header('login.php');
-            exit;
-}
-*/
-?>
 <img id="homeimg" src="images/Stendenhome.jpg" alt="foto van de school">
 <div id="Hgrid">
     <div id="Homeleft">

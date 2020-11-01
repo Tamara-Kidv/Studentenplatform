@@ -1,13 +1,13 @@
-<?php session_start() ?>
+<?php 
+session_start(); 
+if (!isset($_SESSION["email"])){
+    header ("Location: login.php");
+    exit();
+}
+ ?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <?php
-            $session = $_SESSION["login"];
-            if ($session !== true) {
-                header ("Location: login.php");
-            }
-        ?>
         <meta charset="UTF-8">
         <?php
                 if(isset($_GET['Home'])) {

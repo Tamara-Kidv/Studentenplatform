@@ -45,11 +45,13 @@
             		<input class="bloginput" type="submit" name="submitblogfeed" value="Submit"/>
             	</form>
             </div>
-            <div class="add-blog-button">
-                <a class="add-blog-button" href="index.php?AddBlog">   
-                    <p><i class="fas fa-plus-circle"></i>Add Post</p>                                     
-                </a>
-            </div>
+            <!--PHP to make the ADD POST button invisible to students -->
+                <?php
+                if($_SESSION['userlevel'] !== 'student'){
+                    echo'<div class="add-blog-button"><a class="add-blog-button" href="index.php?AddBlog">
+                    <p><i class="fas fa-plus-circle"></i>Add Post</p></a></div>';
+                }
+                ?>
             <!-- JS based search box -->
             <div class="searchcontainer">
                 <div>
