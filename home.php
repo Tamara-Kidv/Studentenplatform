@@ -9,11 +9,7 @@ if($_SESSION['login'] != true)
 }
 */
 ?>
-
-
-
 <img id="homeimg" src="images/Stendenhome.jpg" alt="foto van de school">
-
 <div id="Hgrid">
     <div id="Homeleft">
         <h2 class="Homekopje">Latest News:</h2> 
@@ -58,8 +54,7 @@ if($_SESSION['login'] != true)
             ?>
         </div>
     </div>
-    <div class="Homeline"></div>
-    
+    <div class="Homeline"></div>    
     <div id="Homemid">
         <h5 class="Homekopje">Soon in agenda:</h5>
         <?php 
@@ -79,7 +74,6 @@ if($_SESSION['login'] != true)
         <?php
         //Print all the entries
         $NUMITEMS   = 3;
-
         $count = 0;
         foreach($entries as $entry){
         ?>
@@ -99,17 +93,16 @@ if($_SESSION['login'] != true)
         ?>
         </div>
     </div>
-
     <div id="FaQhome">
         <h2 class="Homekopje">FAQ:</h2>
         <ul id="homelist">
-            <li><a href="http://localhost/studentenplatform/index.php?FAQ">How is NHL Stenden handeling the situation around Covid-19 virus?</a></li>
+            <li><a href="index.php?FAQ">How is NHL Stenden handeling the situation around Covid-19 virus?</a></li>
             <li><br></li>
-            <li><a href="http://localhost/studentenplatform/index.php?FAQ">Where can i order my books?</a></li>
+            <li><a href="index.php?FAQ">Where can i order my books?</a></li>
             <li><br></li>
-            <li><a href="http://localhost/studentenplatform/index.php?FAQ">How can i see my schedule?</a></li>
+            <li><a href="index.php?FAQ">How can i see my schedule?</a></li>
             <li><br></li>
-            <li><a href="http://localhost/studentenplatform/index.php?FAQ">See more...</a></li>
+            <li><a href="index.php?FAQ">See more...</a></li>
         </ul>
     </div>
 </div>

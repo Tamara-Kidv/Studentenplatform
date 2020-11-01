@@ -1,11 +1,12 @@
+<?php session_start() ?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
         <?php
-           /* session_start();
-            if (!(isset($_SESSION['login']) && $_SESSION['login'] != '')) {
-            header ("Location: inlog.php");
-            }*/
+            $session = $_SESSION["login"];
+            if ($session !== true) {
+                header ("Location: login.php");
+            }
         ?>
         <meta charset="UTF-8">
         <?php
@@ -43,7 +44,7 @@
                         <option value="en">EN</option>
                         <option value="nl">NL</option>
                     </select>
-                    <a id="Logout" href="?Loguit">Log uit</a>
+                    <a id="Logout" href="logout.php">Log uit</a>
                 </div>
         </header>
         <div id="banner">

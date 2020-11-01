@@ -1,15 +1,13 @@
-<?php
-/*	session_start();
-
-	if($_SESSION['login'] !== true)
-	{
-		header('Location: inlog.php');
-		exit;
-	}*/
-?>
+<?php session_start() ?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <?php
+            $session = $_SESSION["login"];
+            if ($session !== true) {
+                header ("Location: login.php");
+            }
+        ?>
         <meta charset="UTF-8">
         <title>Home</title>
         <link rel="stylesheet" href="style.css">
@@ -28,7 +26,7 @@
                         <option value="eng">ENG</option>
                         <option value="nl">NL</option>
                     </select>
-                    <div><a href="index.php?Loguit">Log uit</a></div>
+                    <div><a href="logout.php">Log uit</a></div>
                 </div>
                 <?php
                 ?>
