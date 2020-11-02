@@ -67,12 +67,13 @@
         foreach($entries as $entry){
         ?>
         <div>
-            <div>
+            <div class="imgdiv">
                 <br>
                 <h3 class="Honderkopje"><?= $entry->title?></h3>
                 <p class="homep"><?= strftime('%A %e %B %Y %R', strtotime($entry->pubDate)) ?></p>
-                <p class="homep"><?= $entry->description?></p>
-                <a class="Hleesmeer" href="readblog.php?title=<?=str_replace(" ", "_", $entry->title)?>">Read More</a>
+                <div><p class="homep"><img class="imghome" src="<?= $entry->img?>">
+                <?= $entry->description ?></p></div>
+                <p><a class="Hleesmeer" href="readblog.php?title=<?=str_replace(" ", "_", $entry->title)?>">Read More</a></p>
                 <hr>
             </div>
         </div>

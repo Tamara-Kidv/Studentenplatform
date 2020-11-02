@@ -1,15 +1,15 @@
-<?php session_start() ?>
+<?php session_start(); 
+if (!isset($_SESSION["email"])){
+    header ("Location: login.php");
+    exit();
+}
+$title = str_replace('_', ' ',$_GET['title']);
+?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <?php
-            $session = $_SESSION["login"];
-            if ($session !== true) {
-                header ("Location: login.php");
-            }
-        ?>
         <meta charset="UTF-8">
-        <title>Home</title>
+        <title><?= $title ?></title>
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <script src="https://kit.fontawesome.com/27922e58ca.js" crossorigin="anonymous"></script>
@@ -23,7 +23,7 @@
                 <a id="navcontact" href="index.php?Contact">Contact</a> 
                 <div id="placelang">
                     <select id="lang" name="language">
-                        <option value="eng">ENG</option>
+                        <option value="en">EN</option>
                         <option value="nl">NL</option>
                     </select>
                     <div><a href="logout.php">Log uit</a></div>
@@ -46,20 +46,20 @@
 	            $xml = simplexml_load_file($feed);
 	            $entries = array_merge($entries, $xml->xpath("//item"));	     
 	        	foreach($entries as $entry){
-	        		if ($entry->title == $contenttitle) {
+	        		if ($entry->title == $title) {
 	        			if(empty($entry->img)) {
 			?>				<!-- Article content if image is empty-->
 	        			<div class="articlecontainer">
-	        				<h1><?= $entry->title ?></h1>
+	        				<h1 class="readblogtitle"><?= $entry->title ?></h1>
 			        		<p class="readblogdesc"><?= $entry->description ?></p>
-			        		<p class="readblogcontent"><?= $entry->content ?></p>
+			        		<p class="readblogcontent"><?= str_replace('&#xD;', '/n', $entry->content) ?></p>
 	        		    </div>
 	        		<?php
 	        			}
 	        			else {
 	        ?>				<!-- Article content if image is not empty-->	        		
 	        			<div class="articlecontainer">
-                            <h1><?= $entry->title ?></h1>
+                            <h1 class="readblogtitle"><?= $entry->title ?></h1>
                                 <p class="readblogdesc"><?= $entry->description ?></p>
                             <div>
                                 <img class="readblogimg" src=<?= $entry->img ?> alt="Article image">

@@ -218,6 +218,19 @@ hr {
     margin: 10px;
     list-style-type: none;
 }
+.imghome
+{
+    height: 50px;
+    width: auto;
+    object-fit: contain;
+    float: left;
+    margin-right: 8px;
+    margin-bottom: 8px;
+}
+.imgdiv
+{
+    display: grid;
+}
 
 /*Blog styling*/
 .blogcontent {
@@ -278,8 +291,10 @@ div .add-blog-button {
     overflow: hidden;
 }
 .blogimg {
-    width: 300px;
+    width: auto;
+    max-width: 300px;
     height: auto;
+    max-height: 150px;
     margin: auto;
 }
 .blogcategory {
@@ -412,6 +427,8 @@ div .add-blog-button {
 .readblogdesc {
     padding-top: 2em;
     width: 100%;
+    font-style: italic;
+    font-size: 18px;
 }
 .readblogcontent {
     padding-top: 0em;
@@ -423,11 +440,15 @@ div .add-blog-button {
     width: auto;
     object-fit: contain;
     float: left;
-    margin-right: 8px;
-    margin-bottom: 8px;
+    margin-right: 20px;
+    margin-bottom: 10px;
 }
 .readblogtitle {
     width: 100%;
+}
+.readblogtitle
+{
+    margin-top: 10px;
 }
 .articlecontainer div{
     margin-top: 2em;
@@ -435,8 +456,9 @@ div .add-blog-button {
 /*Styling for the div surrounding all inputtypes*/
 .addblogdiv
 {
-    margin-left: auto;
-    margin-right: auto;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
     background-color: white;
     overflow: none;
     border-radius: 15px;

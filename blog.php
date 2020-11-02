@@ -28,7 +28,6 @@
         usort($entries, function ($feed1, $feed2) {
             return strtotime($feed2->pubDate) - strtotime($feed1->pubDate);
         });
-        var_dump($_SESSION);
         ?>
         <div class="blogcontent">
             <div class="selectorcontainer">
@@ -80,7 +79,7 @@
 	                    <p><i><?= strftime('%A %e %B %Y %R', strtotime($entry->pubDate)) ?></i></p>
 	                    <p class="nooverflow"><?= $entry->description ?></p>                        
 	                    <!-- <a class="leesmeer" href="<?= $entry->link ?>">Lees Meer</a> -->
-                        <a class="leesmeer" href="readblog.php?title=<?= str_replace(" ", "_", $entry->title)?>">Read More</a>
+                        <a class="leesmeer" href="readblog.php?title=<?=str_replace(" ", "_", $entry->title)?>">Read More</a>
                 	</div>	            
             	</div>
             <?php } else {                

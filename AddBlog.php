@@ -8,11 +8,11 @@
             <option value="Important">Important</option>
         </select>
         <label for="NameArticle">Title: *</label>
-        <input type="text" required id="NameArticle" placeholder="Input Title" name="titleAB" autocomplete="off"><br>
+        <input type="text" required id="NameArticle" placeholder="Input Title" name="titleAB" autocomplete="off" maxlength="75"><br>
         <label for= "AddBlogdescription">Description *</label>
-        <textarea id="AddBlogdescription" required placeholder="Input text..." name="descriptionAB" maxlength="150"></textarea>
+        <textarea id="AddBlogdescription" required placeholder="Input text..." name="descriptionAB" maxlength="200"></textarea>
         <label for= "AddBlogcontent">Content *</label>
-        <textarea id="AddBlogcontent" required placeholder="Input text..." name="contentAB" minlength="150"></textarea>
+        <textarea id="AddBlogcontent" required placeholder="Input text..." name="contentAB" minlength="200"></textarea>
         <label for="Image">insert image here</label>
         <input id="Image" type="file" name="image"/>
         
