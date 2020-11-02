@@ -1,4 +1,4 @@
-<img id="homeimg" src="images/Stendenhome.jpg" alt="foto van de school">
+<img id="homeimg" src="images\StendenHome.jpg" alt="foto van de school">
 <div id="Hgrid">
     <div id="Homeleft">
         <h2 class="Homekopje">Latest News:</h2> 
@@ -33,7 +33,7 @@
                     <h3 class="Honderkopje"><?= $title?></h3>
                     <p class="homep"><?= strftime('%A %e %B %Y %R', strtotime($entry->pubDate))?></p>
                     <p class="homep"><?= $description?></p>
-                    <a class="Hleesmeer" href="<?=$link?>">Read More</a>
+                    <a class="Hleesmeer" href="<?=$link?>" target=_blank>Read More</a>
                     <hr>
                 </div>
             </div>
@@ -48,7 +48,7 @@
         <h5 class="Homekopje">Soon in agenda:</h5>
         <?php 
             $feeds = array(
-            "Article.xml"
+            "XML/Article.xml"
             );
             $entries = array();
         foreach($feeds as $feed) {
@@ -73,7 +73,7 @@
                 <p class="homep"><?= strftime('%A %e %B %Y %R', strtotime($entry->pubDate)) ?></p>
                 <div><p class="homep"><img class="imghome" src="<?= $entry->img?>">
                 <?= $entry->description ?></p></div>
-                <p><a class="Hleesmeer" href="readblog.php?title=<?=str_replace(" ", "_", $entry->title)?>">Read More</a></p>
+                <p><a class="Hleesmeer" href="BLog/readblog.php?title=<?=str_replace(" ", "_", $entry->title)?>">Read More</a></p>
                 <hr>
             </div>
         </div>

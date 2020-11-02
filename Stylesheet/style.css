@@ -72,7 +72,7 @@
     #banner{
         display: grid;
         height: 10vh;
-        background-image: url("images/background.png");
+        background-image: url("../images/background.png");
         background-size: cover;
         font-size: 2vh;
     }

@@ -14,7 +14,7 @@
 		<img src="images/profiel_photo.png" id="profilePhoto" alt="profile_photo">
 	</div>		
 	<div id="naam">
-		<p id="naamp"> Naam:</p>
+		<p id="naamp"> Name:</p>
 		<p> <?php echo $naam2. " " .$naam3; ?> </p>
 	</div>
 	<div id="email">

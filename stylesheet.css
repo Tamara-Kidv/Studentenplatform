@@ -4,11 +4,12 @@
 .formbox {
   padding: 16px;
   margin: auto;
+  width: 80%;
 }
 
 body
 {
-    background-image: url('stendenachtergrond.png');
+    background-image: url('images/stendenachtergrond.png');
     
 }
 .container
@@ -51,7 +52,7 @@ hr {
 
 /* Set a style for the submit/register button */
 .registerbtn {
-  background-color: #4CAF50;
+  background-color: #007E8F;
   color: white;
   padding: 16px 20px;
   margin: 8px 0;
@@ -74,4 +75,17 @@ a {
 .signin {
   text-align: center;
  
+}
+
+.TenS
+{
+  text-align: center;
+}
+#NoMatch
+{
+  font-weight: bold;
+  text-align: center;
+  font-size: 18px;
+  text-decoration-skip-ink: none;
+  color: black;
 }

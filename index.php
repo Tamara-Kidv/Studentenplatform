@@ -1,7 +1,7 @@
 <?php 
 session_start(); 
 if (!isset($_SESSION["email"])){
-    header ("Location: login.php");
+    header ("Location: Login/login.php");
     exit();
 }
  ?>
@@ -21,14 +21,14 @@ if (!isset($_SESSION["email"])){
                 } else if(isset($_GET['AddBlog'])) {
                     $page = "AddBlog";
                 } else if (isset($_GET['Profile'])){
-                    $page = "Profiel";
+                    $page = "Profile";
                 } else {
                     $page = "Home";
                 }
                 echo "<title>$page</title>"
                 ?> 
 
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="Stylesheet/style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <script src="https://kit.fontawesome.com/27922e58ca.js" crossorigin="anonymous"></script>
     </head>
@@ -44,14 +44,11 @@ if (!isset($_SESSION["email"])){
                         <option value="en">EN</option>
                         <option value="nl">NL</option>
                     </select>
-                    <a id="Logout" href="logout.php">Log uit</a>
+                    <a id="Logout" href="Login/logout.php">Log uit</a>
                 </div>
         </header>
         <div id="banner">
             <?php
-                // if (isset($_GET['Loguit'])) {
-                //     die;
-                // }
                 if(isset($_GET['Home'])) {
                     $page = "Home";
                 } else if(isset($_GET['Blog'])) {
@@ -72,7 +69,22 @@ if (!isset($_SESSION["email"])){
         </div>
         <main>
             <?php
-                include($page .'.php');
+                if(isset($_GET["Home"])){
+                    $page1 = "Home/home.php";}
+                elseif(isset($_GET["Blog"])){
+                    $page1 = "Blog/Blog.php";}
+                elseif(isset($_GET["FAQ"])){
+                    $page1 = "FAQ/FAQ.php";}
+                elseif(isset($_GET["Contact"])){
+                    $page1 = "Contact/contact.php";}
+                elseif(isset($_GET["AddBlog"])){
+                    $page1 = "Blog/AddBlog.php";}
+                elseif(isset($_GET["Profile"])){
+                    $page1 = "Profile/Profile.php";}
+                else{
+                    $page1 = "Home/home.php";
+                }
+                include($page1);
             ?>
         </main>
         <footer>       
