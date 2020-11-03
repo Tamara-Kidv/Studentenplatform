@@ -365,18 +365,16 @@ div .add-blog-button {
     grid-area: add-blog-button;
     margin: auto;
 }
-#blogcontentflex, #searchResults {
+#blogcontentflex, #searchResultsBlog {
 	display: flex;
 	flex-wrap: wrap;
 	width: 65vw;
 	margin: auto;
-/*	border: 1px dotted;*/
 }
-#blogcontentflex div, #searchResults div{
+#blogcontentflex div, #searchResultsBlog div{
 	width: 400px;
 	height: 550px;
 	margin: auto;
-/*	border: 1px dotted;*/
 	display: flex;
 	flex-direction: column;
 }
@@ -391,13 +389,12 @@ div .add-blog-button {
 	box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
 	border: 1px solid;
 }
-#blogcontentflex div div h3, #searchResults div div h3 {
+#blogcontentflex div div h3, #searchResultsBlog div div h3 {
     text-align: center;
 }
-#blogcontentflex div div p, #blogcontentflex div div a , #blogcontentflex div div h3, #searchResults div div p, #searchResults div div a , #searchResults div div h3 {
+#blogcontentflex div div p, #blogcontentflex div div a , #blogcontentflex div div h3, #searchResultsBlog div div p, #searchResultsBlog div div a , #searchResultsBlog div div h3 {
     padding-left: 25px;
     padding-right: 25px;
-    /*overflow: hidden;*/
 }
 .nooverflow {
     overflow: hidden;

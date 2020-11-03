@@ -40,14 +40,17 @@ session_start();
 									$XMLpsw = $user->wachtwoord;
 									$userName = $user->gebruiker;
 									$userLvl = $user->level;
+									$msg = "";
 									if($email == $userName && password_verify($password, $XMLpsw)) {	        
 										//Als username en password matchen
 										logintrue($userName->__toString(), $userLvl->__toString());
+										$msg = "login success!";
 									}
-									else{
-										echo "<p id='NoMatch'>Your password and/or email is incorrect, please try again.</p>";
+									else {
+										$msg = "<p id='NoMatch'>Your password and/or email is incorrect, please try again.</p>";
 									}
 								}
+								echo $msg;
 							}
 						?>
 

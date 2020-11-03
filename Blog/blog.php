@@ -62,7 +62,7 @@
             </div>        	
         </div>
         <!-- Flexbox with the contents of the RSS reader -->
-        <div id="searchResults"></div>   
+        <div id="searchResultsBlog"></div>   
         <div id="blogcontentflex">	
             <?php
             //Print all the entries
@@ -104,7 +104,7 @@
 		        function search(string){
 		            var content = document.getElementsByClassName("blogs");
 		            var searchValue = string;
-		              var canvas = document.getElementById("searchResults");
+		              var canvas = document.getElementById("searchResultsBlog");
 		            for(var i = 0; i < content.length; i++){
 		              if(content[i].innerHTML.indexOf(searchValue) > -1){
 		              canvas.appendChild(content[i]);		              
