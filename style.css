@@ -415,6 +415,7 @@ div .add-blog-button {
 
 #faqQuestions details {
 	padding-bottom: 50px;
+    width: 100%;
 }
 
 summary:focus {

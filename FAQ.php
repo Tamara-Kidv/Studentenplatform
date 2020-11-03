@@ -3,7 +3,7 @@
 		<div>
 			<input type="text" id="search" placeholder="Search..." class="searchBarButton">
         	<input type="button" class="searchButton" name="search" value="Go" onclick="search(document.getElementById('search').value)">
-        	<input type="button" class="searchButton" name="reset" value="Reset" onclick="document.location.href='template.php?FAQ'">
+        	<input type="button" class="searchButton" name="reset" value="Reset" onclick="document.location.href='?FAQ'">
         </div>	        
 	</section>
 	<section id="faqQuestions">
@@ -35,7 +35,7 @@
 			$page = "FAQ";
 
 			// Displays the questions
-			echo "<div id='searchResults'></div>";
+			echo "<div id='searchResult'></div>";
 
 			echo "<div id='FAQ'>";
 			foreach ($questions_array as $key => $value) {
@@ -51,7 +51,7 @@
 		function search(string){
 			var content = document.getElementsByClassName("detailsFAQ");
 			var searchValue = string;
-			var canvas = document.getElementById("searchResults");
+			var canvas = document.getElementById("searchResult");
 	  		
 			for(var i = 0; i < content.length; i++){
 			  	if(content[i].innerHTML.indexOf(searchValue) > -1){
