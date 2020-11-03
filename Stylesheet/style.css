@@ -122,7 +122,119 @@
     }
 
 /*Login styling*/
-
+/* Add padding to containers */
+.formboxLogin {
+    padding: 1vw;
+    margin: auto;
+    margin-top: 3vh;
+    width: 80%;
+    box-sizing: border-box;
+  }
+  
+  #bodyLogin
+  {
+      background-image: url('../images/stendenachtergrond.png');
+      background-size: 75%;
+  }
+  .containerLogin
+  {
+    width: 40vw;
+    min-height: 80vh;
+    box-shadow: 0 0 0.5vw 0.1vw #000000;
+    display: grid;
+    grid-template-columns: auto; 
+    grid-template-rows: auto auto auto;
+    background-color:white;
+    margin: auto;
+  }
+  
+  .formboxLogin form {
+    margin: auto;
+  }
+  
+  /* Full-width input fields */
+  .inputLogin[type=text], .inputLogin[type=password] {
+    width: 30vw;
+    padding: 2vh;
+    margin: 1vh 0 3vh 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+    box-sizing: border-box;
+  }
+  
+  .inputLogin[type=text]:focus, .inputLogin[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+  }
+  
+  /* Overwrite default styles of hr */
+  .hrLogin {
+    border: 0.1vh solid #f1f1f1;
+    margin-bottom: 3vh;
+  }
+  /* Set a style for the submit/register button */
+  .registerbtn {
+    background-color: #007E8F;
+    color: white;
+    padding: 2vh 3vh;
+    margin: 1vh 0;
+    margin-top: 5vh;
+    margin-bottom: 4vh;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+  }
+  .registerbtn:hover {
+    opacity:1;
+  }
+  /* Add a blue text color to links */
+  .aLogin {
+    color: dodgerblue;
+  }
+  /* Set a grey background color and center the text of the "sign in" section */
+  .signin {
+    text-align: center; 
+  }
+  .TenS
+  {
+    text-align: center;
+  }
+  .AlreadyAcc
+  {
+      margin-bottom: 8vh;
+  }
+  /* Only works when there is an error, makes the text bigger then usual */
+  #NoMatch
+  {
+    font-weight: bold;
+    text-align: center;
+    font-size: 2vh;
+    color: black;
+    margin-bottom: 1vh;
+  }
+  /* css to make the image go in the right spot on both the login and the register page */
+  #imgLogin
+  {
+    display: grid;
+    grid-template-columns: auto 15vw auto;
+  }
+  #Loginh1
+  {
+    font-size: 1.5vw;
+  }
+  #imgRegister
+  {
+    display: grid;
+    grid-template-columns: auto 13.1vw auto;
+  }
+  #imageL
+  {
+    width: 10vw;
+    height: 10vh;
+    grid-column: 3;
+  }
 
 
 /*Home styling*/
@@ -623,4 +735,53 @@ textarea {
 
 #onderwerpcontact {
 width:540px;
+}
+/*Profile Styling*/
+
+#containerprofile {
+	width: 500px;
+	height: 400px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 200px;
+	-webkit-box-shadow: 0px 0px 0px 2px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 0px 0px 2px rgba(0,0,0,0.75);
+	box-shadow: 0px 0px 0px 2px rgba(0,0,0,0.75);
+}
+
+#profilenaam{
+	width: 400px;
+	height:70px;
+	-webkit-box-shadow: 0px 2px 0px 0px rgba(199,195,199,1);
+	-moz-box-shadow: 0px 2px 0px 0px rgba(199,195,199,1);
+	box-shadow: 0px 2px 0px 0px rgba(199,195,199,1);
+	margin-left: 30px;
+
+}
+#profilenaamp{
+	margin-bottom: 7px;
+	font-weight: bold;
+}
+
+#profileemail{
+	width: 400px;
+	height:70px;
+	-webkit-box-shadow: 0px 2px 0px 0px rgba(199,195,199,1);
+	-moz-box-shadow: 0px 2px 0px 0px rgba(199,195,199,1);
+	box-shadow: 0px 2px 0px 0px rgba(199,195,199,1);
+	margin-left: 30px;
+	margin-top: 100px;
+}
+#profileemailp{
+	margin-bottom: 7px;
+	font-weight: bold;
+}
+
+#profilePhoto {
+	height: auto;
+	width: 80px;
+	display: block;
+	margin: 0 auto;
+	position: relative;
+	bottom: 53px;
 }

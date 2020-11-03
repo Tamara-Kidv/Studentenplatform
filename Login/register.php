@@ -1,37 +1,40 @@
 <!DOCTYPE HTML>
 <html lang="en">
     <head>
-        <link rel="stylesheet" href="../stylesheet.css">
+        <link rel="stylesheet" href="../Stylesheet/style.css">
         <meta charset="UTF-8">
-        <title>Register page</title>
+        <title>Register | AQA</title>
     </head>
-    <body> 
+    <body id="bodyLogin"> 
         <main> 
-            <div class="container"> 
-                <div class="formbox">
-                <h1>Register</h1>
-                <hr>
+            <div class="containerLogin"> 
+                <div class="formboxLogin">
+                    <div Id="imgRegister">
+						<h1 id="Loginh1">Register</h1>
+						<img id="imageL" src="../Images/logo.png">
+					</div>
+                <hr class="hrLogin">
                     <form action="register.php" method="POST">
                         <label for="email"><b>Email</b></label>
-                        <input type="text" placeholder="Enter Email" name="email" id="email" required>
+                        <input class="inputLogin" type="text" placeholder="Enter Email" name="email" id="email" required>
 
                         <label for="psw"><b>Password</b></label>
-                        <input type="password" placeholder="Enter Password" name="password" id="password" required minlength="8">
+                        <input class="inputLogin" type="password" placeholder="Enter Password" name="password" id="password" required minlength="8">
 
                         <label for="psw2"><b>Repeat Password</b></label>
-                        <input type="password" placeholder="Repeat Password" name="passwordconfirm" id="passwordconfirm" required minlength="8">
-                        <hr>
+                        <input class="inputLogin" type="password" placeholder="Repeat Password" name="passwordconfirm" id="passwordconfirm" required minlength="8">
+                        <hr class="hrLogin">
                         <?php
                                 if(isset($_POST['register'])){
                                     if($_POST['password'] !== $_POST['passwordconfirm']){
                                         echo "<p id='NoMatch'>Passwords do not match, please try again<p>";
                                     }}
                         ?>
-                        <p class="TenS">By continuing, you agree to our <a href="https://www.nhlstenden.com/privacyverklaring" target=_blank>Terms of Service</a>.</p>
+                        <p class="TenS">By making an account, you agree to our <a class="aLogin" href="https://www.nhlstenden.com/privacyverklaring" target=_blank>Terms of Service</a>.</p>
 
                         <input type="submit" value="Register" name="register" class="registerbtn">
                         <div class="signin">
-                            <p>Already have an account? <a href="login.php">Sign in</a>.</p>
+                            <p class="AlreadyAcc">Already have an account? <a class="aLogin" href="login.php">Sign in</a>.</p>
                         </div>
                         <?php 
                         if(isset($_POST['register'])){
