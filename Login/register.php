@@ -75,13 +75,13 @@
                         /*$hash = hash('sha256',$password);*/
                         $hash = password_hash($password, PASSWORD_DEFAULT);
 
-                        $xml = simplexml_load_file("../XML/login.xml");
+                        $xml = simplexml_load_file("../include/XML/login.xml");
                         $sxe = new simpleXMLElement($xml->asXML());
                         $user = $sxe->addChild("user");
                         $user->addChild("gebruiker",$email);
                         $user->addChild("wachtwoord",$hash);
                         $user->addChild("level",$level);
-                        $sxe->asXML("../XML/login.xml");
+                        $sxe->asXML("../include/XML/login.xml");
                         
                         header('location:login.php');
 			}

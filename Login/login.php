@@ -35,7 +35,7 @@ session_start();
 							if(isset($_POST['login'])) {
 								$email = $_POST['email'];
 								$password = $_POST['psw'];
-								$xml = simplexml_load_file("../XML/login.xml");
+								$xml = simplexml_load_file("../include/XML/login.xml");
 								foreach($xml->user as $user) {
 									$XMLpsw = $user->wachtwoord;
 									$userName = $user->gebruiker;
