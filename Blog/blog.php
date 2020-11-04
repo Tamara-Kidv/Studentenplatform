@@ -54,7 +54,7 @@
             <!-- JS based search box -->
             <div class="searchcontainer">
                 <div>
-		            <input type="text" id="search" placeholder="Search..." class="blogsearchbarbutton">
+		            <input type="text" id="search" placeholder="Search..." class="searchbarbutton">
 		            <input class="searchButton" type="button" name="search" value="Go" onclick="search(document.getElementById('search').value)">
                    <!--  Reset button -->
                     <input class="searchButton" type="button" name="reset" value="Reset" onclick="document.location.href='../index.php?Blog'">

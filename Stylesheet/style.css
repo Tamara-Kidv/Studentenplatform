@@ -491,7 +491,7 @@ div .add-blog-button {
 	text-align: right;
 }
     /*button styling*/
-.blogselect, .blogsearchbarbutton, .bloginput {
+.blogselect, .searchbarbutton, .bloginput {
     font-size: 13px;
     border: 1px solid #ccc;
     height: 35px;
@@ -664,21 +664,6 @@ div .add-blog-button {
 	display: flex;
 	justify-content: space-between;
 	grid-column-start: 2;
-}
-
-.searchBar {
-	border-radius: 10px;
-	border: 1px solid;
-	width: 250px;
-	height: 20px;
-}
-
-.searchBarButton {
-	border: none;
-	background-color: white;
-	font-size: 17px;
-    padding-bottom: 2px;
-    border-bottom: 1px solid grey;
 }
 
 .iconSearch {

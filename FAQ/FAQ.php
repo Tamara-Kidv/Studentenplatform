@@ -1,7 +1,7 @@
 <div id="faqMain">
 	<div id="faqUserSearchBox">
 		<div>
-			<input type="text" id="search" placeholder="Search..." class="searchBarButton">
+			<input type="text" id="search" placeholder="Search..." class="searchbarbutton">
         	<input type="button" class="searchButton" name="search" value="Go" onclick="search(document.getElementById('search').value)">
         	<input type="button" class="searchButton" name="reset" value="Reset" onclick="document.location.href='?FAQ'">
         </div>	        
