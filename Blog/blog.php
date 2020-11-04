@@ -15,7 +15,7 @@
         "https://www.nu.nl/rss/Tech",
         "blog.xml",
         "http://feeds.feedburner.com/tweakers/nieuws",*/
-        "include/XML/Article.xml"
+        "XML/Article.xml"
         );
 
         $entries = array();
@@ -33,7 +33,7 @@
             <div class="selectorcontainer">
                 <!-- Category selector -->
             	<p>Select category:</p>
-            	<form action="../index.php?Blog" method="post"> 
+            	<form action="index.php?Blog" method="post"> 
     	        	<select class="blogselect" name="blogselector">
     	        		<option value="everything">Everything</option>
     	        		<option value="News">News</option>
@@ -57,7 +57,7 @@
 		            <input type="text" id="search" placeholder="Search..." class="blogsearchbarbutton">
 		            <input class="searchButton" type="button" name="search" value="Go" onclick="search(document.getElementById('search').value)">
                    <!--  Reset button -->
-                    <input class="searchButton" type="button" name="reset" value="Reset" onclick="document.location.href='../index.php?Blog'">
+                    <input class="searchButton" type="button" name="reset" value="Reset" onclick="document.location.href='index.php?Blog'">
         		</div>
             </div>        	
         </div>
