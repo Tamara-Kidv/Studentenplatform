@@ -74,8 +74,9 @@
                                 if(isset($_POST['register'])){
                                     if($_POST['password'] !== $_POST['passwordconfirm']){
                                         echo "<p id='NoMatch'>Passwords do not match, please try again<p>";
-                                    }}
+                                    }
                                     echo $msg;
+                                }
                         ?>
                         <p class="TenS">By making an account, you agree to our <a class="aLogin" href="https://www.nhlstenden.com/privacyverklaring" target=_blank>Terms of Service</a>.</p>
 
