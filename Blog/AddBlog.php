@@ -17,11 +17,11 @@ exit;
             <option value="Entertainment">Entertainment</option>
             <option value="Important">Important</option>
         </select>
-        <label for="NameArticle">Title: *</label>
+        <label for="NameArticle" class="labelAddBlog">Title: *</label>
         <input type="text" required id="NameArticle" placeholder="Input Title" name="titleAB" autocomplete="off" maxlength="75"><br>
-        <label for= "AddBlogdescription">Description *</label>
+        <label for= "AddBlogdescription" class="labelAddBlog">Description *</label>
         <textarea id="AddBlogdescription" required placeholder="Input text..." name="descriptionAB" maxlength="250"></textarea>
-        <label for= "AddBlogcontent">Content *</label>
+        <label for= "AddBlogcontent" class="labelAddBlog">Content *</label>
         <textarea id="AddBlogcontent" required placeholder="Input text..." name="contentAB" minlength="250"></textarea>
         <?php
         if(isset($_POST['submitpost']))
@@ -72,11 +72,11 @@ exit;
             }
         }
         ?>
-        <label for="Image">insert image here</label>
+        <label for="Image" class="labelAddBlog">insert image here</label>
         <input id="Image" type="file" name="image"/>
         <div class="buttonsAB">
             <button class="buttonwhite" type="reset">Reset</button>
-            <button class="buttonblue" type="submit" name="submitpost"><u>Submit</u></button>
+            <button class="buttonblue" type="submit" name="submitpost">Submit</button>
         </div>
     </div>
 </form>

@@ -10,11 +10,6 @@
             $selectedcategory = "everything";
         }
         $feeds = array(
-        /*XML files go here*/
-/*      Old blogs  
-        "https://www.nu.nl/rss/Tech",
-        "blog.xml",
-        "http://feeds.feedburner.com/tweakers/nieuws",*/
         "include/XML/Article.xml"
         );
 
@@ -48,7 +43,7 @@
                 <?php
                 if($_SESSION['userlevel'] === 'docent'){
                     echo'<div class="add-blog-button"><a class="add-blog-button" href="index.php?AddBlog">
-                    <p><i class="fas fa-plus-circle"></i>Add Post</p></a></div>';
+                    <p><i class="fas fa-plus-circle"></i> Add Post</p></a></div>';
                 }
                 ?>
             <!-- JS based search box -->
