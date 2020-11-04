@@ -2,6 +2,7 @@
        /*Check the value from the category selector, and put it in the variable $selectedcategory*/
             if(isset($_POST["submitblogfeed"])) {
                 $selectedcategory = $_POST['blogselector'];
+                header("location: ../index.php?Blog");
             }
         ?>        
         <?php
@@ -38,7 +39,7 @@
     	        		<option value="everything">Everything</option>
     	        		<option value="News">News</option>
     	        		<option value="Corona">Corona</option>
-                        <option value="Evenementen">Events</option>
+                        <option value="Entertainment">Entertainment</option>
                         <option value="Important">Important</option>
             		</select>
             		<input class="bloginput" type="submit" name="submitblogfeed" value="Submit"/>
@@ -77,12 +78,12 @@
                         <p class="blogcategory <?= $entry->category?>"><?= $entry->category?></p>
 	                    <h3><?= $entry->title ?></h3>
 	                    <p><i><?= strftime('%A %e %B %Y %R', strtotime($entry->pubDate)) ?></i></p>
-	                    <p class="nooverflow"><?= $entry->description ?></p>                        
-	                    <!-- <a class="leesmeer" href="<?= $entry->link ?>">Lees Meer</a> -->
+	                    <p class="nooverflow"><?= $entry->description ?></p>
                         <a class="leesmeer" href="Blog/readblog.php?title=<?=str_replace(" ", "_", $entry->title)?>">Read More</a>
                 	</div>	            
             	</div>
-            <?php } else {                
+            <?php 
+                } else {                
             ?>
             <div>
                 <div class="blogs">
@@ -92,7 +93,6 @@
                     <p><i><?= strftime('%A %e %B %Y %R', strtotime($entry->pubDate)) ?></i></p>
                     <img class="blogimg" src=<?= $entry->img?> alt="Article image">
                     <p class="nooverflow"><?= $entry->description ?></p>                        
-                    <!-- <a class="leesmeer" href="<?= $entry->link ?>">Lees Meer</a> -->
                     <a class="leesmeer" href="Blog/readblog.php?title=<?= str_replace(" ", "_", $entry->title)?>">Read More</a>
                     </div>              
                 </div>
@@ -115,5 +115,3 @@
 		            document.getElementById("blogcontentflex").style.cssText = 'visibility: hidden';
 		        }
 	    	</script>
-<!--     </body>
-</html> -->
