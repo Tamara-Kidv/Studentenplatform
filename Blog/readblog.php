@@ -41,7 +41,7 @@ $title = str_replace('_', ' ',$_GET['title']);
         <main>
             <?php
             	/*RSS reader*/
-            	$feed = "../XML/Article.xml";
+            	$feed = "../include/XML/Article.xml";
             	$entries = array();
 	            $xml = simplexml_load_file($feed);
 	            $entries = array_merge($entries, $xml->xpath("//item"));	     
