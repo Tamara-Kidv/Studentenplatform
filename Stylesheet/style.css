@@ -84,7 +84,7 @@
         display: table;
     }
     main {
-    	min-height: 79vh;
+    	min-height: 76vh;
     }
     footer {
         display: grid;
@@ -541,6 +541,7 @@ div .add-blog-button {
 }
 .readblogcontent {
     padding-top: 0em;
+    margin-bottom: 5vh;
     width: 100%;
     text-align: justify
 }
