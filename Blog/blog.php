@@ -2,6 +2,7 @@
        /*Check the value from the category selector, and put it in the variable $selectedcategory*/
             if(isset($_POST["submitblogfeed"])) {
                 $selectedcategory = $_POST['blogselector'];
+                header("location: ../index.php?Blog");
             }
         ?>        
         <?php
@@ -38,7 +39,7 @@
     	        		<option value="everything">Everything</option>
     	        		<option value="News">News</option>
     	        		<option value="Corona">Corona</option>
-                        <option value="Evenementen">Entertainment</option>
+                        <option value="Entertainment">Entertainment</option>
                         <option value="Important">Important</option>
             		</select>
             		<input class="bloginput" type="submit" name="submitblogfeed"/>
@@ -82,7 +83,8 @@
                         <a class="leesmeer" href="Blog/readblog.php?title=<?=str_replace(" ", "_", $entry->title)?>">Read More</a>
                 	</div>	            
             	</div>
-            <?php } else {                
+            <?php 
+                } else {                
             ?>
             <div>
                 <div class="blogs">
@@ -114,5 +116,3 @@
 		            document.getElementById("blogcontentflex").style.cssText = 'visibility: hidden';
 		        }
 	    	</script>
-<!--     </body>
-</html> -->
