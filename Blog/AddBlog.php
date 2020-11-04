@@ -8,7 +8,7 @@ exit;
 }
 }
 ?>
-<form method="post" id="addblogform" action="Blog/Addblog.php" enctype="multipart/form-data">
+<form method="post" id="addblogform" action="index.php?AddBlog" enctype="multipart/form-data">
     <div class="addblogdiv">
         <select name="CategoryAB" required id="ABcategory">
             <option value="" disabled selected>Select Category *</option>
@@ -20,12 +20,9 @@ exit;
         <label for="NameArticle">Title: *</label>
         <input type="text" required id="NameArticle" placeholder="Input Title" name="titleAB" autocomplete="off" maxlength="75"><br>
         <label for= "AddBlogdescription">Description *</label>
-        <textarea id="AddBlogdescription" required placeholder="Input text..." name="descriptionAB" maxlength="200"></textarea>
+        <textarea id="AddBlogdescription" required placeholder="Input text..." name="descriptionAB" maxlength="250"></textarea>
         <label for= "AddBlogcontent">Content *</label>
-        <textarea id="AddBlogcontent" required placeholder="Input text..." name="contentAB" minlength="200"></textarea>
-        <label for="Image">insert image here</label>
-        <input id="Image" type="file" name="image"/>
-        
+        <textarea id="AddBlogcontent" required placeholder="Input text..." name="contentAB" minlength="250"></textarea>
         <?php
         if(isset($_POST['submitpost']))
         {   
@@ -57,8 +54,7 @@ exit;
                 }
                 else
                 {
-                    echo "error, verkeerd type bestand toegevoegd. De pagina wordt herladen binnen 3 seconden";
-                    header('refresh: 3');
+                    echo "<p>error, verkeerd type bestand toegevoegd. De pagina wordt herladen binnen 3 seconden</p><br>";
                 }
             }
             else
@@ -76,6 +72,8 @@ exit;
             }
         }
         ?>
+        <label for="Image">insert image here</label>
+        <input id="Image" type="file" name="image"/>
         <div class="buttonsAB">
             <button class="buttonwhite" type="reset">Reset</button>
             <button class="buttonblue" type="submit" name="submitpost"><u>Submit</u></button>

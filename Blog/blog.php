@@ -41,7 +41,7 @@
                         <option value="Entertainment">Entertainment</option>
                         <option value="Important">Important</option>
             		</select>
-            		<input class="bloginput" type="submit" name="submitblogfeed"/>
+            		<input class="bloginput" type="submit" name="submitblogfeed" value="Submit"/>
             	</form>
             </div>
             <!--PHP to make the ADD POST button invisible to students -->
@@ -57,7 +57,7 @@
 		            <input type="text" id="search" placeholder="Search..." class="blogsearchbarbutton">
 		            <input class="searchButton" type="button" name="search" value="Go" onclick="search(document.getElementById('search').value)">
                    <!--  Reset button -->
-                    <input class="searchButton" type="button" name="reset" value="Reset" onclick="document.location.href='../index.php?Blog'">
+                    <input class="searchButton" type="button" name="reset" value="Reset" onclick="document.location.href='index.php?Blog'">
         		</div>
             </div>        	
         </div>
@@ -114,4 +114,13 @@
 		            }
 		            document.getElementById("blogcontentflex").style.cssText = 'visibility: hidden';
 		        }
-	    	</script>
+            </script>
+            
+
+
+
+
+
+
+
+            

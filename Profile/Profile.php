@@ -1,6 +1,5 @@
 <link rel="stylesheet" href="../Stylesheet/style.css">
 <div id="containerprofile">
-
 	<?php
 		$email = $_SESSION['email'];
 		$emailsearch = strpos($email, '@');
