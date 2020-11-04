@@ -33,20 +33,20 @@
             <div class="selectorcontainer">
                 <!-- Category selector -->
             	<p>Select category:</p>
-            	<form action="../index.php?Blog" method="post"> 
+            	<form action="index.php?Blog" method="post"> 
     	        	<select class="blogselect" name="blogselector">
     	        		<option value="everything">Everything</option>
     	        		<option value="News">News</option>
     	        		<option value="Corona">Corona</option>
-                        <option value="Evenementen">Events</option>
+                        <option value="Evenementen">Entertainment</option>
                         <option value="Important">Important</option>
             		</select>
-            		<input class="bloginput" type="submit" name="submitblogfeed" value="Submit"/>
+            		<input class="bloginput" type="submit" name="submitblogfeed"/>
             	</form>
             </div>
             <!--PHP to make the ADD POST button invisible to students -->
                 <?php
-                if($_SESSION['userlevel'] !== 'student'){
+                if($_SESSION['userlevel'] === 'docent'){
                     echo'<div class="add-blog-button"><a class="add-blog-button" href="index.php?AddBlog">
                     <p><i class="fas fa-plus-circle"></i>Add Post</p></a></div>';
                 }
@@ -78,7 +78,7 @@
 	                    <h3><?= $entry->title ?></h3>
 	                    <p><i><?= strftime('%A %e %B %Y %R', strtotime($entry->pubDate)) ?></i></p>
 	                    <p class="nooverflow"><?= $entry->description ?></p>                        
-	                    <!-- <a class="leesmeer" href="<?= $entry->link ?>">Lees Meer</a> -->
+
                         <a class="leesmeer" href="Blog/readblog.php?title=<?=str_replace(" ", "_", $entry->title)?>">Read More</a>
                 	</div>	            
             	</div>
@@ -92,7 +92,6 @@
                     <p><i><?= strftime('%A %e %B %Y %R', strtotime($entry->pubDate)) ?></i></p>
                     <img class="blogimg" src=<?= $entry->img?> alt="Article image">
                     <p class="nooverflow"><?= $entry->description ?></p>                        
-                    <!-- <a class="leesmeer" href="<?= $entry->link ?>">Lees Meer</a> -->
                     <a class="leesmeer" href="Blog/readblog.php?title=<?= str_replace(" ", "_", $entry->title)?>">Read More</a>
                     </div>              
                 </div>

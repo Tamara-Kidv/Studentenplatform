@@ -1,3 +1,13 @@
+<?php 
+if(isset($_SESSION['email']))
+{
+if($_SESSION['userlevel'] !== 'docent')
+{
+header('Location: index.php?Blog', true, 301);
+exit;
+}
+}
+?>
 <form method="post" id="addblogform" action="Blog/Addblog.php" enctype="multipart/form-data">
     <div class="addblogdiv">
         <select name="CategoryAB" required id="ABcategory">
