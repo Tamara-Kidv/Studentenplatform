@@ -2,7 +2,6 @@
        /*Check the value from the category selector, and put it in the variable $selectedcategory*/
             if(isset($_POST["submitblogfeed"])) {
                 $selectedcategory = $_POST['blogselector'];
-                header("location: ../index.php?Blog");
             }
         ?>        
         <?php
