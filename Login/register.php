@@ -6,7 +6,53 @@
         <title>Register | AQA</title>
     </head>
     <body id="bodyLogin"> 
-        <main> 
+        <main>
+            <?php
+            // old and not improved registratie systeem
+                if(isset($_POST['register'])){
+                    $msg = "";
+                    $email = $_POST['email'];
+                    $password = $_POST['password'];
+                    if(!empty($email) && !empty($password)){
+                        $stringB = $email;
+                        $find = "nhl";
+                        $resultaat = strchr($stringB,$find);
+                            if(strpos($resultaat, "nhl") === FALSE){
+                                $acces = "DENIED";
+                            }
+                            else{
+                                $acces = "ACCEPTED";
+                            }
+                            if($acces == "DENIED"){
+                                $msg = "<p id='NoMatch'><i/>U heeft geen toegang tot dit platform zonder gebruik van een NHL Stenden account</i></p><br>";
+                            }
+                            else{
+                                $stringA = $email; 
+                                $toFind = "@";
+                                $result = strchr($stringA,$toFind);
+                                if(strpos($result, "student") === FALSE){
+                                    $level = "docent";
+                                }
+                            else{
+                                $level = "student";
+                            }       
+             
+                            /*$hash = hash('sha256',$password);*/
+                            $hash = password_hash($password, PASSWORD_DEFAULT);
+
+                            $xml = simplexml_load_file("../include/XML/login.xml");
+                            $sxe = new simpleXMLElement($xml->asXML());
+                            $user = $sxe->addChild("user");
+                            $user->addChild("gebruiker",$email);
+                            $user->addChild("wachtwoord",$hash);
+                            $user->addChild("level",$level);
+                            $sxe->asXML("../include/XML/login.xml");
+                            
+                            header('location:login.php');
+                }
+                }
+                }
+            ?> 
             <div class="containerLogin"> 
                 <div class="formboxLogin">
                     <div Id="imgRegister">
@@ -29,6 +75,7 @@
                                     if($_POST['password'] !== $_POST['passwordconfirm']){
                                         echo "<p id='NoMatch'>Passwords do not match, please try again<p>";
                                     }}
+                                    echo $msg;
                         ?>
                         <p class="TenS">By making an account, you agree to our <a class="aLogin" href="https://www.nhlstenden.com/privacyverklaring" target=_blank>Terms of Service</a>.</p>
 
@@ -43,50 +90,5 @@
                 </div>
             </div>
         </main>
-        <?php
-        // old and not improved registratie systeem
-			if(isset($_POST['register'])){
-                $email = $_POST['email'];
-                $password = $_POST['password'];
-		        if(!empty($email) && !empty($password)){
-                    $stringB = $email;
-                    $find = "nhl";
-                    $resultaat = strchr($stringB,$find);
-                        if(strpos($resultaat, "nhl") === FALSE){
-                            $acces = "DENIED";
-		                }
-		                else{
-		                    $acces = "ACCEPTED";
-		                }
-		                if($acces == "DENIED"){
-		                    echo "U heeft geen toegang tot dit platform zonder gebruik van een NHL Stenden account";
-		                }
-			            else{
-                            $stringA = $email; 
-                            $toFind = "@";
-                            $result = strchr($stringA,$toFind);
-                            if(strpos($result, "student") === FALSE){
-                                $level = "docent";
-		                    }
-                        else{
-                            $level = "student";
-                        }       
-		 
-                        /*$hash = hash('sha256',$password);*/
-                        $hash = password_hash($password, PASSWORD_DEFAULT);
-
-                        $xml = simplexml_load_file("../include/XML/login.xml");
-                        $sxe = new simpleXMLElement($xml->asXML());
-                        $user = $sxe->addChild("user");
-                        $user->addChild("gebruiker",$email);
-                        $user->addChild("wachtwoord",$hash);
-                        $user->addChild("level",$level);
-                        $sxe->asXML("../include/XML/login.xml");
-                        
-                        header('location:login.php');
-			}
-			}
-            }
-		?>
     </body>
 </html>
