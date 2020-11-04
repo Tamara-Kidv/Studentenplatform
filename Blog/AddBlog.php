@@ -1,4 +1,4 @@
-<form method="post" id="addblogform" action="addblog.php" enctype="multipart/form-data">
+<form method="post" id="addblogform" action="Blog/Addblog.php" enctype="multipart/form-data">
     <div class="addblogdiv">
         <select name="CategoryAB" required id="ABcategory">
             <option value="" disabled selected>Select Category *</option>
@@ -33,7 +33,7 @@
                     $name = $TitleAB.'_'.str_replace(basename($_FILES["image"]["name"]));
                     move_uploaded_file($tmp_name, "$uploads_dir/$name");
                     $link = "$uploads_dir/$name";
-                    $xml = simplexml_load_file('Article.xml');
+                    $xml = simplexml_load_file("../include/XML/Article.xml");
                     $post = $xml->addChild('item', '');
                     $post->addChild('category', $_POST["CategoryAB"]);
                     $post->addchild('img', $link);
@@ -41,7 +41,7 @@
                     $post->addChild('pubDate', $date);
                     $post->addChild('description', $_POST["descriptionAB"]);
                     $post->addChild('content', $_POST['contentAB']);
-                    $xml->saveXML("Article.xml");
+                    $xml->saveXML("../include/XML/Article.xml");
                     header('Location: index.php?Blog', true, 301);
                     exit();
                 }
@@ -53,15 +53,15 @@
             }
             else
             {
-                $xml = simplexml_load_file('Article.xml');
+                $xml = simplexml_load_file("../include/XML/Article.xml");
                 $post = $xml->addChild('item', '');
                 $post->addChild('category', $_POST["CategoryAB"]);
                 $post->addChild('title', $_POST["titleAB"]);
                 $post->addChild('pubDate', $date);
                 $post->addChild('description', $_POST["descriptionAB"]);
                 $post->addChild('content', $_POST['contentAB']);
-                $xml->saveXML("Article.xml");
-                header('Location: index.php?Blog', true, 301);
+                $xml->saveXML("../include/XML/Article.xml");
+                header('Location: ../index.php?Blog', true, 301);
                 exit();
             }
         }

@@ -1,4 +1,4 @@
-<img id="homeimg" src="images\StendenHome.jpg" alt="foto van de school">
+<img id="homeimg" src="images/StendenHome.jpg" alt="foto van de school">
 <div id="Hgrid">
     <div id="Homeleft">
         <h2 class="Homekopje">Latest News:</h2> 
@@ -48,7 +48,7 @@
         <h5 class="Homekopje">Soon in agenda:</h5>
         <?php 
             $feeds = array(
-            "XML/Article.xml"
+            "include/XML/Article.xml"
             );
             $entries = array();
         foreach($feeds as $feed) {
