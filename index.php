@@ -40,11 +40,7 @@ if (!isset($_SESSION["email"])){
                 <a id="navfaq" href="?FAQ">FAQ</a>
                 <a id="navcontact" href="?Contact">Contact</a> 
                 <div id="placelang">
-                    <select id="lang" name="language">
-                        <option value="en">EN</option>
-                        <option value="nl">NL</option>
-                    </select>
-                    <a id="Logout" href="Login/logout.php">Log uit</a>
+                    <a id="Logout" href="Login/logout.php">sign out</a>
                 </div>
         </header>
         <div id="banner">
