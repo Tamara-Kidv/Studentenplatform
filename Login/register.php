@@ -15,15 +15,15 @@
                     $password = $_POST['password'];
                     if(!empty($email) && !empty($password)){
                         $stringB = $email;
-                        $find = "nhl";
+                        $find = "nhlstenden.com";
                         $resultaat = strchr($stringB,$find);
-                            if(strpos($resultaat, "nhl") === FALSE){
-                                $acces = "DENIED";
+                            if(strpos($resultaat, "nhlstenden.com") === FALSE){
+                                $acces = FALSE;
                             }
                             else{
-                                $acces = "ACCEPTED";
+                                $acces = TRUE;
                             }
-                            if($acces == "DENIED"){
+                            if($acces == FALSE){
                                 $msg = "<p id='NoMatch'><i/>U heeft geen toegang tot dit platform zonder gebruik van een NHL Stenden account</i></p><br>";
                             }
                             else{
@@ -71,12 +71,15 @@
                         <input class="inputLogin" type="password" placeholder="Repeat Password" name="passwordconfirm" id="passwordconfirm" required minlength="8">
                         <hr class="hrLogin">
                         <?php
-                                if(isset($_POST['register'])){
-                                    if($_POST['password'] !== $_POST['passwordconfirm']){
-                                        echo "<p id='NoMatch'>Passwords do not match, please try again<p>";
-                                    }
-                                    echo $msg;
-                                }
+                        if(isset($POST['register'])){
+                            if($_POST['password'] !== $_POST['passwordconfirm']){
+                            echo "<p class='NoMatch'>Passwords do not match, please try again.<p>";
+                        }
+                            if(strlen($_POST['password']) <= 7 || strlen($_POST['passwordconfirm']) <= 7){
+                                echo "<p class='NoMatch'>Your password is too short. Please fill in at least 8 characters.<p>";
+                        }
+                        echo $msg;
+                        }
                         ?>
                         <p class="TenS">By making an account, you agree to our <a class="aLogin" href="https://www.nhlstenden.com/privacyverklaring" target=_blank>Terms of Service</a>.</p>
 
@@ -86,7 +89,8 @@
                         </div>
                         <?php 
                         if(isset($_POST['register'])){
-                            if($_POST['password'] !== $_POST['passwordconfirm']){exit;}}?>
+                            if($_POST['password'] !== $_POST['passwordconfirm'])
+                            {exit;}}?>
                     </form>
                 </div>
             </div>
