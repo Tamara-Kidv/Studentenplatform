@@ -1,0 +1,853 @@
+	*{
+		margin: 0;
+		padding: 0;
+	}
+    .footerwhite{
+        color:white ;
+    }
+    header a {
+        text-decoration: none;
+        color: #0464b3;
+        font-size: 2vh;
+    }
+    header a:hover{
+        color: #012340;
+        text-decoration: underline;
+    }
+    header{
+        height: 8vh;
+        display: grid;
+        grid-template-columns: 5vw auto auto auto auto 3vw 2vw;
+        font-family: arial;
+    }
+
+    #logo{
+        height: 100%;
+        grid-column-start: 1;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        height: 8vh;
+    }
+    #navhome{
+        grid-column-start: 2;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #navblog{
+        grid-column-start: 3;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #navfaq{
+        grid-column-start: 4;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #navcontact{
+        grid-column-start: 5;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #placelang{
+        display: grid;
+        grid-template-rows: auto auto 1.3vw;
+        justify-content: flex-end;
+        grid-column-start: 6;
+        align-items: center;
+        width: 4vw;
+    }
+    #lang{
+        height: 2vh;
+        width:  2.2vw;
+        border: 0px;
+        font-size: 1vh;
+        -moz-text-size-adjust: 1vw;
+        -webkit-appearance: 1vw;
+    }
+    #banner{
+        display: grid;
+        height: 10vh;
+        background-image: url("../images/background.png");
+        background-size: cover;
+        font-size: 2vh;
+    }
+    #title{
+        color: white;
+        background-color:#0065b1;
+        margin: auto;
+        padding: 1vw;
+        display: table;
+    }
+    main {
+        min-height: 76vh;
+    }
+    footer {
+        display: grid;
+        grid-template-columns: 45% 40% auto;
+        grid-template-rows: 35% auto;
+        height: 6vh;
+        width: 100%;
+        background-color: #0464b3 ;
+    }
+    #footerdate{
+        color: #ffffff;
+        margin: 0px;
+        grid-column: 2;
+        grid-row: 2;
+        font-size: 2vh;
+    }
+    #footerprivacy
+    {
+        color: #ffffff ;
+        margin: 0px;
+        grid-column: 3;
+        grid-row: 2;
+        font-size: 2vh;
+    }
+    .searchButton {
+        font-size: 13px;
+        border: 1px solid #ccc;
+        height: 35px;
+        border-radius: 5px;
+        background-color: white;
+        width: 50px;
+    }
+    body {
+        font-family: arial;
+    }
+
+/*Login styling*/
+/* Add padding to containers */
+.formboxLogin {
+    padding: 1vw;
+    margin: auto;
+    margin-top: 3vh;
+    width: 80%;
+    box-sizing: border-box;
+  }
+
+  #bodyLogin
+  {
+      background-image: url('../images/stendenachtergrond.png');
+      background-size: 75%;
+  }
+  .containerLogin
+  {
+    width: 40vw;
+    min-height: 80vh;
+    box-shadow: 0 0 0.5vw 0.1vw #000000;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto;
+    background-color:white;
+    margin: auto;
+  }
+
+  .formboxLogin form {
+    margin: auto;
+  }
+
+  /* Full-width input fields */
+  .inputLogin[type=text], .inputLogin[type=password] {
+    width: 30vw;
+    padding: 2vh;
+    margin: 1vh 0 3vh 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+    box-sizing: border-box;
+  }
+
+  .inputLogin[type=text]:focus, .inputLogin[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+  }
+
+  /* Overwrite default styles of hr */
+  .hrLogin {
+    border: 0.1vh solid #f1f1f1;
+    margin-bottom: 3vh;
+  }
+  /* Set a style for the submit/register button */
+  .registerbtn {
+    background-color: #007E8F;
+    color: white;
+    padding: 2vh 3vh;
+    margin: 1vh 0;
+    margin-top: 5vh;
+    margin-bottom: 4vh;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+  }
+  .registerbtn:hover {
+    opacity:1;
+  }
+  /* Add a blue text color to links */
+  .aLogin {
+    color: dodgerblue;
+  }
+  /* Set a grey background color and center the text of the "sign in" section */
+  .signin {
+    text-align: center;
+  }
+  .TenS
+  {
+    text-align: center;
+  }
+  .AlreadyAcc
+  {
+      margin-bottom: 8vh;
+  }
+  /* Only works when there is an error, makes the text bigger then usual */
+  #NoMatch
+  {
+    font-weight: bold;
+    text-align: center;
+    font-size: 2vh;
+    color: black;
+    margin-bottom: 1vh;
+  }
+  /* css to make the image go in the right spot on both the login and the register page */
+  #imgLogin
+  {
+    display: grid;
+    grid-template-columns: auto 15vw auto;
+  }
+  #Loginh1
+  {
+    font-size: 1.5vw;
+  }
+  #imgRegister
+  {
+    display: grid;
+    grid-template-columns: auto 13.1vw auto;
+  }
+  #imageL
+  {
+    width: 10vw;
+    height: 10vh;
+    grid-column: 3;
+  }
+
+
+/*Home styling*/
+#homeimg {
+    width: 100%;
+    height: 17vw;
+}
+
+#homekopjes {
+    width: 500px;
+    height: 50px;
+}
+
+.Homekopje, h2, h5 {
+    font-family: Arial;
+    font-size: 16px;
+    color: blue;
+    width: 150px;
+    color: #0c70c7;
+    margin-left: 10px;
+    height: 20px;
+}
+
+.Honderkopje {
+    margin: 10px;
+    font-family: Arial;
+    font-size: 13px;
+}
+
+#Hgrid {
+    margin-top: 50px;
+    margin-left: 50px;
+    display: grid;
+    grid-template-columns: 33% 12% 16% auto auto;
+    grid-template-rows: auto;
+    grid-template-areas: Homeleft homemiddle calendar;
+    grid-column-gap: 0px;
+    width: 90vw;
+
+}
+
+.Homeline {
+    width: 3px;
+    background-color: #0c70c7;
+    height: 800px;
+}
+
+.homep {
+    font-family: Arial;
+    font-size: 11px;
+    margin: 10px;
+    padding-bottom: 5px;
+}
+
+.Hleesmeer {
+    margin-top: auto;
+    margin-left: 10px;
+    text-align: right;
+}
+
+hr {
+    margin-top: 30px;
+    color: cyan;
+}
+
+#Homeleft {
+    width: 300px;
+}
+
+#Homemid {
+    width: 300px;
+}
+
+#homeright {
+    background-color: orange;
+    width: 300px;
+}
+
+.homenews {
+    overflow: hidden;
+    width: 300px;
+}
+
+#FaQhome {
+    width: 300px;
+    height: 200px;
+    margin-top: 50px;
+    margin-left: 250px;
+}
+
+#homelist{
+    padding-top: 10px;
+    margin: 10px;
+    list-style-type: none;
+}
+.imghome
+{
+    height: 50px;
+    width: auto;
+    object-fit: contain;
+    float: left;
+    margin-right: 8px;
+    margin-bottom: 8px;
+}
+.imgdiv
+{
+    display: grid;
+}
+
+/*Blog styling*/
+.blogcontent {
+	display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 53px;
+    grid-template-areas: "search add-blog-button selector";
+}
+div .selectorcontainer{
+    grid-area: selector;
+    padding-right: 50px;
+    margin: auto;
+}
+div .searchcontainer{
+    grid-area: search;
+    margin: auto;
+    padding-left: 50px;
+}
+div .add-blog-button {
+    grid-area: add-blog-button;
+    margin: auto;
+}
+#blogcontentflex, #searchResultsBlog {
+	display: flex;
+	flex-wrap: wrap;
+	width: 65vw;
+	margin: auto;
+}
+#blogcontentflex div, #searchResultsBlog div{
+	width: 400px;
+	height: 550px;
+	margin: auto;
+	display: flex;
+	flex-direction: column;
+}
+#blogcontentflex div div, .blogs{
+	width: 350px;
+	height: 500px;
+	margin: auto;
+	background-color: white;
+	display: flex;
+	flex-direction: column;
+	border-radius: 10px;
+	box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+	border: 1px solid;
+}
+#blogcontentflex div div h3, #searchResultsBlog div div h3 {
+    text-align: center;
+}
+#blogcontentflex div div p, #blogcontentflex div div a , #blogcontentflex div div h3, #searchResultsBlog div div p, #searchResultsBlog div div a , #searchResultsBlog div div h3 {
+    padding-left: 25px;
+    padding-right: 25px;
+}
+.nooverflow {
+    overflow: hidden;
+}
+.blogimg {
+    width: auto;
+    max-width: 300px;
+    height: auto;
+    max-height: 150px;
+    margin: auto;
+}
+.blogcategory {
+    width: 200px;
+    height: 40px;
+    position: relative;
+    /*background: #005AA7;*/
+    text-align: center;
+    margin-right: -50px;
+    margin-left: 120px;
+    color: white;
+    vertical-align: center;
+    line-height: 40px;
+    font-weight: bold;
+}
+.blogcategory:before {
+    content: "";
+    position: absolute;
+    right: -20px;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border: 20px;
+    border-style: solid;
+    border-color: #005AA7;
+    background-color: #005AA7;
+}
+.blogcategory:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-top: 20px solid white;
+    border-right: 40px solid #005AA7;
+    border-bottom: 20px solid white;
+}
+/* Categorie specifieke CSS */
+.Important {
+    background-color: red;
+}
+.Important:before {
+    border-color: red;
+    background-color: red;
+}
+.Important:after {
+    border-right: 40px solid red;
+}
+.News {
+    background-color: #008487;
+}
+.News:before {
+    border-color: #008487;
+    background-color: #008487;
+}
+.News:after {
+    border-right: 40px solid #008487;
+}
+.Corona {
+    background-color: green;
+}
+.Corona:before {
+    border-color: green;
+    background-color: green;
+}
+.Corona:after {
+    border-right: 40px solid green;
+}
+.Entertainment {
+    background-color: orange;
+}
+.Entertainment:before {
+    border-color: orange;
+    background-color: orange;
+}
+.Entertainment:after {
+    border-right: 40px solid orange;
+}
+.leesmeer {
+    margin-top: auto;
+    padding: 25px;
+	text-align: right;
+}
+    /*button styling*/
+.blogselect, .searchbarbutton, .bloginput {
+    font-size: 13px;
+    border: 1px solid #ccc;
+    height: 35px;
+    border-radius: 5px;
+    background-color: white;
+}
+.blogselect{
+    width: 150px;
+}
+.bloginput {
+    width: 50px;
+}
+.blogsearch {
+    width: 150px;
+}
+.add-blog-button {
+    background-color:#005AA7;
+    border-radius:8px;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-size:20px;
+    font-weight:bold;
+    padding:4px;
+    text-decoration:none;
+}
+.add-blog-button:hover {
+    background-color:#008587;
+}
+.add-blog-button:active {
+    position:relative;
+    top:1px;
+}
+.articlecontainer {
+    display: flex;
+    width: 65vw;
+    margin: auto;
+    flex-direction: column;
+    align-items: baseline;
+    flex-wrap: wrap;
+}
+.readblogdesc {
+    padding-top: 2em;
+    width: 100%;
+    font-style: italic;
+    font-size: 18px;
+}
+.readblogcontent {
+    padding-top: 0em;
+    margin-bottom: 5vh;
+    width: 100%;
+    text-align: justify
+}
+.readblogimg {
+    height: 250px;
+    width: auto;
+    object-fit: contain;
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 10px;
+}
+.readblogtitle {
+    width: 100%;
+}
+.readblogtitle
+{
+    margin-top: 10px;
+}
+.articlecontainer div{
+    margin-top: 2em;
+}
+/*Styling for the div surrounding all inputtypes*/
+.addblogdiv
+{
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: white;
+    overflow: none;
+    border-radius: 20px;
+    box-shadow: 10px 10px 20px 1px rgba(0,0,0,0.75);
+	border: 1px solid;
+    display: grid;
+    grid-template-rows: 50px 20px 50px 1px 20px 60px auto auto 25px auto;
+    padding: 50px;
+    width: 500px;
+    min-height: 750px;
+    min-width: 500px;
+    font-weight: bold;
+    font-family: Arial;
+}
+
+#ABcategory
+{
+    border-radius: 5px;
+}
+.labelAddBlog
+{
+    color: #424242
+}
+.addblogdiv input
+{
+    margin-bottom: 20px;
+    width: 100%;
+    height: 25px;
+    border: none;
+    border-bottom: solid lightgrey 1px;
+    font-size: 10pt;
+}
+.addblogdiv input :focus
+{
+    margin-bottom: 20px;
+    width: 100%;
+    height: 25px;
+    border: none;
+    border-bottom: solid lightgrey 1px;
+    font-size: 10pt;
+}
+.addblogdiv select
+{
+    margin-bottom: 20px;
+    width: 100%;
+    height: 30px;
+    border-radius: 5px;
+    text-align: center;
+}
+.addblogdiv #AddBlogdescription
+{
+    resize: none;
+    height: 50px;
+    width: 100%;
+    background-color: white;
+    display: block;
+    overflow: auto;
+    border: none;
+    border-bottom: solid lightgrey 1px;
+    font-size: 10pt;
+    margin-bottom: 50px;
+}
+.addblogdiv #AddBlogcontent
+{
+    min-height: 150px;
+    width: 100%;
+    background-color: white;
+    display: block;
+    border: none;
+    border-bottom: solid lightgrey 1px;
+    font-size: 10pt;
+    margin-bottom: 50px;
+}
+/*Styling for the addblog buttons*/
+.buttonsAB
+{
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-around;
+    width: 450px;
+    height: 50px;
+    margin-top: 20px;
+
+}
+.buttonblue
+{
+    width: 150px;
+    height: 50px;
+    border-radius: 10px;
+    background-color:#0AAFAF;
+    border: 1px solid black;
+    color: white;
+    font-size: 15pt;
+}
+.buttonblue:hover
+{
+    background-color: #008F9F;
+    text-decoration: underline;
+    font-size: 15.5pt;
+}
+.buttonwhite
+{
+    width: 150px;
+    height: 50px;
+    background-color:#BDBDBD;
+    border-radius: 10px;
+    border: 1px solid black;
+    color: black;
+    font-size: 15pt;
+}
+.buttonwhite:hover
+{
+    background-color: #9E9E9E;
+    text-decoration: underline;
+    font-size: 15.5pt;
+}
+.h1AB
+{
+    margin-left: 44px;
+}
+
+/*FAQ styling*/
+#faqMain {
+	padding-top: 50px;
+	display: grid;
+	grid-template-columns: 250px 900px 300px 250px;
+}
+
+#faqUserSearchBox {
+	padding-bottom: 50px;
+	display: flex;
+	justify-content: space-between;
+	grid-column-start: 2;
+}
+
+.iconSearch {
+	color: #005AA7;
+}
+
+#faqQuestions {
+	grid-column-start: 2;
+	grid-column-end: 3;
+	grid-row-start: 2;
+	min-height: 500px;
+}
+
+#faqQuestions p {
+	text-align: justify;
+	padding-top: 15px;
+}
+
+#faqQuestions summary {
+	color: #008487;
+}
+
+#faqQuestions details {
+	padding-bottom: 50px;
+}
+
+summary:focus {
+	outline: none;
+}
+
+/*Contact styling*/
+
+.contact-box {
+    width: 500px;
+    min-height: 600px;
+    background-color: #fff;
+    border-radius: 15px;
+	box-shadow: 0 0 20px 0 #999;
+	top: 55%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	position:absolute;
+	content: center;
+}
+.contact-form {
+    display: block;
+    margin:auto;
+	margin-left: 35px;
+	margin-right: 35px;
+	margin-bottom: 35px;
+}
+ .inputfield,.submitcontact{
+    display: block;
+    margin:auto;
+	width: 400px;
+	height: 40px;
+	margin-top: 20px;
+	padding-left: 10px;
+	border: 1px solid #777;
+	border-radius: 14px;
+	outline: none;
+}
+.contactleraren,.contactcourse{
+    display: block;
+    margin:auto;
+	width: 412px;
+	height: 42px;
+	margin-top: 20px;
+	padding-left: 10px;
+	border: 1px solid #777;
+	border-radius: 14px;
+	outline: none;
+
+}
+.inputtextcontact {
+    resize: none;
+    display: block;
+    margin:auto;
+	width: 390px;
+	height: 140px;
+    padding: 10px;
+	margin-top: 30px;
+    border: 1px solid;
+    border-radius: 5px;
+}
+.submitcontact {
+    border-radius: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+	color: white;
+	margin-top: 18px;
+	padding: 10px;
+    background-color: #005AA7;
+}
+.h1center{
+    text-align: center;
+}
+
+/*Profile Styling*/
+
+#containerprofile {
+	width: 500px;
+	height: 400px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 200px;
+	-webkit-box-shadow: 0px 0px 0px 2px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 0px 0px 2px rgba(0,0,0,0.75);
+	box-shadow: 0px 0px 0px 2px rgba(0,0,0,0.75);
+}
+
+#profilenaam{
+	width: 400px;
+	height:70px;
+	-webkit-box-shadow: 0px 2px 0px 0px rgba(199,195,199,1);
+	-moz-box-shadow: 0px 2px 0px 0px rgba(199,195,199,1);
+	box-shadow: 0px 2px 0px 0px rgba(199,195,199,1);
+	margin-left: 30px;
+
+}
+#profilenaamp{
+	margin-bottom: 7px;
+	font-weight: bold;
+}
+
+#profileemail{
+	width: 400px;
+	height:70px;
+	-webkit-box-shadow: 0px 2px 0px 0px rgba(199,195,199,1);
+	-moz-box-shadow: 0px 2px 0px 0px rgba(199,195,199,1);
+	box-shadow: 0px 2px 0px 0px rgba(199,195,199,1);
+	margin-left: 30px;
+	margin-top: 100px;
+}
+#profileemailp{
+	margin-bottom: 7px;
+	font-weight: bold;
+}
+
+#profilePhoto {
+	height: auto;
+	width: 80px;
+	display: block;
+	margin: 0 auto;
+	position: relative;
+	bottom: 53px;
+}
