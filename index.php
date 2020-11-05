@@ -40,7 +40,7 @@ if (!isset($_SESSION["email"])){
                 <a id="navfaq" href="?FAQ">FAQ</a>
                 <a id="navcontact" href="?Contact">Contact</a> 
                 <div id="placelang">
-                    <a id="Logout" href="Login/logout.php">sign out</a>
+                    <a id="Logout" href="Login/logout.php">Sign out</a>
                 </div>
         </header>
         <div id="banner">
