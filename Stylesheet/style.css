@@ -736,8 +736,10 @@ summary:focus {
 /*Contact styling*/
 
 .contact-box {
-	width: 500px;
-	background-color: #fff;
+    width: 500px;
+    min-height: 600px;
+    background-color: #fff;
+    border-radius: 15px;
 	box-shadow: 0 0 20px 0 #999;
 	top: 55%;
 	left: 50%;
@@ -746,11 +748,15 @@ summary:focus {
 	content: center;
 }
 .contact-form {
+    display: block;
+    margin:auto;
 	margin-left: 35px;
 	margin-right: 35px;
 	margin-bottom: 35px;
 }
  .inputfield,.submitcontact{
+    display: block;
+    margin:auto;
 	width: 400px;
 	height: 40px;
 	margin-top: 20px;
@@ -760,6 +766,8 @@ summary:focus {
 	outline: none;
 }
 .contactleraren,.contactcourse{
+    display: block;
+    margin:auto;
 	width: 412px;
 	height: 42px;
 	margin-top: 20px;
@@ -770,19 +778,28 @@ summary:focus {
 
 }
 .inputtextcontact {
-	resize: none;
-	width: 410px;
-	height: 100px;
-	padding-top:10px;
+    resize: none;
+    display: block;
+    margin:auto;
+	width: 390px;
+	height: 140px;
+    padding: 10px;
 	margin-top: 30px;
-	border: 1px solid;
+    border: 1px solid;
+    border-radius: 5px;
 }
 .submitcontact {
-	border-radius: 20px;
+    border-radius: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 	color: white;
 	margin-top: 18px;
 	padding: 10px;
-	background-color: #005AA7;
+    background-color: #005AA7;
+}
+.h1center{
+    text-align: center;
 }
 /*Profile Styling*/
 
