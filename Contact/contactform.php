@@ -1,4 +1,4 @@
-<?php session_start(); 
+<?php session_start();
 if (!isset($_SESSION["email"])){
     header ("Location: ../Login/login.php");
     exit();
@@ -19,13 +19,8 @@ if (!isset($_SESSION["email"])){
                 <a id="navhome" href="../index.php?Home">Home</a>
                 <a id="navblog" href="../index.php?Blog">Blog</a>
                 <a id="navfaq" href="../index.php?FAQ">FAQ</a>
-                <a id="navcontact" href="../index.php?Contact">Contact</a> 
-                <div id="placelang">
-                    <select id="lang" name="language">
-                        <option value="en">EN</option>
-                        <option value="nl">NL</option>
-                    </select>
-                    <div><a href="../Login/logout.php">Log uit</a></div>
+                <a id="navcontact" href="../index.php?Contact">Contact</a>
+                    <div><a href="../Login/logout.php">Sign out</a></div>
                 </div>
                 <?php
                 ?>
@@ -45,7 +40,7 @@ if (!isset($_SESSION["email"])){
               $email = $_POST['email'];
               $onderwerpcontact = $_POST['onderwerpcontact'];
               $message = $_POST['message'];
-              $formcontent = "From: ".$name."\n Message:".$message;  
+              $formcontent = "From: ".$name."\n Message:".$message;
               $to ='lucashaytink@gmail.com';
               //mail($to, $onderwerpcontact, $formcontent or die('Error!'));
             }
@@ -53,7 +48,7 @@ if (!isset($_SESSION["email"])){
             echo "nothing happened"
         ?>
         <div class="contact-box">
-        <h1 class="h1center">Email Verstuurd</h1>
+        <h1 class="h1center">Email has been sent!</h1>
         <form class="contact-form">
         <input type="text" class="inputfield" value="<?=$leraar?>" readonly>
         <input type="text" class="inputfield" value="<?=$name?>" name="name" readonly>
@@ -64,7 +59,7 @@ if (!isset($_SESSION["email"])){
           <a href="../index.php"><button class='submitcontact'>Home</button></a>
     </div>
     </main>
-    <footer>       
+    <footer>
             <p id="footerdate"> &copy; 2020 - 2021</p>
             <p id="footerprivacy"> <a class="footerwhite" href="https://www.nhlstenden.com/over-nhl-stenden/over-deze-website/privacy-statement" target="_blank">privacystatement</a> - <a class="footerwhite" href="../index.php?Profile">profile<i class="fas fa-user"></i></a></p>
         </footer>
