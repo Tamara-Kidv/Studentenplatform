@@ -22,11 +22,7 @@ $title = str_replace('_', ' ',$_GET['title']);
                 <a id="navfaq" href="../index.php?FAQ">FAQ</a>
                 <a id="navcontact" href="../index.php?Contact">Contact</a> 
                 <div id="placelang">
-                    <select id="lang" name="language">
-                        <option value="en">EN</option>
-                        <option value="nl">NL</option>
-                    </select>
-                    <div><a href="../Login/logout.php">Log uit</a></div>
+                    <div><a href="../Login/logout.php">Sign out</a></div>
                 </div>
                 <?php
                 ?>
