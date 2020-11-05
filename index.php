@@ -44,7 +44,7 @@ if (!isset($_SESSION["email"])){
                         <option value="en">EN</option>
                         <option value="nl">NL</option>
                     </select>
-                    <a id="Logout" href="Login/logout.php">Log uit</a>
+                    <a id="Logout" href="Login/logout.php">Log out</a>
                 </div>
         </header>
         <div id="banner">
