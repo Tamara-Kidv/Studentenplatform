@@ -8,7 +8,7 @@
 <body>
   <h1>Gelukt!</h1><br>
     <p>Uw bericht is succesvol verzonden!</p><br>
-    <p> Klik <a href="index.php?Home">hier</a> om terug te gaan naar de homepagina</p>
+  <!-- <p> Klik <a href="index.php?Home">hier</a> om terug te gaan naar de homepagina</p> -->
 </body>
 <?php
 

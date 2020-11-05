@@ -130,7 +130,7 @@
     width: 80%;
     box-sizing: border-box;
   }
-  
+
   #bodyLogin
   {
       background-image: url('../images/stendenachtergrond.png');
@@ -142,16 +142,16 @@
     min-height: 80vh;
     box-shadow: 0 0 0.5vw 0.1vw #000000;
     display: grid;
-    grid-template-columns: auto; 
+    grid-template-columns: auto;
     grid-template-rows: auto auto auto;
     background-color:white;
     margin: auto;
   }
-  
+
   .formboxLogin form {
     margin: auto;
   }
-  
+
   /* Full-width input fields */
   .inputLogin[type=text], .inputLogin[type=password] {
     width: 30vw;
@@ -162,12 +162,12 @@
     background: #f1f1f1;
     box-sizing: border-box;
   }
-  
+
   .inputLogin[type=text]:focus, .inputLogin[type=password]:focus {
     background-color: #ddd;
     outline: none;
   }
-  
+
   /* Overwrite default styles of hr */
   .hrLogin {
     border: 0.1vh solid #f1f1f1;
@@ -195,7 +195,7 @@
   }
   /* Set a grey background color and center the text of the "sign in" section */
   .signin {
-    text-align: center; 
+    text-align: center;
   }
   .TenS
   {
@@ -581,7 +581,7 @@ div .add-blog-button {
     min-height: 750px;
     min-width: 500px;
     font-weight: bold;
-    font-family: Arial; 
+    font-family: Arial;
 }
 
 #ABcategory
@@ -734,30 +734,55 @@ summary:focus {
 }
 
 /*Contact styling*/
-.grid-container {
-	display:grid;
-	grid-template-columns: repeat(2, 100px);
-	grid-auto-rows: minmax(150px, auto);
-	grid-column-gap: 260px;
-	justify-content:center;
-	align-content: stretch;
-}
 
-textarea {
+.contact-box {
+	width: 500px;
+	background-color: #fff;
+	box-shadow: 0 0 20px 0 #999;
+	top: 55%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	position:absolute;
+	content: center;
+}
+.contact-form {
+	margin-left: 35px;
+	margin-right: 35px;
+	margin-bottom: 35px;
+}
+ .inputfield,.submitcontact{
+	width: 400px;
+	height: 40px;
+	margin-top: 20px;
+	padding-left: 10px;
+	border: 1px solid #777;
+	border-radius: 14px;
+	outline: none;
+}
+.contactleraren,.contactcourse{
+	width: 412px;
+	height: 42px;
+	margin-top: 20px;
+	padding-left: 10px;
+	border: 1px solid #777;
+	border-radius: 14px;
+	outline: none;
+
+}
+.inputtextcontact {
 	resize: none;
-	height: 250px;
-	width:542px;
+	width: 410px;
+	height: 100px;
+	padding-top:10px;
+	margin-top: 30px;
+	border: 1px solid;
 }
-
-#submitcontact {
-	background-color:#005AA7;
+.submitcontact {
+	border-radius: 20px;
 	color: white;
-	width:150px;
-	height:40px;
-}
-
-#onderwerpcontact {
-width:540px;
+	margin-top: 18px;
+	padding: 10px;
+	background-color: #005AA7;
 }
 /*Profile Styling*/
 

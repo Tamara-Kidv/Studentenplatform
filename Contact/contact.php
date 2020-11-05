@@ -1,46 +1,49 @@
+
  &nbsp;&nbsp;
   <!-- Spacing tussen banner -->
+  <head>
+    <link rel="stylesheet" href="../style.css">
+  </head>
+  <body class="bodycontact">
+    <div class="contact-box">
+      <form class="contact-form" action="index.php?contactform.php" method="POST">
+          <div class="grid=item-1">
+          <div class="lerarencontact">
+            <select id="contactleraren" class="contactleraren"name="contactleraren" onchange="insertOptions(contactleraren,'contactcourse')" required>
+                <option value="" disabled selected>Selecteer leraar</option>
+                <option value="raymondblankestijn">Raymond Blankestijn</option>
+                <option value="gerjanvanoenen">Gerjan van Oenen</option>
+                <option value="albertdejonge">Albert de Jonge</option>
+                <option value="renevanlaan">Rene van Laan</option>
+                <option value="jandoornbos">Jan Doornbos</option>
+                <option value="robloves">Rob Loves</option>
+                <option value="robsmit">Rob Smit</option>
+            </select>
+          </div>
+        </div>
 
-<div class="grid-container">
-    <div class="grid=item-1">
-      <div class="lerarencontact">
-        <select id="contactleraren" name="contactleraren" onchange="insertOptions(contactleraren,'contactcourse')" required>
-          <option value="" disabled selected>Selecteer leraar</option>
-          <option value="raymondblankestijn">Raymond Blankestijn</option>
-          <option value="gerjanvanoenen">Gerjan van Oenen</option>
-          <option value="albertdejonge">Albert de Jonge</option>
-          <option value="renevanlaan">Rene van Laan</option>
-          <option value="jandoornbos">Jan Doornbos</option>
-          <option value="robloves">Rob Loves</option>
-          <option value="robsmit">Rob Smit</option>
-        </select>
+          <!-- Select leraar -->
+      <div class="grid=item-2">
+        <div class="courses">
+          <select id="contactcourse" class="contactcourse" name="contactcourse" required>
+              <option value="">--</option>
+            </select>
+        </div>
       </div>
-    </div>
-    <!-- Select leraar -->
 
-<div class="grid=item-2">
-  <div class="courses">
-      <select id="contactcourse" name="contactcourse" required>
-        <option value="">--</option>
-      </select>
-  </div>
-</div>
+          <!-- Select courses -->
 
-    <!-- Select courses -->
+        <form class="contact-form" action="index.php?contactform.php" method="POST">
+          <input type="text" class="inputfield" placeholder="Voer uw studentnummer in" required >
+          <input type="email" class="inputfield" placeholder="Voer uw mailadres in" required >
+          <input type="text" class="inputfield" name="onderwerpcontact" placeholder="Onderwerp">
+          <textarea name="message" class="inputtextcontact" placeholder="Bericht"></textarea>
+          <input class="submitcontact" type="submit" value="Submit">
+        </form>
+            <!-- Subject, textarea and the submit button -->
+      </div>
+  </body>
 
-<div class="grid-item-3">
-  <form class="contact-form" action="contactform.php" method="POST">
-    <p class="pstudentnumber">Studentnummer</p>
-    <input id="student_number" type="text" name="student_number" placeholder="..." required > &nbsp;&nbsp;
-    <p class="contactemail">E-mail</p>
-    <input id="email" type="email" name="Email" placeholder="..." required > &nbsp;&nbsp;
-    <input id="onderwerpcontact" type="text" name="onderwerpcontact" placeholder="Onderwerp"> <br /> <br />
-    <textarea name="message"  placeholder="Bericht"></textarea> <br />
-    <input id="submitcontact" type="submit" value="Submit">
-  </form>
-      <!-- Subject, textarea and the submit button -->
-</div>
-</div>
   <!-- Script voor het dynamische selectbox -->
 
   <script>
