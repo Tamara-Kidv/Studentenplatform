@@ -62,7 +62,7 @@
                 <hr class="hrLogin">
                     <form action="register.php" method="POST">
                         <label for="email"><b>Email</b></label>
-                        <input class="inputLogin" type="text" placeholder="Enter Email" name="email" id="email" required>
+                        <input class="inputLogin" type="email" placeholder="Enter Email" name="email" id="email" required>
 
                         <label for="psw"><b>Password</b></label>
                         <input class="inputLogin" type="password" placeholder="Enter Password" name="password" id="password" required minlength="8">
