@@ -19,7 +19,7 @@
           <div class="grid=item-1">
           <div class="lerarencontact">
             <select id="contactleraren" class="contactleraren" name="contactleraren" onchange="insertOptions(contactleraren,'contactcourse')" required>
-                <option value="" disabled selected>Selecteer leraar</option>
+                <option value="" disabled selected>Choose a teacher</option>
                 <option value="Raymond Blankestijn">Raymond Blankestijn</option>
                 <option value="Gerjan van Oenen">Gerjan van Oenen</option>
                 <option value="Albert de Jonge">Albert de Jonge</option>
@@ -35,7 +35,7 @@
       <div class="grid=item-2">
         <div class="courses">
           <select id="contactcourse" class="contactcourse" name="contactcourse" required>
-              <option value="">select course</option>
+              <option value="">Select course</option>
             </select>
         </div>
       </div>
@@ -45,8 +45,8 @@
         <form class="contact-form" action="contact/contactform.php" method="POST">
           <input type="text" class="inputfield" value="<?php echo ucwords($naam2. " " .$Anaam); ?>" name="name" required readonly>
           <input type="email" class="inputfield" name="email" value="<?=$_SESSION['email']?>" required readonly>
-          <input type="text" class="inputfield" name="onderwerpcontact" placeholder="Onderwerp" required autocomplete="off">
-          <textarea name="message" class="inputtextcontact" placeholder="Bericht" required></textarea>
+          <input type="text" class="inputfield" name="onderwerpcontact" placeholder="Subject" required autocomplete="off">
+          <textarea name="message" class="inputtextcontact" placeholder="Message" required></textarea>
           <input class="submitcontact" type="submit" value="Submit">
         </form>
             <!-- Subject, textarea and the submit button -->
