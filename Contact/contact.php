@@ -1,5 +1,5 @@
  &nbsp;&nbsp;
-  <!-- Spacing tussen banner -->
+  <!-- Spacing between the banner -->
   <head>
     <link rel="stylesheet" href="../style.css">
     <?php
@@ -31,7 +31,7 @@
           </div>
         </div>
 
-          <!-- Select leraar -->
+          <!-- Selects the teacher -->
       <div class="grid=item-2">
         <div class="courses">
           <select id="contactcourse" class="contactcourse" name="contactcourse" required>
@@ -40,7 +40,7 @@
         </div>
       </div>
 
-          <!-- Select courses -->
+          <!-- Selects a course -->
 
         <form class="contact-form" action="contact/contactform.php" method="POST">
           <input type="text" class="inputfield" value="<?php echo ucwords($naam2. " " .$Anaam); ?>" name="name" required readonly>
@@ -53,7 +53,7 @@
       </div>
   </body>
 
-  <!-- Script voor het dynamische selectbox -->
+  <!-- Script for the dynamic select area -->
 
   <script>
   function removeAll(contactcourse){
