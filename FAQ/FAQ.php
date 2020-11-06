@@ -10,7 +10,7 @@
 		<?php 	
 			$questions_array = [
 				[
-					"title" => "How is NHL Stenden handeling the situation around Covid-19 virus?",
+					"title" => "How is NHL Stenden handling the situation around Covid-19 virus?",
 					"description" => "On 19 May, the Dutch government announced a gradual relaxation of the corona measures. However, a number of measures are still very much in effect so as to prevent the further spread of the virus. For instance, because a cold, a cough or a fever may be the first symptoms of coronavirus, people with these symptoms are being asked to stay at home and avoid social contacts as much as possible. The Dutch National Institute for Public Health and the Environment have issued a number of guidelines for everyone to follow. See  <a href='https://www.rivm.nl/en/novel-coronavirus-covid-19'>https://www.rivm.nl/en/novel-coronavirus-covid-19)</a>. Amongst these guidelines are that schools, colleges, universities of applied sciences and universities have all closed their buildings, and travel abroad is severely restricted. </br></br>
 						In addition, as NHL Stenden, we have urged our staff and students currently working and studying abroad to return to the Netherlands as soon as possible. With the gradual relaxation of the measures, we are able to provide some forms of face-to-face education with the focus being on those students due to graduate, students with a handicap and students needing to catch up on practicals. After the summer of 2020, the focus will be on connecting with our new first-year students. We will of course be adhering closely to the restrictions and measures then in place. More information about the measures in the Netherlands to prevent the spread of the coronavirus can be found at government.nl."
 				],

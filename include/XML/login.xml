@@ -1,2 +1,2 @@
 <?xml version="1.0"?>
-<root><user><gebruiker>test@nhlstenden.com</gebruiker><wachtwoord>$2y$10$yfzlgyjrwyDgjbxqP/i9TOK5UOZgnIxLJ.Rmj5OA7g6kNf0ZQCkFO</wachtwoord><level>docent</level></user></root>
+<root><user><gebruiker>test@nhlstenden.com</gebruiker><wachtwoord>$2y$10$yfzlgyjrwyDgjbxqP/i9TOK5UOZgnIxLJ.Rmj5OA7g6kNf0ZQCkFO</wachtwoord><level>docent</level></user><user><gebruiker>cecile.richetti@student.nhlstenden.com</gebruiker><wachtwoord>$2y$10$DTCW5O83fdxFH7YaGnqEj.2GKOs0vq48BI947/cJztk5NwL7iFzDi</wachtwoord><level>student</level></user></root>
